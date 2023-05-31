@@ -1,5 +1,16 @@
-fly.toml
-Dockerfile
-.dockerignore
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
 node_modules
-.git
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+
+pnpm-lock.yaml
