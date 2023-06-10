@@ -1,7 +1,55 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<h1 class="[text-shadow:0_0_15px_#FBFF00,0_0_40px_#FBFF00,0_0_70px_#FBFF00] cursor-pointer hover:[text-shadow:0_0_30px_#FBFF00,0_0_55px_#FBFF00,0_0_90px_#FBFF00] text-white text-8xl font-bold">Muy Pronto!!...</h1>	
+<div class="flex flex-col justify-center items-center gap-10 p-4">
+	<header
+	id="landing-header"
+	class="flex items-center top-0 justify-between text-black"
+>
+	<nav>
+		<ul
+			class="flex items-center gap-10 text-2xl font-bold"
+		>
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Sobre mi</a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#">Model Y</a></li>
+			<li><a href="#">Powerwall</a></li>
+			<li><a href="#">Carga</a></li>
+		</ul>
+	</nav>
+	<div
+		id="menu-backdrop"
+		class="absolute bg-black/5 backdrop-blur-lg rounded translate-x-[var(--left)] translate-y-[var(--top)] left-0 top-0 w-[var(--width)] h-[var(--height)] transition-all duration-500 delay-75 ease-in-out opacity-0 -z-10"
+	>
+	</div>
+</header>
+<main>
+	<h1 class="[text-shadow:0_0_15px_#FBFF00,0_0_40px_#FBFF00,0_0_70px_#FBFF00] cursor-pointer hover:[text-shadow:0_0_30px_#FBFF00,0_0_55px_#FBFF00,0_0_90px_#FBFF00] text-white text-4xl font-bold">Muy Pronto!!...</h1>	
+</main>
+</div>
 </Layout>
+
+<script>
+  const listItem = document.querySelectorAll("#landing-header li");
+  const menuBackdrop = document.querySelector("#menu-backdrop") as HTMLElement;
+
+  listItem.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      const { left, top, width, height } = item.getBoundingClientRect();
+      menuBackdrop.style.setProperty("--left", `${left}px`);
+      menuBackdrop.style.setProperty("--top", `${top}px`);
+      menuBackdrop.style.setProperty("--width", `${width}px`);
+      menuBackdrop.style.setProperty("--height", `${height}px`);
+      menuBackdrop.style.opacity = "1";
+      menuBackdrop.style.visibility = "visible";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      menuBackdrop.style.opacity = "0";
+      menuBackdrop.style.visibility = "hidden";
+    });
+  });
+</script>
