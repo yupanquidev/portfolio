@@ -1,0 +1,33 @@
+---
+import Backdrop from "../Backdrop.astro";
+---
+
+<header
+  class="w-full h-auto flex justify-between items-center self-stretch py-0 px-20 font-bold text-base text-[#0A0C10] dark:text-[#F5F9FF]"
+>
+  <Backdrop />
+  <div class="w-auto h-full p-10">
+    <a class="" href="/">Humberto</a>
+  </div>
+  <nav
+    class="w-auto h-full p-10 flex items-center justify-center relative z-10"
+    id="backdrop"
+  >
+    <ul
+      class="w-auto h-full flex items-center self-stretch p-0 [&>li]:py-2 [&>li]:px-4 [&>li]:rounded-lg"
+    >
+      <li><a href="/">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Experience</a></li>
+      <li><a href="#">Portfolio</a></li>
+    </ul>
+  </nav>
+  <div class="p-10 self-stretch">
+    <a
+      class="rounded-lg py-2 px-4 bg-[#96F] backdrop-blur-3xl text-[#F5F9FF] flex items-center justify-center"
+      href="#"
+    >
+      Contact me</a
+    >
+  </div>
+</header>

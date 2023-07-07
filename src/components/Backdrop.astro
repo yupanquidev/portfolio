@@ -1,0 +1,36 @@
+<div
+  id="menu-backdrop"
+  class={`
+  absolute bg-[#96F]/90 backdrop-blur-3xl rounded-lg
+  translate-x-[var(--left)] translate-y-[var(--top)]
+  left-0 top-0 
+  w-[var(--width)] h-[var(--height)]
+  transition-all duration-700
+  ease-in-out z-10 pointer-events-none
+`}
+>
+</div>
+
+<script>
+  const listItem = document.querySelectorAll("#backdrop li");
+  const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement;
+
+  listItem.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      const { left, top, width, height } = item.getBoundingClientRect();
+
+      menuBackDrop.style.setProperty("--left", `${left}px`);
+      menuBackDrop.style.setProperty("--top", `${top}px`);
+      menuBackDrop.style.setProperty("--width", `${width}px`);
+      menuBackDrop.style.setProperty("--height", `${height}px`);
+
+      menuBackDrop.style.opacity = "1";
+      menuBackDrop.style.visibility = "visible";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      menuBackDrop.style.opacity = "0";
+      menuBackDrop.style.visibility = "hidden";
+    });
+  });
+</script>
