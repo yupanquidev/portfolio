@@ -71,9 +71,10 @@
     ? document.documentElement.classList.add("dark")
     : document.documentElement.classList.remove("dark");
 
-  const toggleChange = document.querySelector("#dark_mode");
   const sun = document.querySelector("#sun") as HTMLElement;
   const moon = document.querySelector("#moon") as HTMLElement;
+
+  const toggleChange = document.querySelector("#dark_mode");
 
   toggleChange.addEventListener("click", (e) => {
     const toggle = document.documentElement.classList.toggle("dark");
