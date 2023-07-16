@@ -1,0 +1,95 @@
+<button
+  class="py-2 px-4 flex justify-center items-center"
+  id="dark_mode"
+  aria-label="ChangeTheme"
+>
+  <span
+    class="opacity-70 hover:opacity-100"
+    id="sun"
+    :class="{ 'hidden': darkMode }"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler icon-tabler-sun"
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"
+      ></path>
+      <path d="M6.343 17.657l-1.414 1.414"></path>
+      <path d="M6.343 6.343l-1.414 -1.414"></path>
+      <path d="M17.657 6.343l1.414 -1.414"></path>
+      <path d="M17.657 17.657l1.414 1.414"></path>
+      <path d="M4 12h-2"></path>
+      <path d="M12 4v-2"></path>
+      <path d="M20 12h2"></path>
+      <path d="M12 20v2"></path>
+    </svg>
+  </span>
+  <span
+    class="opacity-70 hover:opacity-100"
+    id="moon"
+    :class="{ 'hidden': !darkMode }"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler icon-tabler-moon"
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+      ></path>
+    </svg>
+  </span>
+</button>
+
+<script>
+  const prefersColorScheme = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+
+  const isDarkModeMachine =
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) && prefersColorScheme);
+
+  isDarkModeMachine
+    ? document.documentElement.classList.add("dark")
+    : document.documentElement.classList.remove("dark");
+
+  const toggleChange = document.querySelector("#dark_mode");
+  const sun = document.querySelector("#sun") as HTMLElement;
+  const moon = document.querySelector("#moon") as HTMLElement;
+
+  toggleChange.addEventListener("click", (e) => {
+    const toggle = document.documentElement.classList.toggle("dark");
+    const removeItem = localStorage.removeItem("theme");
+
+    toggle
+      ? (localStorage.theme = "dark") &&
+        (sun.style.display = "none") &&
+        (moon.style.display = "block")
+      : ((localStorage.theme = "light") &&
+          (sun.style.display = "block") &&
+          (moon.style.display = "none")) ||
+        removeItem;
+  });
+
+  document.documentElement.classList.contains("dark")
+    ? (sun.style.display = "none") && (moon.style.display = "block")
+    : (sun.style.display = "block") && (moon.style.display = "none");
+</script>

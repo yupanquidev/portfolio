@@ -1,33 +1,85 @@
 ---
 import Backdrop from "../Backdrop.astro";
+import DarkModeToggle from "./DarkModeToggle.astro";
 ---
 
-<header
-  class="w-full h-auto flex justify-between items-center self-stretch py-0 px-20 font-bold text-base text-[#F5F9FF]"
->
-  <Backdrop />
-  <div class="w-auto h-full p-10">
-    <a class="hover:opacity-70" href="/">Humberto</a>
-  </div>
-  <nav
-    class="w-auto h-full p-10 flex items-center justify-center relative z-10"
-    id="backdrop"
+<header class="w-full h-auto">
+  <div
+    class="w-full h-auto container mx-auto px-10 py-4 flex justify-between items-center font-bold text-base text-[#0A0C10] dark:text-[#F5F9FF]"
   >
-    <ul
-      class="w-auto h-full flex items-center self-stretch p-0 [&>li]:py-2 [&>li]:px-4 [&>li]:rounded-lg"
+    <Backdrop />
+    <div class="w-auto h-full px-10 py-4">
+      <a class="opacity-70 hover:opacity-100" href="/">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-code"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M7 8l-4 4l4 4"></path>
+          <path d="M17 8l4 4l-4 4"></path>
+          <path d="M14 4l-4 16"></path>
+        </svg>
+      </a>
+    </div>
+    <nav
+      class="w-auto h-full px-10 flex items-center justify-center relative z-10"
+      id="backdrop"
     >
-      <li><a href="/">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Experience</a></li>
-      <li><a href="#">Portfolio</a></li>
-    </ul>
-  </nav>
-  <div class="p-10 self-stretch">
-    <a
-      class="rounded-lg py-2 px-4 bg-[#96F] backdrop-blur-3xl text-[#F5F9FF] flex items-center justify-center hover:bg-opacity-70 transition-all"
-      href="#"
-    >
-      Contact me</a
-    >
+      <ul
+        class="w-auto h-full flex items-center p-0 [&>li]:py-2 [&>li]:px-4 [&>li]:rounded-lg"
+      >
+        <li>
+          <a
+            class="opacity-70 hover:opacity-100 hover:[text-shadow:0_0_10px_#F5F9FF]"
+            href="/"
+          >
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a
+            class="opacity-70 hover:opacity-100 hover:[text-shadow:0_0_10px_#F5F9FF]"
+            href="#"
+          >
+            Conoceme
+          </a>
+        </li>
+        <li>
+          <a
+            class="opacity-70 hover:opacity-100 hover:[text-shadow:0_0_10px_#F5F9FF]"
+            href="#"
+          >
+            Experiencia
+          </a>
+        </li>
+        <li>
+          <a
+            class="opacity-70 hover:opacity-100 hover:[text-shadow:0_0_10px_#F5F9FF]"
+            href="#"
+          >
+            Proyectos
+          </a>
+        </li>
+        <li>
+          <a
+            class="opacity-70 hover:opacity-100 hover:[text-shadow:0_0_10px_#F5F9FF]"
+            href="#"
+          >
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="px-10">
+      <DarkModeToggle />
+    </div>
   </div>
 </header>

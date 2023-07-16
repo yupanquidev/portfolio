@@ -5,6 +5,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			Raleway: ['Raleway', 'sans-serif'],
+			N27: ['N27']
 		},
 		extend: {},
 	},
