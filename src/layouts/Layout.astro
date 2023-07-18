@@ -23,20 +23,23 @@ const { title } = Astro.props;
 
 <style is:global>
   @font-face {
-    font-family: "Raleway";
-    src: url("/public/fonts/Raleway-Bold.ttf");
+    font-family: "Inter";
+    src: url("/public/fonts/Inter-Bold.woff2") format("woff2"),
+      url("/public/fonts/Inter-Bold.woff") format("woff");
     font-weight: bold;
   }
 
   @font-face {
-    font-family: "Raleway";
-    src: url("/public/fonts/Raleway-Regular.ttf");
+    font-family: "Inter";
+    src: url("/public/fonts/Inter-Regular.woff2") format("woff2"),
+      url("/public/fonts/Inter-Regular.woff") format("woff");
     font-weight: normal;
   }
 
   @font-face {
-    font-family: "Raleway";
-    src: url("/public/fonts/Raleway-Medium.ttf");
+    font-family: "Inter";
+    src: url("/public/fonts/Inter-Medium.woff2") format("woff2"),
+      url("/public/fonts/Inter-Medium.woff") format("woff");
     font-weight: 500;
   }
 
@@ -44,14 +47,31 @@ const { title } = Astro.props;
     font-family: "N27";
     src: url("/public/fonts/n27-regular.woff2") format("woff2"),
       url("/public/fonts/n27-regular.woff") format("woff");
+    font-weight: normal;
+  }
+
+  body::-webkit-scrollbar,
+  textarea::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+
+  body::-webkit-scrollbar-thumb,
+  textarea::-webkit-scrollbar-thumb {
+    background-color: #97f;
+    border-radius: 0.1rem;
+  }
+
+  body::-webkit-scrollbar-thumb:hover,
+  textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #96f;
   }
 
   header,
   main {
-    font-family: "Raleway", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   footer {
-    font-family: N27, sans-serif;
+    font-family: "N27", sans-serif;
   }
 </style>
