@@ -1,0 +1,100 @@
+---
+import Github from "../../contactIcons/Github.astro";
+import Gmail from "../../contactIcons/Gmail.astro";
+import Instagram from "../../contactIcons/Instagram.astro";
+import LinkedIn from "../../contactIcons/LinkedIn.astro";
+import Twitter from "../../contactIcons/Twitter.astro";
+---
+
+<section
+  id="contact"
+  class="w-full h-auto mx-auto container px-20 flex flex-col justify-between gap-8"
+>
+  <h2 class="text-5xl font-bold text-[#96F]">Contáctame</h2>
+  <div class="w-full flex">
+    <section class="w-full py-6 flex flex-col gap-8">
+      <p class="text-base text-[#0A0C10] dark:text-[#F5F5FF]">
+        Siéntete libre de contactarme en cualquier momento. ¡Me pondré en
+        contacto contigo tan pronto como pueda!
+      </p>
+      <p class="flex flex-col gap-2 text-[#0A0C10] dark:text-[#F5F5FF]">
+        <span class="text-lg font-bold">Email</span>
+        <span class="text-base">hyupanquia24@gmail.com</span>
+      </p>
+      <div class="flex gap-2 items-center">
+        <LinkedIn />
+        <Github />
+        <Gmail />
+        <Instagram />
+        <Twitter />
+      </div>
+    </section>
+    <form
+      class="w-full h-auto flex flex-col items-center justify-center gap-6 px-4 py-6 cursor-pointer border-2 rounded-md text-[#0A0C10] border-[#CFD9E4] shadow-[0_0px_20px_0px_#CFD9E4] hover:shadow-[0_0px_20px_0px_#CFD9E4] dark:text-[#F5F9FF] dark:border-[#08152C] dark:shadow-[0_0px_10px_0px_#08152C] dark:hover:shadow-[0_0px_20px_0px_#08152C] hover:text-opacity-100 hover:opacity-100"
+    >
+      <div class="w-full h-auto flex gap-4">
+        <input
+          required=""
+          autocomplete="off"
+          name="name"
+          type="text"
+          value=""
+          placeholder="Nombre"
+          class="w-full dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C]"
+          data-form-type="name"
+        />
+        <input
+          required=""
+          autocomplete="off"
+          name="email"
+          type="email"
+          value=""
+          placeholder="Correo electrónico"
+          class="w-full dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C]"
+          data-form-type="name"
+        />
+      </div>
+      <textarea
+        required=""
+        autocomplete="off"
+        name="message"
+        rows="5"
+        placeholder="Mensaje"
+        class="w-full dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C] resize-none"
+        data-dashlane-rid="7499e0651a5cbd66"
+        data-form-type="other"></textarea>
+      <a
+        href="#"
+        class="w-full flex justify-center items-center font-bold py-3 px-4 gap-2 text-sm text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
+      >
+        Enviar mensaje
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-send"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M10 14l11 -11"></path>
+            <path
+              d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"
+            ></path>
+          </svg>
+        </span>
+      </a>
+    </form>
+  </div>
+</section>
+
+<style>
+  p {
+    text-wrap: balance;
+  }
+</style>

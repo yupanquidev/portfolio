@@ -16,7 +16,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="w-full h-full font-Raleway bg-[#F5F9FF] dark:bg-[#0A0C10]">
+  <body class="w-full h-full bg-[#F5F9FF] dark:bg-[#0A0C10]">
     <slot />
   </body>
 </html>
@@ -38,5 +38,20 @@ const { title } = Astro.props;
     font-family: "Raleway";
     src: url("/public/fonts/Raleway-Medium.ttf");
     font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "N27";
+    src: url("/public/fonts/n27-regular.woff2") format("woff2"),
+      url("/public/fonts/n27-regular.woff") format("woff");
+  }
+
+  header,
+  main {
+    font-family: "Raleway", sans-serif;
+  }
+
+  footer {
+    font-family: N27, sans-serif;
   }
 </style>
