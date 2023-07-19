@@ -1,14 +1,16 @@
 ---
 import Backdrop from "../Backdrop.astro";
-import DarkModeToggle from "./DarkModeToggle.astro";
+import DarkModeToggle from "../DarkModeToggle.astro";
+import MenuToggle from "./MenuToggle.astro";
 ---
 
-<header class="w-full h-auto">
+<header class="w-full h-auto p-5">
   <div
-    class="w-full h-auto container mx-auto px-10 py-4 flex justify-between items-center font-bold text-base text-[#0A0C10] dark:text-[#F5F9FF]"
+    class="w-full h-auto container mx-auto px-10 py-4 flex justify-between items-center font-bold text-base text-[#0A0C10] dark:text-[#F5F9FF] max-lg:container max-lg:mx-auto max-lg:px-5 max-md:container max-md:mx-auto max-md:px-2 max-md:py-2 max-sm:bg-blue-200 max-sm:dark:bg-[#08152c] max-sm:top-0 max-sm:w-1/2 max-sm:min-h-screen max-sm:py-5 max-sm:right-0 max-sm:backdrop-blur-3xl max-sm:flex-col max-sm:hiddsen max-sm:fixed"
+    id="header-menu"
   >
     <Backdrop />
-    <div class="w-auto h-full px-10 py-4">
+    <div class="w-auto h-full px-10 py-4 max-lg:px-4 max-md:hidden">
       <a class="opacity-70 hover:opacity-100" href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,13 +32,13 @@ import DarkModeToggle from "./DarkModeToggle.astro";
       </a>
     </div>
     <nav
-      class="w-auto h-full px-10 flex items-center justify-center relative z-10"
+      class="w-auto h-full pl-10 pr-10 py-4 flex items-center justify-center relative z-10 max-lg:px-4 max-md:px-2 max-md:py-2 max-sm:w-full"
       id="backdrop"
     >
       <ul
-        class="w-auto h-full flex items-center p-0 [&>li]:py-2 [&>li]:px-4 [&>li]:rounded-lg"
+        class="w-auto h-full flex items-center p-0 [&>li]:py-2 [&>li]:px-4 [&>li]:rounded-lg max-sm:flex max-sm:flex-col max-sm:items-start max-sm:w-full"
       >
-        <li>
+        <li class="w-full text-left">
           <a
             class="opacity-70 hover:opacity-100 hover:[text-shadow:0_0_10px_#F5F9FF]"
             href="#home"
@@ -78,8 +80,9 @@ import DarkModeToggle from "./DarkModeToggle.astro";
         </li>
       </ul>
     </nav>
-    <div class="px-10">
+    <section class="max-sm:flex max-sm:w-full">
       <DarkModeToggle />
-    </div>
+    </section>
   </div>
+  <MenuToggle />
 </header>

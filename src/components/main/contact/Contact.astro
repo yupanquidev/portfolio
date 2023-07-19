@@ -8,25 +8,33 @@ import Twitter from "../../contactIcons/Twitter.astro";
 
 <section
   id="contact"
-  class="w-full h-auto mx-auto container px-20 flex flex-col justify-between gap-8"
+  class="w-full h-auto mx-auto container px-20 flex flex-col justify-between gap-8 max-lg:container max-lg:mx-auto max-lg:px-5 max-md:container max-md:mx-auto max-md:px-2 max-md:py-2"
 >
   <h2 class="text-5xl font-bold text-[#96F]">Contáctame</h2>
-  <div class="w-full flex">
-    <section class="w-full py-6 flex flex-col gap-8">
+  <div class="w-full flex max-lg:flex-col max-lg:gap-8">
+    <section class="w-full py-4 flex flex-col gap-6">
       <p class="text-base text-[#0A0C10] dark:text-[#F5F5FF]">
         Siéntete libre de contactarme en cualquier momento. ¡Me pondré en
         contacto contigo tan pronto como pueda!
       </p>
-      <p class="flex flex-col gap-2 text-[#0A0C10] dark:text-[#F5F5FF]">
+      <div
+        class="w-full flex flex-col gap-2 py-6 text-[#0A0C10] dark:text-[#F5F5FF]"
+      >
         <span class="text-lg font-bold">Email</span>
-        <span class="text-base">hyupanquia24@gmail.com</span>
-      </p>
-      <div class="flex gap-2 items-center">
-        <LinkedIn />
-        <Github />
-        <Gmail />
-        <Instagram />
-        <Twitter />
+        <section
+          class="flex flex-col gap-8 max-lg:flex-row max-lg:items-center max-lg:justify-between max-md:flex-col max-md:items-start"
+        >
+          <span class="text-base">hyupanquia24@gmail.com</span>
+          <div
+            class="flex gap-2 items-center max-lg:gap-4 max-md:[&>a>svg]:w-5"
+          >
+            <LinkedIn />
+            <Github />
+            <Gmail />
+            <Instagram />
+            <Twitter />
+          </div>
+        </section>
       </div>
     </section>
     <form
@@ -96,5 +104,11 @@ import Twitter from "../../contactIcons/Twitter.astro";
 <style>
   p {
     text-wrap: balance;
+  }
+
+  @media not all and (min-width: 1024px) {
+    p {
+      text-wrap: wrap;
+    }
   }
 </style>

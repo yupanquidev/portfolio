@@ -1,32 +1,41 @@
 ---
+import TailwindCSS from "../../tags/TailwindCSS.astro";
+import Astrojs from "../../tags/Astrojs.astro";
 import Portfolio from "/public/portfolio.webp";
 ---
 
 <section
   id="proyect"
-  class="w-full h-auto mx-auto container px-10 flex flex-col justify-between gap-8"
+  class="w-full h-auto mx-auto container px-10 flex flex-col justify-between gap-8 max-lg:container max-lg:mx-auto max-lg:px-5 max-md:container max-md:mx-auto max-md:px-2 max-md:py-2"
 >
-  <h2 class="text-5xl px-10 font-bold text-[#96F]">Proyectos</h2>
-  <div class="w-full flex justify-between gap-8 px-10">
+  <h2 class="text-5xl px-10 font-bold text-[#96F] max-sm:px-2">Proyectos</h2>
+  <div
+    class="w-full flex justify-between gap-8 px-10 max-sm:px-2 max-sm:flex-col"
+  >
     <article
-      class="w-full flex items-center justify-center gap-1 px-2 py-4 cursor-pointer border-2 rounded-md text-[#0A0C10] border-[#CFD9E4] shadow-[0_0px_20px_0px_#CFD9E4] hover:shadow-[0_0px_20px_0px_#CFD9E4] dark:text-[#F5F9FF] dark:border-[#08152C] dark:shadow-[0_0px_10px_0px_#08152C] dark:hover:shadow-[0_0px_20px_0px_#08152C] hover:text-opacity-100 hover:opacity-100"
+      class="w-full flex items-center justify-center gap-1 px-2 py-4 cursor-pointer border-2 rounded-md text-[#0A0C10] border-[#CFD9E4] shadow-[0_0px_20px_0px_#CFD9E4] hover:shadow-[0_0px_20px_0px_#CFD9E4] dark:text-[#F5F9FF] dark:border-[#08152C] dark:shadow-[0_0px_10px_0px_#08152C] dark:hover:shadow-[0_0px_20px_0px_#08152C] hover:text-opacity-100 hover:opacity-100 max-md:flex-col max-md:w-1/2 max-sm:w-full"
     >
       <section class="w-full flex gap-2 items-center text-[#F5F9FF]">
-        <img class="w-64" src={Portfolio} alt="Portfolio" />
+        <img class="w-64 max-sm:w-full" src={Portfolio} alt="Portfolio" />
       </section>
-      <section class="w-full flex gap-4">
-        <div class="text-[#F5F9FF]">
-          <h4 class="w-full flex items-center gap-2">
+      <section class="w-full flex gap-4 max-md:justify-center">
+        <div class="text-[#F5F9FF] max-md:w-full max-md:flex max-md:flex-col">
+          <h4 class="w-full flex items-center gap-2 max-md:justify-center">
             <div class="flex items-center gap-2">
               <span class="font-bold text-lg">Mi portafolio</span>
               <span class="font-normal text-xs p-1 rounded bg-[#113B73]">
                 Reciente
               </span>
             </div>
-            <span class="rotate-180 text-[#F5F9FF] opacity-60">
+            <a
+              class="rotate-180 text-[#F5F9FF] opacity-60"
+              href="https://ypnq.fly.dev/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-arrow-down-left"
+                class="icon icon-tabler icon-tabler-arrow-down-left text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
@@ -40,45 +49,68 @@ import Portfolio from "/public/portfolio.webp";
                 <path d="M17 7l-10 10"></path>
                 <path d="M16 17l-9 0l0 -9"></path>
               </svg>
-            </span>
+            </a>
+            <a
+              class="opacity-70 hover:opacity-100 text-[#0A0C10] dark:text-[#F5F9FF]"
+              href="https://github.com/ypnqh/portfolio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-brand-github text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                ></path>
+              </svg>
+            </a>
           </h4>
-          <aside class="py-2">
+          <aside class="py-2 max-md:flex max-md:flex-col max-md:items-center">
             <p class="text-sm text-gray-400">
               Primer sitio de portafolio construido con Astro y TailwindCSS.
             </p>
             <section class="py-2 flex gap-2">
-              <span
-                class="font-bold text-[#F5F9FF] bg-[#FF5A03] rounded-[10px] px-3 py-1 text-xs"
-                >Astro</span
-              >
-              <span
-                class="font-bold text-[#0A0C10] bg-[#38BDF8] rounded-[10px] px-3 py-1 text-xs"
-                >TailwindCSS</span
-              >
+              <Astrojs />
+              <TailwindCSS />
             </section>
           </aside>
         </div>
       </section>
     </article>
     <article
-      class="w-full flex items-center justify-center gap-1 px-2 py-4 cursor-pointer border-2 rounded-md text-[#0A0C10] border-[#CFD9E4] shadow-[0_0px_20px_0px_#CFD9E4] hover:shadow-[0_0px_20px_0px_#CFD9E4] dark:text-[#F5F9FF] dark:border-[#08152C] dark:shadow-[0_0px_10px_0px_#08152C] dark:hover:shadow-[0_0px_20px_0px_#08152C] hover:text-opacity-100 hover:opacity-100"
+      class="w-full flex items-center justify-center gap-1 px-2 py-4 cursor-pointer border-2 rounded-md text-[#0A0C10] border-[#CFD9E4] shadow-[0_0px_20px_0px_#CFD9E4] hover:shadow-[0_0px_20px_0px_#CFD9E4] dark:text-[#F5F9FF] dark:border-[#08152C] dark:shadow-[0_0px_10px_0px_#08152C] dark:hover:shadow-[0_0px_20px_0px_#08152C] hover:text-opacity-100 hover:opacity-100 max-md:flex-col max-md:w-1/2 max-sm:w-full"
     >
       <section class="w-full flex gap-2 items-center text-[#F5F9FF]">
-        <img class="w-64" src={Portfolio} alt="Portfolio" />
+        <img class="w-64 max-sm:w-full" src={Portfolio} alt="Portfolio" />
       </section>
-      <section class="w-full flex gap-4">
-        <div class="text-[#F5F9FF]">
-          <h4 class="w-full flex items-center gap-2">
+      <section class="w-full flex gap-4 max-md:justify-center">
+        <div class="text-[#F5F9FF] max-md:w-full max-md:flex max-md:flex-col">
+          <h4 class="w-full flex items-center gap-2 max-md:justify-center">
             <div class="flex items-center gap-2">
               <span class="font-bold text-lg">Mi portafolio</span>
               <span class="font-normal text-xs p-1 rounded bg-[#113B73]">
                 Reciente
               </span>
             </div>
-            <span class="rotate-180 text-[#F5F9FF] opacity-60">
+            <a
+              class="rotate-180 text-[#F5F9FF] opacity-60"
+              href="https://ypnq.fly.dev/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-arrow-down-left"
+                class="icon icon-tabler icon-tabler-arrow-down-left text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
@@ -92,21 +124,39 @@ import Portfolio from "/public/portfolio.webp";
                 <path d="M17 7l-10 10"></path>
                 <path d="M16 17l-9 0l0 -9"></path>
               </svg>
-            </span>
+            </a>
+            <a
+              class="opacity-70 hover:opacity-100 text-[#0A0C10] dark:text-[#F5F9FF]"
+              href="https://github.com/ypnqh/portfolio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-brand-github text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                ></path>
+              </svg>
+            </a>
           </h4>
-          <aside class="py-2">
+          <aside class="py-2 max-md:flex max-md:flex-col max-md:items-center">
             <p class="text-sm text-gray-400">
               Primer sitio de portafolio construido con Astro y TailwindCSS.
             </p>
             <section class="py-2 flex gap-2">
-              <span
-                class="font-bold text-[#F5F9FF] bg-[#FF5A03] rounded-[10px] px-3 py-1 text-xs"
-                >Astro</span
-              >
-              <span
-                class="font-bold text-[#0A0C10] bg-[#38BDF8] rounded-[10px] px-3 py-1 text-xs"
-                >TailwindCSS</span
-              >
+              <Astrojs />
+              <TailwindCSS />
             </section>
           </aside>
         </div>
@@ -118,5 +168,11 @@ import Portfolio from "/public/portfolio.webp";
 <style>
   p {
     text-wrap: balance;
+  }
+
+  @media not all and (min-width: 768px) {
+    p {
+      text-wrap: none;
+    }
   }
 </style>

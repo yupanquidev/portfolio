@@ -7,12 +7,16 @@ import IMGHome from "/public/home.svg";
 
 <section
   id="home"
-  class="w-full h-auto mx-auto container px-10 flex items-center justify-between"
+  class="w-full h-auto mx-auto container px-10 flex items-center justify-between max-lg:container max-lg:mx-auto max-lg:px-5 max-md:container max-md:mx-auto max-md:px-2 max-md:py-2 max-sm:container max-sm:mx-auto"
 >
-  <div class="w-full px-10 flex flex-col justify-center gap-8">
-    <div class="flex flex-col gap-6">
+  <div
+    class="w-full px-10 flex flex-col justify-center gap-8 max-lg:px-5 max-lg:py-0 max-sm:px-2 max-md:gap-4"
+  >
+    <div class="flex flex-col gap-6 max-lg:text-center">
       <h1 class="text-6xl font-bold text-[#96F]">Humberto Yupanqui Apaza</h1>
-      <h3 class="text-4xl font-bold dark:text-[#F5F9FF] text-[#0A0C10]">
+      <h3
+        class="text-4xl font-bold dark:text-[#F5F9FF] text-[#0A0C10] max-sm:text-3xl"
+      >
         FullStack Developer
       </h3>
       <p
@@ -22,44 +26,52 @@ import IMGHome from "/public/home.svg";
         accesibles e inclusivos y experiencias digitales para la web.
       </p>
     </div>
-    <div class="flex gap-4 items-center">
-      <LinkedIn />
-      <Github />
-      <Gmail />
-      <a
-        href="#"
-        class="font-medium py-3 px-4 flex gap-2 items-center text-sm text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
+    <div
+      class="w-auto flex gap-4 items-center max-lg:justify-center max-md:flex-col max-md:items-center"
+    >
+      <section class="w-auto flex gap-4 items-center max-lg:justify-center">
+        <LinkedIn />
+        <Github />
+        <Gmail />
+      </section>
+      <section
+        class="w-auto flex gap-2 max-lg:flex-row max-lg:justify-center max-md:gap-4"
       >
-        Descargar CV
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-download"
-            width="22"
-            height="22"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
-            <path d="M7 11l5 5l5 -5"></path>
-            <path d="M12 4l0 12"></path>
-          </svg>
-        </span>
-      </a>
-      <a
-        href="#contact"
-        class="font-medium py-3 px-4 text-sm text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
-      >
-        Contáctame
-      </a>
+        <a
+          href="#"
+          class="font-medium py-3 px-4 flex gap-2 items-center text-sm text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
+        >
+          Descargar CV
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-download"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+              <path d="M7 11l5 5l5 -5"></path>
+              <path d="M12 4l0 12"></path>
+            </svg>
+          </span>
+        </a>
+        <a
+          href="#contact"
+          class="font-medium py-3 px-4 text-sm text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
+        >
+          Contáctame
+        </a>
+      </section>
     </div>
   </div>
-  <div class="w-full px-10 flex justify-end">
+  <div class="w-full px-10 flex justify-end max-lg:hidden">
     <img class="w-[400pxs]" src={IMGHome} alt="" />
   </div>
 </section>

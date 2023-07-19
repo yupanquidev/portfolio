@@ -6,18 +6,18 @@ import Twitter from "../contactIcons/Twitter.astro";
 ---
 
 <footer
-  class="w-full bg-[#08152C] dark:bg-opacity-40 text-[#0A0C10] dark:text-gray-500"
+  class="w-full bg-blue-200 dark:bg-[#08152C] dark:bg-opacity-40 text-gray-700 dark:text-gray-500 pointer-events-auto"
 >
   <section
-    class="w-full h-auto mx-auto container px-20 py-10 bg-opacity-70 flex justify-between items-center gap-8"
+    class="w-full h-auto mx-auto container px-20 py-10 bg-opacity-70 flex justify-between items-center gap-4 max-lg:flex-col max-lg:container max-lg:mx-auto max-lg:px-5 max-md:container max-md:mx-auto max-md:px-2 max-md:py-2"
   >
-    <p class="w-full text-base text-[#0A0C10] dark:text-gray-500">
+    <p class="w-full text-base text-gray-700 dark:text-gray-500">
       Diseñado en
       <a
         href="https://www.figma.com/"
         target="_blank"
         rel="noreferrer"
-        class="text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] dark:focus-visible:text-[#96F]"
         >Figma</a
       >
       y codificado en
@@ -25,21 +25,21 @@ import Twitter from "../contactIcons/Twitter.astro";
         href="https://code.visualstudio.com/"
         target="_blank"
         rel="noreferrer"
-        class="text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] dark:focus-visible:text-[#96F]"
         >Visual Studio Code</a
       > por mí mismo. Construido con
       <a
         href="https://astro.build/"
         target="_blank"
         rel="noreferrer"
-        class="text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] dark:focus-visible:text-[#96F]"
         >Astro</a
       > y
       <a
         href="https://tailwindcss.com/"
         target="_blank"
         rel="noreferrer"
-        class="text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] dark:focus-visible:text-[#96F]"
         >Tailwind CSS</a
       >
       , desplegado en
@@ -47,20 +47,14 @@ import Twitter from "../contactIcons/Twitter.astro";
         href="https://fly.io/"
         target="_blank"
         rel="noreferrer"
-        class="text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] dark:focus-visible:text-[#96F]"
         >Fly.io</a
       >
       . Todo el texto está en la tipografía
-      <!--   <a
-        href=""
-        target="_blank"
-        rel="noreferrer"
-        class="text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
-        >Raleway</a
-      > -->
+
       <a
         href="https://rsms.me/inter/"
-        class="text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] dark:focus-visible:text-[#96F]"
         target="_blank"
         rel="noreferrer">Inter</a
       >
@@ -69,26 +63,27 @@ import Twitter from "../contactIcons/Twitter.astro";
         href="https://www.atipofoundry.com/fonts/n27"
         target="_blank"
         rel="noreferrer"
-        class="text-[#F5F9FF] hover:text-[#96F] focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] dark:focus-visible:text-[#96F]"
         >N27</a
       >.
     </p>
+    <span
+      class="hidden max-lg:block w-full h-[1px] bg-gray-200 dark:bg-gray-950"
+    ></span>
     <div
-      class="w-full flex items-center justify-center gap-2 text-sm [&>a>svg]:w-5"
+      class="w-full flex items-center justify-center gap-2 text-sm max-md:flex-col max-md:gap-1 max-sm:flex-col [&>div>a>svg]:w-5 [&>div]:px-0"
     >
-      <p class="flex items-center">
+      <p class="w-full flex items-center">
         © 2023 Humberto Yupanqui | FullStack Developer - Freelancer
       </p>
-      <Github style="hover:text-[#96F]" />
-      <Instagram style="hover:text-[#96F]" />
-      <Twitter style="hover:text-[#96F]" />
-      <LinkedIn style="hover:text-[#96F]" />
+      <div
+        class="flex items-center justify-center gap-2 max-lg:justify-end max-lg:gap-6 max-sm:justify-center"
+      >
+        <Github style="hover:text-[#96F]" />
+        <Instagram style="hover:text-[#96F]" />
+        <Twitter style="hover:text-[#96F]" />
+        <LinkedIn style="hover:text-[#96F]" />
+      </div>
     </div>
   </section>
 </footer>
-
-<style>
-  p {
-    text-wrap: balance;
-  }
-</style>
