@@ -9,9 +9,9 @@ import Twitter from "../contactIcons/Twitter.astro";
   class="w-full bg-blue-200 dark:bg-[#08152C] dark:bg-opacity-40 text-gray-700 dark:text-gray-500 pointer-events-auto"
 >
   <section
-    class="w-full h-auto mx-auto container px-20 py-10 bg-opacity-70 flex justify-between items-center gap-4 max-lg:flex-col max-lg:container max-lg:mx-auto max-lg:px-5 max-md:container max-md:mx-auto max-md:px-2 max-md:py-2"
+    class="container mx-auto py-10 flex flex-col gap-8 max-lg:gap-6 max-md:px-2"
   >
-    <p class="w-full text-base text-gray-700 dark:text-gray-500">
+    <p class="w-full text-base text-gray-700 dark:text-gray-500 max-sm:text-sm">
       Diseñado en
       <a
         href="https://www.figma.com/"
@@ -50,7 +50,7 @@ import Twitter from "../contactIcons/Twitter.astro";
         class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] dark:focus-visible:text-[#96F]"
         >Fly.io</a
       >
-      . Todo el texto está en la tipografía
+      . Las tipografías utilizadas son
 
       <a
         href="https://rsms.me/inter/"
@@ -67,17 +67,15 @@ import Twitter from "../contactIcons/Twitter.astro";
         >N27</a
       >.
     </p>
-    <span
-      class="hidden max-lg:block w-full h-[1px] bg-gray-200 dark:bg-gray-950"
-    ></span>
+    <span class="w-full h-[1px] bg-gray-400 dark:bg-gray-700"></span>
     <div
-      class="w-full flex items-center justify-center gap-2 text-sm max-md:flex-col max-md:gap-1 max-sm:flex-col [&>div>a>svg]:w-5 [&>div]:px-0"
+      class="w-full flex items-center justify-center gap-2max-md:gap-1 max-sm:flex-col [&>div>a>svg]:w-6 [&>div]:px-0"
     >
-      <p class="w-full flex items-center">
+      <p class="w-full flex justify-center text-sm max-sm:text-xs">
         © 2023 Humberto Yupanqui | FullStack Developer - Freelancer
       </p>
       <div
-        class="flex items-center justify-center gap-2 max-lg:justify-end max-lg:gap-6 max-sm:justify-center"
+        class="flex items-center justify-center gap-2 max-lg:justify-end max-lg:gap-6 max-sm:justify-center max-sm:gap-1"
       >
         <Github style="hover:text-[#96F]" />
         <Instagram style="hover:text-[#96F]" />

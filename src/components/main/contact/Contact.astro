@@ -8,29 +8,33 @@ import Twitter from "../../contactIcons/Twitter.astro";
 
 <section
   id="contact"
-  class="w-full h-auto mx-auto container px-20 flex flex-col justify-between gap-8 max-lg:container max-lg:mx-auto max-lg:px-5 max-md:container max-md:mx-auto max-md:px-2 max-md:py-2"
+  class="container mx-auto px-10 flex flex-col gap-8 max-lg:gap-6 max-lg:px-5 max-lg:py-0 max-md:gap-0 max-md:p-2"
 >
   <h2
-    class="w-1/2 text-5xl uppercase font-black text-[#96F] max-sm:sticky max-sm:top-0 max-sm:pt-4 max-sm:z-30 max-sm:text-xl"
+    class="w-full text-4xl uppercase font-black text-[#96F] max-lg:text-3xl max-md:text-2xl max-sm:sticky max-sm:top-4 max-sm:z-30 max-sm:text-xl max-sm:w-4/5"
   >
     Contáctame
   </h2>
-  <div class="w-full flex max-lg:flex-col max-lg:gap-8">
-    <section class="w-full py-4 flex flex-col gap-6">
-      <p class="text-base text-[#0A0C10] dark:text-[#F5F5FF]">
+  <div
+    class="w-full flex py-4 max-lg:flex-col max-lg:gap-8 max-md:gap-4 max-sm:gap-2"
+  >
+    <section class="w-full flex flex-col gap-6 max-md:gap-6">
+      <p class="text-base text-[#0A0C10] dark:text-[#F5F5FF] max-sm:text-sm">
         Siéntete libre de contactarme en cualquier momento. ¡Me pondré en
         contacto contigo tan pronto como pueda!
       </p>
       <div
-        class="w-full flex flex-col gap-2 py-6 text-[#0A0C10] dark:text-[#F5F5FF]"
+        class="w-full flex flex-col gap-2 text-[#0A0C10] dark:text-[#F5F5FF] max-md:gap-0"
       >
-        <span class="text-lg font-bold">Email</span>
-        <section
-          class="flex flex-col gap-8 max-lg:flex-row max-lg:items-center max-lg:justify-between max-md:flex-col max-md:items-start"
+        <span class="text-lg font-bold max-sm:text-base"
+          ><strong>Email</strong></span
         >
-          <span class="text-base">hyupanquia24@gmail.com</span>
+        <section
+          class="flex flex-col gap-8 max-lg:flex-row max-lg:items-center max-md:flex max-md:gap-4"
+        >
+          <span class="text-base max-sm:text-sm">hyupanquia24@gmail.com</span>
           <div
-            class="flex gap-2 items-center max-lg:gap-4 max-md:[&>a>svg]:w-5"
+            class="flex gap-2 items-center max-lg:gap-4 max-md:gap-2 max-lg:[&>a>svg]:w-7 max-md:[&>a>svg]:w-6 max-sm:gap-1"
           >
             <LinkedIn />
             <Github />
@@ -42,9 +46,9 @@ import Twitter from "../../contactIcons/Twitter.astro";
       </div>
     </section>
     <form
-      class="w-full h-auto flex flex-col items-center justify-center gap-6 px-4 py-6 cursor-pointer border-2 rounded-md text-[#0A0C10] border-[#CFD9E4] shadow-[0_0px_20px_0px_#CFD9E4] hover:shadow-[0_0px_20px_0px_#CFD9E4] dark:text-[#F5F9FF] dark:border-[#08152C] dark:shadow-[0_0px_10px_0px_#08152C] dark:hover:shadow-[0_0px_20px_0px_#08152C] hover:text-opacity-100 hover:opacity-100"
+      class="w-full h-auto flex flex-col items-center justify-center gap-6 px-4 py-6 cursor-pointer border-2 rounded-md text-[#0A0C10] border-[#CFD9E4] shadow-[0_0px_20px_0px_#CFD9E4] hover:shadow-[0_0px_20px_0px_#CFD9E4] dark:text-[#F5F9FF] dark:border-[#08152C] dark:shadow-[0_0px_10px_0px_#08152C] dark:hover:shadow-[0_0px_20px_0px_#08152C] hover:text-opacity-100 hover:opacity-100 max-sm:gap-4"
     >
-      <div class="w-full h-auto flex gap-4">
+      <div class="w-full h-auto flex gap-4 max-sm:flex-col">
         <input
           required=""
           autocomplete="off"
@@ -52,7 +56,7 @@ import Twitter from "../../contactIcons/Twitter.astro";
           type="text"
           value=""
           placeholder="Nombre"
-          class="w-full dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C]"
+          class="w-full h-12 dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C]"
           data-form-type="name"
         />
         <input
@@ -62,7 +66,7 @@ import Twitter from "../../contactIcons/Twitter.astro";
           type="email"
           value=""
           placeholder="Correo electrónico"
-          class="w-full dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C]"
+          class="w-full h-12 dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C]"
           data-form-type="name"
         />
       </div>
@@ -70,14 +74,14 @@ import Twitter from "../../contactIcons/Twitter.astro";
         required=""
         autocomplete="off"
         name="message"
-        rows="5"
+        rows="7"
         placeholder="Mensaje"
         class="w-full dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C] resize-none"
         data-dashlane-rid="7499e0651a5cbd66"
         data-form-type="other"></textarea>
       <a
         href="#"
-        class="w-full flex justify-center items-center font-bold py-3 px-4 gap-2 text-sm text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
+        class="w-full h-12 flex justify-center items-center font-bold py-3 px-4 gap-2 text-sm text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
       >
         Enviar mensaje
         <span>
