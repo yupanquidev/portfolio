@@ -17,7 +17,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="w-full h-full bg-[#F5F9FF] dark:bg-[#0A0C10] flex flex-col gap-10 max-sm:gap-4"
+    class="w-full h-full bg-[#F5F9FF] dark:bg-[#0A0C10] flex flex-col gap-10 max-md:gap-5 max-sm:gap-0"
   >
     <slot />
   </body>
@@ -75,12 +75,21 @@ const { title } = Astro.props;
     background-color: #96f;
   }
 
-  header,
-  main {
+  header {
     font-family: "Inter", sans-serif;
   }
 
-  footer {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Inter", sans-serif;
+  }
+
+  footer,
+  button,
+  p {
     font-family: "N27", sans-serif;
   }
 </style>

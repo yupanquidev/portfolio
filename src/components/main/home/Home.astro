@@ -12,22 +12,26 @@ import IMGHome from "/public/home.svg";
   <div
     class="w-full px-10 flex flex-col justify-center gap-8 max-lg:px-5 max-lg:py-0 max-sm:px-2 max-md:gap-4"
   >
-    <div class="flex flex-col gap-6 max-lg:text-center">
-      <h1 class="text-6xl font-bold text-[#96F]">Humberto Yupanqui Apaza</h1>
+    <div class="flex flex-col gap-6 max-lg:text-center max-md:gap-3">
+      <h1
+        class="text-6xl font-bold text-[#96F] max-md:text-5xl max-sm:text-4xl"
+      >
+        Humberto Yupanqui Apaza
+      </h1>
       <h3
-        class="text-4xl font-bold dark:text-[#F5F9FF] text-[#0A0C10] max-sm:text-3xl"
+        class="text-4xl font-bold dark:text-[#F5F9FF] text-[#0A0C10] max-md:text-3xl max-sm:text-2xl"
       >
         FullStack Developer
       </h3>
       <p
-        class="dark:text-[#F5F9FF] text-[#0A0C10] text-base font-normal opacity-70"
+        class="dark:text-[#F5F9FF] text-[#0A0C10] text-base font-normal opacity-70 max-sm:text-sm"
       >
         +1 año de experiencia en desarrollo web, Construyendo productos
         accesibles e inclusivos y experiencias digitales para la web.
       </p>
     </div>
     <div
-      class="w-auto flex gap-4 items-center max-lg:justify-center max-md:flex-col max-md:items-center"
+      class="w-auto flex gap-4 items-center max-lg:justify-center max-md:justify-evenly max-md:items-center max-sm:flex-col"
     >
       <section class="w-auto flex gap-4 items-center max-lg:justify-center">
         <LinkedIn />
@@ -35,11 +39,11 @@ import IMGHome from "/public/home.svg";
         <Gmail />
       </section>
       <section
-        class="w-auto flex gap-2 max-lg:flex-row max-lg:justify-center max-md:gap-4"
+        class="w-auto flex gap-2 max-lg:flex-row max-lg:justify-center max-md:gap-4 items-center"
       >
         <a
           href="#"
-          class="font-medium py-3 px-4 flex gap-2 items-center text-sm text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
+          class="h-10 font-medium justify-center px-4 flex gap-2 items-center text-sm font-n27 text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
         >
           Descargar CV
           <span>
@@ -64,7 +68,7 @@ import IMGHome from "/public/home.svg";
         </a>
         <a
           href="#contact"
-          class="font-medium py-3 px-4 text-sm text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
+          class="h-10 font-medium flex items-center justify-center px-4 text-sm font-n27 text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
         >
           Contáctame
         </a>
@@ -75,3 +79,12 @@ import IMGHome from "/public/home.svg";
     <img class="w-[400pxs]" src={IMGHome} alt="" />
   </div>
 </section>
+
+<style>
+  @media not all and (min-width: 640px) {
+    p,
+    h1 {
+      text-wrap: balance;
+    }
+  }
+</style>
