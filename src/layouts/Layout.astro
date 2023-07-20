@@ -16,12 +16,21 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="w-full h-full bg-[#F5F9FF] dark:bg-[#0A0C10]">
+  <body
+    class="w-full h-full bg-[#F5F9FF] dark:bg-[#0A0C10] flex flex-col gap-10 max-sm:gap-4"
+  >
     <slot />
   </body>
 </html>
 
 <style is:global>
+  @font-face {
+    font-family: "Inter";
+    src: url("/public/fonts/Inter-Black.woff2") format("woff2"),
+      url("/public/fonts/Inter-Black.woff") format("woff");
+    font-weight: 900;
+  }
+
   @font-face {
     font-family: "Inter";
     src: url("/public/fonts/Inter-Bold.woff2") format("woff2"),
@@ -31,16 +40,16 @@ const { title } = Astro.props;
 
   @font-face {
     font-family: "Inter";
-    src: url("/public/fonts/Inter-Regular.woff2") format("woff2"),
-      url("/public/fonts/Inter-Regular.woff") format("woff");
-    font-weight: normal;
+    src: url("/public/fonts/Inter-Medium.woff2") format("woff2"),
+      url("/public/fonts/Inter-Medium.woff") format("woff");
+    font-weight: 500;
   }
 
   @font-face {
     font-family: "Inter";
-    src: url("/public/fonts/Inter-Medium.woff2") format("woff2"),
-      url("/public/fonts/Inter-Medium.woff") format("woff");
-    font-weight: 500;
+    src: url("/public/fonts/Inter-Regular.woff2") format("woff2"),
+      url("/public/fonts/Inter-Regular.woff") format("woff");
+    font-weight: normal;
   }
 
   @font-face {

@@ -1,17 +1,18 @@
 ---
 import Backdrop from "../Backdrop.astro";
 import DarkModeToggle from "../DarkModeToggle.astro";
-import MenuToggle from "./MenuToggle.astro";
 ---
 
-<header class="w-full h-auto p-5">
+<header
+  class="w-full h-auto px-5 justify-center items-center sticky backdrop-blur-3xl bg-[#F5F9FF]/70 dark:bg-[#0A0C10]/70 top-0 right-0 left-0 z-30 max-sm:px-0"
+>
   <div
-    class="w-full h-auto container mx-auto px-10 py-4 flex justify-between items-center font-bold text-base text-[#0A0C10] dark:text-[#F5F9FF] max-lg:container max-lg:mx-auto max-lg:px-5 max-md:container max-md:mx-auto max-md:px-2 max-md:py-2 max-sm:bg-blue-200 max-sm:dark:bg-[#08152c] max-sm:top-0 max-sm:w-1/2 max-sm:min-h-screen max-sm:py-5 max-sm:right-0 max-sm:backdrop-blur-3xl max-sm:flex-col max-sm:hiddsen max-sm:fixed"
+    class="w-full h-auto container mx-auto px-10 py-0 flex justify-between items-center font-bold text-base text-[#0A0C10] dark:text-[#F5F9FF] max-lg:px-5 max-md:px-2 max-md:py-2 max-sm:px-0 max-sm:py-0"
     id="header-menu"
   >
     <Backdrop />
-    <div class="w-auto h-full px-10 py-4 max-lg:px-4 max-md:hidden">
-      <a class="opacity-70 hover:opacity-100" href="/">
+    <div class="w-auto h-full px-10 py-4 max-lg:px-4">
+      <a class="opacity-70 hover:opacity-100 max-sm:opacity-0" href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-code"
@@ -32,13 +33,13 @@ import MenuToggle from "./MenuToggle.astro";
       </a>
     </div>
     <nav
-      class="w-auto h-full pl-10 pr-10 py-4 flex items-center justify-center relative z-10 max-lg:px-4 max-md:px-2 max-md:py-2 max-sm:w-full"
+      class="w-auto h-full pl-10 pr-10 py-4 z-10 flex items-center justify-between max-lg:px-4 max-md:px-2 max-md:py-2 max-sm:hidden"
       id="backdrop"
     >
       <ul
-        class="w-auto h-full flex items-center p-0 [&>li]:py-2 [&>li]:px-4 [&>li]:rounded-lg max-sm:flex max-sm:flex-col max-sm:items-start max-sm:w-full"
+        class="w-auto h-full flex items-center p-0 [&>li]:py-2 [&>li]:px-4 [&>li]:rounded-lg max-sm:flex-col max-sm:items-start max-sm:w-full"
       >
-        <li class="w-full text-left">
+        <li class="w-full text-left max-md:hidden">
           <a
             class="opacity-70 hover:opacity-100 hover:[text-shadow:0_0_10px_#F5F9FF]"
             href="#home"
@@ -80,9 +81,6 @@ import MenuToggle from "./MenuToggle.astro";
         </li>
       </ul>
     </nav>
-    <section class="max-sm:flex max-sm:w-full">
-      <DarkModeToggle />
-    </section>
+    <DarkModeToggle />
   </div>
-  <MenuToggle />
 </header>
