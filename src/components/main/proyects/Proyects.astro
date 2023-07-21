@@ -2,6 +2,7 @@
 import TailwindCSS from "../../tags/TailwindCSS.astro";
 import Astrojs from "../../tags/Astrojs.astro";
 import Portfolio from "/public/portfolio.webp";
+import Github from "../../contactIcons/Github.astro";
 ---
 
 <section
@@ -35,7 +36,7 @@ import Portfolio from "/public/portfolio.webp";
                 Reciente
               </span>
             </div>
-            <div class="flex gap-2">
+            <div class="flex gap-2 [&>a>svg]:w-5 items-center justify-center">
               <a
                 class="rotate-180"
                 href="https://ypnq.fly.dev/"
@@ -44,9 +45,7 @@ import Portfolio from "/public/portfolio.webp";
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="stroke-[#0A0C10] dark:stroke-[#F5F9FF] hover:stroke-purple-600 hover:scale-125 dark:hover:stroke-purple-600 transition-all focus-visible:text-[#96F]"
-                  width="20"
-                  height="20"
+                  class="stroke-[#0A0C10] dark:stroke-[#F5F9FF] hover:stroke-purple-600 hover:scale-125 dark:hover:stroke-purple-600 transition-all duration-500 focus-visible:text-[#96F]"
                   viewBox="0 0 24 24"
                   stroke-width="2"
                   stroke="currentColor"
@@ -59,29 +58,7 @@ import Portfolio from "/public/portfolio.webp";
                   <path d="M16 17l-9 0l0 -9"></path>
                 </svg>
               </a>
-              <a
-                href="https://github.com/ypnqh/portfolio"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="stroke-[#0A0C10] dark:stroke-[#F5F9FF] hover:stroke-purple-600 hover:scale-125 dark:hover:stroke-purple-600 transition-all focus-visible:text-[#96F]"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-                  ></path>
-                </svg>
-              </a>
+              <Github hyperlink="https://github.com/ypnqh/portfolio" />
             </div>
           </aside>
           <aside class="py-2 max-md:flex max-md:flex-col max-md:items-center">
@@ -140,7 +117,6 @@ import Portfolio from "/public/portfolio.webp";
                 </svg>
               </a>
               <a
-                class="opacity-70 hover:opacity-100 text-[#0A0C10] dark:text-[#F5F9FF]"
                 href="https://github.com/ypnqh/portfolio"
                 target="_blank"
                 rel="noreferrer"
