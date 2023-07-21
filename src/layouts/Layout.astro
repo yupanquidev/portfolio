@@ -95,3 +95,15 @@ const { title } = Astro.props;
     font-family: "N27", sans-serif;
   }
 </style>
+
+<script>
+  // CHANGE TITLE WHEN USER CHANEGS TAB
+  let docTitle = document.title;
+  window.addEventListener("blur", () => {
+    document.title = "Come back - Humberto Yupanqui Apaza ";
+  });
+
+  window.addEventListener("focus", () => {
+    document.title = docTitle;
+  });
+</script>

@@ -8,10 +8,10 @@ import Twitter from "../../contactIcons/Twitter.astro";
 
 <section
   id="contact"
-  class="container mx-auto px-10 flex flex-col gap-8 max-lg:gap-6 max-lg:px-5 max-lg:py-0 max-md:gap-0 max-md:p-2"
+  class="container mx-auto px-60 flex flex-col gap-8 max-lg:gap-6 max-lg:px-10 max-md:px-5 max-md:gap-0"
 >
   <h2
-    class="w-full text-4xl uppercase font-black text-[#96F] max-lg:text-3xl max-md:text-2xl max-sm:sticky max-sm:top-4 max-sm:z-30 max-sm:text-xl max-sm:w-4/5"
+    class="w-full text-4xl uppercase font-black text-purple-600 dark:text-[#96F] max-lg:text-3xl max-md:text-2xl max-sm:sticky max-sm:top-4 max-sm:z-30 max-sm:text-xl max-sm:w-4/5 max-sm:text-left"
   >
     Contáctame
   </h2>
@@ -36,17 +36,17 @@ import Twitter from "../../contactIcons/Twitter.astro";
           <div
             class="flex gap-2 items-center max-lg:gap-4 max-md:gap-2 max-lg:[&>a>svg]:w-7 max-md:[&>a>svg]:w-6 max-sm:gap-1"
           >
-            <LinkedIn />
-            <Github />
-            <Gmail />
-            <Instagram />
-            <Twitter />
+            <LinkedIn style="hover:text-[#96F] transition-all transition-all" />
+            <Github style="hover:text-[#96F] transition-all" />
+            <Gmail style="hover:text-[#96F] transition-all" />
+            <Instagram style="hover:text-[#96F] transition-all" />
+            <Twitter style="hover:text-[#96F] transition-all" />
           </div>
         </section>
       </div>
     </section>
     <form
-      class="w-full h-auto flex flex-col items-center justify-center gap-6 px-4 py-6 cursor-pointer border-2 rounded-md text-[#0A0C10] border-[#CFD9E4] shadow-[0_0px_20px_0px_#CFD9E4] hover:shadow-[0_0px_20px_0px_#CFD9E4] dark:text-[#F5F9FF] dark:border-[#08152C] dark:shadow-[0_0px_10px_0px_#08152C] dark:hover:shadow-[0_0px_20px_0px_#08152C] hover:text-opacity-100 hover:opacity-100 max-sm:gap-4"
+      class="w-full h-auto flex flex-col items-center justify-center gap-6 px-4 py-6 cursor-pointer transition-all rounded-lg border-1 shadow-[0_0px_20px_0px_#CFD9E4] hover:shadow-[0_0px_20px_0px_#CFD9E4] dark:border-[#172554] dark:shadow-[0_0px_5px_0px_#172554] hover:bg-blue-200 dark:hover:bg-blue-950 max-sm:gap-4"
     >
       <div class="w-full h-auto flex gap-4 max-sm:flex-col">
         <input
@@ -56,7 +56,7 @@ import Twitter from "../../contactIcons/Twitter.astro";
           type="text"
           value=""
           placeholder="Nombre"
-          class="w-full h-12 dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C]"
+          class="w-full h-12 dark:bg-[#08152C] border-2 dark:border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-bold focus:outline-none focus:border-purple-600 dark:focus:border-[#96F]/40 focus:border-opacity-40 dark:border-opacity-20 placeholder-opacity-70 dark:placeholder-opacity-50 placeholder-[#0A0C10] bg-blue-50 dark:placeholder-[#F5F9FF] border-blue-200 text-[#0A0C10] dark:text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C]"
           data-form-type="name"
         />
         <input
@@ -66,7 +66,7 @@ import Twitter from "../../contactIcons/Twitter.astro";
           type="email"
           value=""
           placeholder="Correo electrónico"
-          class="w-full h-12 dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C]"
+          class="w-full h-12 dark:bg-[#08152C] border-2 dark:border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-bold focus:outline-none focus:border-purple-600 dark:focus:border-[#96F]/40 focus:border-opacity-40 dark:border-opacity-20 placeholder-opacity-70 dark:placeholder-opacity-50 placeholder-[#0A0C10] bg-blue-50 dark:placeholder-[#F5F9FF] border-blue-200 text-[#0A0C10] dark:text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C]"
           data-form-type="name"
         />
       </div>
@@ -76,12 +76,12 @@ import Twitter from "../../contactIcons/Twitter.astro";
         name="message"
         rows="7"
         placeholder="Mensaje"
-        class="w-full dark:bg-[#08152C] border-2 border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-medium focus:outline-none focus:border-[#96F] focus:border-opacity-30 placeholder-opacity-70 text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C] resize-none"
+        class="w-full dark:bg-[#08152C] border-2 dark:border-[#08152C] border-opacity-60 p-2 rounded-md text-sm font-bold focus:outline-none focus:border-purple-600 dark:focus:border-[#96F]/40 focus:border-opacity-40 dark:border-opacity-20 placeholder-opacity-70 dark:placeholder-opacity-50 placeholder-[#0A0C10] bg-blue-50 dark:placeholder-[#F5F9FF] border-blue-200 text-[#0A0C10] dark:text-[#F5F9FF] dark:hover:shadow-[0_0px_10px_0px_#08152C] resize-none"
         data-dashlane-rid="7499e0651a5cbd66"
         data-form-type="other"></textarea>
       <a
         href="#"
-        class="w-full h-12 flex justify-center items-center font-bold py-3 px-4 gap-2 text-sm text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
+        class="w-full h-12 flex justify-center items-center font-bold px-4 gap-2 text-base text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-purple-600 dark:bg-[#96F] transition-all"
       >
         Enviar mensaje
         <span>

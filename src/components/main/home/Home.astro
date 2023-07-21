@@ -1,81 +1,75 @@
 ---
 import Github from "../../contactIcons/Github.astro";
 import Gmail from "../../contactIcons/Gmail.astro";
+import Instagram from "../../contactIcons/Instagram.astro";
 import LinkedIn from "../../contactIcons/LinkedIn.astro";
-import IMGHome from "/public/home.svg";
+import Twitter from "../../contactIcons/Twitter.astro";
 ---
 
 <section
   id="home"
-  class="w-full mx-auto container px-10 flex items-center justify-center max-lg:p-0 max-md:p-2"
+  class="w-full mx-auto container px-60 flex items-center justify-center flex-col gap-8 max-lg:px-10 max-sm:px-2 max-md:gap-4 max-md:p-5 max-sm:pt-0"
 >
-  <div
-    class="w-full px-10 flex flex-col justify-center gap-8 max-lg:px-5 max-lg:py-0 max-sm:px-2 max-md:gap-4"
-  >
-    <div class="flex flex-col gap-6 max-lg:text-center max-md:gap-3">
-      <h1
-        class="text-6xl font-bold text-[#96F] max-md:text-5xl max-sm:text-4xl"
-      >
-        Humberto Yupanqui Apaza
-      </h1>
-      <h3
-        class="text-4xl font-bold dark:text-[#F5F9FF] text-[#0A0C10] max-md:text-3xl max-sm:text-2xl"
-      >
-        FullStack Developer
-      </h3>
-      <p
-        class="dark:text-[#F5F9FF] text-[#0A0C10] text-base font-normal opacity-70 max-sm:text-sm"
-      >
-        +1 año de experiencia en desarrollo web, Construyendo productos
-        accesibles e inclusivos y experiencias digitales para la web.
-      </p>
-    </div>
-    <div
-      class="w-auto flex gap-4 items-center max-lg:justify-center max-md:justify-evenly max-md:items-center max-sm:flex-col"
+  <div class="flex flex-col gap-6 max-lg:text-center max-md:gap-3">
+    <h1
+      class="text-6xl font-bold text-purple-600 dark:text-[#96F] max-md:text-5xl max-sm:text-4xl"
     >
-      <section class="w-auto flex gap-4 items-center max-lg:justify-center">
-        <LinkedIn />
-        <Github />
-        <Gmail />
-      </section>
-      <section
-        class="w-auto flex gap-2 max-lg:flex-row max-lg:justify-center max-md:gap-4 items-center"
-      >
-        <a
-          href="#"
-          class="h-10 font-medium justify-center px-4 flex gap-2 items-center text-sm font-n27 text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
-        >
-          Descargar CV
-          <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-download"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
-              <path d="M7 11l5 5l5 -5"></path>
-              <path d="M12 4l0 12"></path>
-            </svg>
-          </span>
-        </a>
-        <a
-          href="#contact"
-          class="h-10 font-medium flex items-center justify-center px-4 text-sm font-n27 text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-[#96F] bg-opacity-70 hover:bg-opacity-100"
-        >
-          Contáctame
-        </a>
-      </section>
-    </div>
+      Humberto Yupanqui Apaza
+    </h1>
+    <h3
+      class="text-4xl font-bold dark:text-[#F5F9FF] text-[#0A0C10] max-md:text-3xl max-sm:text-2xl"
+    >
+      FullStack Developer
+    </h3>
+    <p
+      class="dark:text-[#F5F9FF] text-[#0A0C10] text-base font-normal opacity-70 max-sm:text-sm"
+    >
+      +1 año de experiencia en desarrollo web, Construyendo productos accesibles
+      e inclusivos y experiencias digitales para la web.
+    </p>
   </div>
-  <div class="w-full px-10 flex justify-end bg-white max-lg:hidden">
-    <img class="w-[400pxs]" src={IMGHome} alt="" />
+  <div class="w-full flex gap-8 items-center justify-between max-md:flex-col">
+    <section
+      class="w-auto flex gap-4 max-lg:flex-row max-lg:justify-center max-md:gap-6 items-center"
+    >
+      <a
+        href="#"
+        class="h-10 font-medium justify-center px-4 flex gap-2 items-center text-sm font-n27 text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-purple-600 dark:bg-[#96F] dark:bg-opacity-70 dark:hover:bg-opacity-100 transition-all"
+      >
+        Descargar CV
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-download"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+            <path d="M7 11l5 5l5 -5"></path>
+            <path d="M12 4l0 12"></path>
+          </svg>
+        </span>
+      </a>
+      <a
+        href="#contact"
+        class="h-10 font-medium flex items-center justify-center px-4 text-sm font-n27 text-[#F5F9FF] hover:text-[#0A0C10] rounded-lg bg-purple-600 dark:bg-[#96F] dark:bg-opacity-70 dark:hover:bg-opacity-100 transition-all"
+      >
+        Contáctame
+      </a>
+    </section>
+    <section class="w-auto flex gap-4 items-center max-lg:justify-center">
+      <Gmail style="hover:text-[#96F] transition-all" />
+      <LinkedIn style="hover:text-[#96F] transition-all" />
+      <Github style="hover:text-[#96F] transition-all" />
+      <Instagram style="hover:text-[#96F] transition-all" />
+      <Twitter style="hover:text-[#96F] transition-all" />
+    </section>
   </div>
 </section>

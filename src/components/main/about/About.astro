@@ -4,110 +4,35 @@ import TechnologyStack from "./TechnologyStack.astro";
 
 <section
   id="about"
-  class="container mx-auto px-10 flex flex-col gap-8 max-lg:gap-6 max-lg:px-5 max-lg:py-0 max-md:gap-0 max-md:p-2"
+  class="container mx-auto px-60 flex flex-col gap-6 max-lg:px-10 max-md:px-5 max-md:gap-2"
 >
   <h2
-    class="w-full text-4xl uppercase font-black text-[#96F] max-lg:text-3xl max-md:text-2xl max-sm:sticky max-sm:top-4 max-sm:z-30 max-sm:text-xl max-sm:w-4/5 max-sm:text-left"
+    class="w-full text-4xl uppercase font-black text-purple-600 dark:text-[#96F] max-lg:text-3xl max-md:text-2xl max-sm:sticky max-sm:top-4 max-sm:z-30 max-sm:text-xl max-sm:w-4/5 max-sm:text-left"
   >
     Sobre mí
   </h2>
-  <div class="w-full flex gap-8 items-center py-4">
-    <section class="max-lg:hidden">
-      <svg
-        width="200"
-        viewBox="0 0 338 403"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g opacity="0.6">
-          <path
-            d="M182.729 371.987C218.672 371.987 247.855 378.901 247.855 387.418C247.855 395.935 218.672 402.85 182.729 402.85C146.785 402.85 117.602 395.935 117.602 387.418C117.602 378.901 146.785 371.987 182.729 371.987Z"
-            fill="#C4C4C4"></path>
-        </g>
-        <path
-          d="M26.7665 108.19C41.5389 106.663 55.0745 120.334 56.9731 138.7C58.8718 157.065 48.4193 173.217 33.6469 174.744C18.8745 176.271 5.33892 162.6 3.44026 144.234C1.54159 125.868 11.9941 109.717 26.7665 108.19Z"
-          fill="#E1E1E1"></path>
-        <path
-          d="M301.183 79.8205C315.955 78.2933 329.491 91.9649 331.389 110.331C333.288 128.696 322.836 144.848 308.063 146.375C293.291 147.902 279.755 134.231 277.856 115.865C275.958 97.4992 286.41 81.3477 301.183 79.8205Z"
-          fill="#E1E1E1"></path>
-        <path
-          d="M178.607 180.68C172.608 180.68 112.183 175.346 104.582 215.564C100.616 236.545 103.456 279.104 127.568 303.036C146.261 321.589 173.201 320.659 179.577 320.801C186.144 320.947 217.761 322.061 236.054 303.587C258.279 281.143 263.456 236.437 258.482 214.694C251.122 182.517 203.335 180.68 178.607 180.68Z"
-          fill="url(#paint0_linear_178_81)"></path>
-        <path
-          d="M180.304 183.104C210.676 183.104 235.335 190.165 235.335 198.862C235.335 207.558 210.676 214.619 180.304 214.619C149.933 214.619 125.274 207.558 125.274 198.862C125.274 190.165 149.933 183.104 180.304 183.104Z"
-          fill="#D1D1D1"></path>
-        <path
-          d="M180.304 183.104C210.676 183.104 235.335 190.165 235.335 198.862C235.335 207.558 210.676 214.619 180.304 214.619C149.933 214.619 125.274 207.558 125.274 198.862C125.274 190.165 149.933 183.104 180.304 183.104Z"
-          stroke="#939393"></path>
-        <path
-          d="M296.613 61.0849C230.63 -20.8065 73.1731 12.0443 43.3333 91.1686C32.459 120.004 17.2501 197.201 106.022 197.772C122.761 197.88 259.486 182.882 259.486 182.882C259.486 182.882 295.245 177.221 309.918 150.149C320.968 129.759 320.11 90.2472 296.613 61.0849Z"
-          fill="url(#paint1_linear_178_81)"></path>
-        <path
-          d="M304.298 93.7219L305.993 110.119C307.754 127.154 294.971 142.454 277.467 144.264L122.349 160.3C104.844 162.11 89.2015 149.748 87.4405 132.714L85.7453 116.316C83.9842 99.2813 96.7669 83.981 114.272 82.1713L269.39 66.1351C286.894 64.3254 302.537 76.6871 304.298 93.7219Z"
-          fill="#222222"></path>
-        <path
-          d="M214.82 72.1752C214.428 74.9116 223.202 122.611 187.071 152.667L283.941 142.376C283.941 142.376 307.672 140.898 305.005 100.96C303.665 80.8819 294.269 64.294 273.24 65.9806C252.211 67.6672 214.845 72.4163 214.82 72.1752Z"
-          fill="#3A3A3A"></path>
-        <path
-          d="M134.812 104.907L137.654 132.397C138.149 137.188 134.662 141.48 129.87 141.975C125.079 142.471 120.787 138.983 120.292 134.192L117.45 106.702C116.955 101.911 120.443 97.6187 125.234 97.1234C130.025 96.6281 134.317 100.116 134.812 104.907Z"
-          fill="#4084FF"></path>
-        <path
-          d="M268.885 91.0464L271.727 118.536C272.223 123.327 268.735 127.619 263.944 128.115C259.153 128.61 254.861 125.122 254.365 120.331L251.523 92.8413C251.028 88.0502 254.516 83.7581 259.307 83.2628C264.098 82.7675 268.39 86.2553 268.885 91.0464Z"
-          fill="#4084FF"></path>
-        <path
-          d="M73.566 208.582C50.1717 247.617 65.9265 288.242 71.5919 300.665C74.7765 307.648 84.5014 308.847 89.2338 305.175C92.9206 302.314 92.1778 295.443 92.0413 292.89C89.3351 242.35 93.2259 217.811 94.4031 212.259C94.9514 209.674 92.9412 203.726 88.468 202.634C83.3362 201.381 75.4971 205.36 73.566 208.582Z"
-          fill="#EFEFEF"></path>
-        <path
-          d="M287.372 217.37C325.716 192.859 329.726 149.471 330.193 135.826C330.456 128.155 322.286 122.746 316.412 123.923C311.837 124.84 309.438 131.322 308.422 133.667C288.312 180.113 273.889 200.344 270.36 204.789C268.716 206.858 267.864 213.078 271.381 216.05C275.416 219.46 284.207 219.393 287.372 217.37Z"
-          fill="url(#paint2_linear_178_81)"></path>
-        <defs>
-          <linearGradient
-            id="paint0_linear_178_81"
-            x1="111.213"
-            y1="237.407"
-            x2="233.395"
-            y2="236.437"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F3F3F3"></stop>
-            <stop offset="0.65" stop-color="#D9DEE3"></stop>
-            <stop offset="1" stop-color="#C3C3C3"></stop>
-          </linearGradient>
-          <linearGradient
-            id="paint1_linear_178_81"
-            x1="45.4236"
-            y1="167.967"
-            x2="283.769"
-            y2="144.301"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F3F3F3"></stop>
-            <stop offset="0.65" stop-color="#D9DEE3"></stop>
-            <stop offset="1" stop-color="#C3C3C3"></stop>
-          </linearGradient>
-          <linearGradient
-            id="paint2_linear_178_81"
-            x1="313.679"
-            y1="190.037"
-            x2="272.707"
-            y2="166.553"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#CECECE"></stop>
-            <stop offset="0.65" stop-color="#EDEDED"></stop>
-            <stop offset="1" stop-color="#EFEFEF"></stop>
-          </linearGradient>
-        </defs>
-      </svg>
-    </section>
+  <div class="w-full flex flex-col gap-8 items-center">
     <section
-      class="w-full flex flex-col gap-4 dark:text-[#F5F9FF] text-[#0A0C10] max-md:gap-2 max-sm:gap-1 max-sm:text-sm"
+      class="w-full flex flex-col gap-2 dark:text-[#F5F9FF] text-[#0A0C10] max-md:gap-2 max-sm:gap-1 max-sm:text-sm"
     >
       <p class="opacity-70">
-        Comencé mi carrera en la programación en el año 2020, cuando tomé mi
-        primer curso de programación en línea. Desde entonces, he estado
-        trabajando en proyectos personales y colaborando con diferentes empresas
-        y organizaciones.
+        Comencé mi carrera de
+        <a
+          href="https://www.senati.edu.pe/especialidades/tecnologias-de-la-informacion/ingenieria-de-software-con-inteligencia-artificial"
+          target="_blank"
+          rel="noreferrer"
+          class="font-bold text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] transition-all dark:focus-visible:text-[#96F]"
+        >
+          Ingeniería de Software e Inteligencia Artifical
+        </a> en
+        <a
+          href="https://www.senati.edu.pe/"
+          target="_blank"
+          rel="noreferrer"
+          class="font-bold text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] transition-all dark:focus-visible:text-[#96F]"
+          >SENATI</a
+        > , en el año 2021, donde aprendí los fundamentos de la programación y el
+        desarrollo de software.
       </p>
       <p>
         Mi objetivo es crear productos que ofrezcan experiencias excepcionales,
@@ -119,13 +44,13 @@ import TechnologyStack from "./TechnologyStack.astro";
         profesionalmente.
       </p>
     </section>
-  </div>
-  <div class="flex flex-col gap-8 max-md:gap-4">
-    <h3
-      class="text-2xl uppercase font-bold text-[#96F] max-lg:text-xl max-md:text-lg max-sm:text-base"
-    >
-      Tecnologías
-    </h3>
-    <TechnologyStack />
+    <div class="flex flex-col gap-4">
+      <h3
+        class="text-2xl uppercase font-bold text-purple-600 dark:text-[#96F] max-lg:text-xl max-md:text-lg max-sm:text-base"
+      >
+        Tecnologías
+      </h3>
+      <TechnologyStack />
+    </div>
   </div>
 </section>
