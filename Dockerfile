@@ -6,5 +6,5 @@ WORKDIR /app
 COPY package.json .
 RUN pnpm i
 COPY . .
-RUN [ "pnpm", "run", "build" ]
+RUN pnpm build
 CMD ["pnpm", "run", "preview"]
