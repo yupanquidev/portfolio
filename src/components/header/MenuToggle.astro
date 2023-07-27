@@ -1,28 +1,21 @@
-<button class="hidden" id="open">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="menu"
-    width="34"
-    height="34"
-    viewBox="0 0 24 24"
-    stroke-width="2"
-    stroke="currentColor"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M4 6l16 0"></path>
-    <path d="M4 12l16 0"></path>
-    <path d="M4 18l16 0"></path>
-  </svg>
+<button
+  class="w-[30px] h-[30px] flex flex-col items-center justify-center gap-2 border-0 bg-transparent opacity-70 hover:opacity-100"
+  id="hambuger"
+>
+  <span class="bg-amber-50 h-[2px] w-full rounded transition-all origin-left"
+  ></span>
+  <span class="bg-amber-50 h-[2px] w-full rounded transition-all origin-left"
+  ></span>
+  <span class="bg-amber-50 h-[2px] w-full rounded transition-all origin-left"
+  ></span>
 </button>
 
 <script>
-  const nav = document.querySelector("#backdrop");
-  const open = document.querySelector("#open");
+  const hambuger = document.querySelector("#hambuger");
+  const menu = document.querySelector("#menu") as HTMLElement;
 
-  open.addEventListener("click", () => {
-    nav.classList.add("visible");
+  hambuger.addEventListener("click", (e) => {
+    e.preventDefault();
+    menu.classList.toggle("hidden");
   });
 </script>
