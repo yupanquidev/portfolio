@@ -1,5 +1,5 @@
 <button
-  class="w-[30px] h-[30px] flex flex-col items-center justify-center gap-2 border-0 bg-transparent opacity-70 hover:opacity-100"
+  class="w-[30px] h-[30px] flex flex-col items-center justify-center gap-2 border-0 bg-transparent opacity-70 hover:opacity-100 sm:hidden"
   id="hambuger"
 >
   <span class="bg-amber-50 h-[2px] w-full rounded transition-all origin-left"
@@ -9,13 +9,3 @@
   <span class="bg-amber-50 h-[2px] w-full rounded transition-all origin-left"
   ></span>
 </button>
-
-<script>
-  const hambuger = document.querySelector("#hambuger");
-  const menu = document.querySelector("#menu") as HTMLElement;
-
-  hambuger.addEventListener("click", (e) => {
-    e.preventDefault();
-    menu.classList.toggle("hidden");
-  });
-</script>
