@@ -17,7 +17,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="w-full h-full bg-[#F5F9FF] dark:bg-[#0A0C10] flex flex-col gap-10 max-md:gap-5 max-sm:gap-0"
+    class="w-full h-full bg-zinc-100 dark:bg-zinc-950 flex flex-col gap-10 max-md:gap-5 max-sm:gap-0 font-"
   >
     <slot />
   </body>
@@ -26,17 +26,17 @@ const { title } = Astro.props;
 <style is:global>
   @font-face {
     font-family: "Inter";
-    src: url("/public/fonts/Inter-Black.woff2") format("woff2"),
-      url("/public/fonts/Inter-Black.woff") format("woff");
-    font-weight: 900;
+    src: url("/public/fonts/Inter-Light.woff2") format("woff2"),
+      url("/public/fonts/Inter-Light.woff") format("woff");
+    font-weight: 300;
     font-display: swap;
   }
 
   @font-face {
     font-family: "Inter";
-    src: url("/public/fonts/Inter-Bold.woff2") format("woff2"),
-      url("/public/fonts/Inter-Bold.woff") format("woff");
-    font-weight: bold;
+    src: url("/public/fonts/Inter-Regular.woff2") format("woff2"),
+      url("/public/fonts/Inter-Regular.woff") format("woff");
+    font-weight: normal;
     font-display: swap;
   }
 
@@ -50,18 +50,51 @@ const { title } = Astro.props;
 
   @font-face {
     font-family: "Inter";
-    src: url("/public/fonts/Inter-Regular.woff2") format("woff2"),
-      url("/public/fonts/Inter-Regular.woff") format("woff");
-    font-weight: normal;
+    src: url("/public/fonts/Inter-SemiBold.woff2") format("woff2"),
+      url("/public/fonts/Inter-SemiBold.woff") format("woff");
+    font-weight: 600;
     font-display: swap;
   }
 
   @font-face {
+    font-family: "Inter";
+    src: url("/public/fonts/Inter-Bold.woff2") format("woff2"),
+      url("/public/fonts/Inter-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Inter";
+    src: url("/public/fonts/Inter-ExtraBold.woff2") format("woff2"),
+      url("/public/fonts/Inter-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Inter";
+    src: url("/public/fonts/Inter-Black.woff2") format("woff2"),
+      url("/public/fonts/Inter-Black.woff") format("woff");
+    font-weight: 900;
+    font-display: swap;
+  }
+  @font-face {
     font-family: "N27";
     src: url("/public/fonts/n27-regular.woff2") format("woff2"),
       url("/public/fonts/n27-regular.woff") format("woff");
-    font-weight: normal;
+    font-style: normal;
     font-display: swap;
+  }
+
+  *,
+  html,
+  body {
+    font-family: "Inter", sans-serif;
+  }
+
+  .code {
+    font-family: "N27", sans-serif;
   }
 
   body::-webkit-scrollbar,
@@ -78,26 +111,6 @@ const { title } = Astro.props;
   body::-webkit-scrollbar-thumb:hover,
   textarea::-webkit-scrollbar-thumb:hover {
     background-color: #96f;
-  }
-
-  header {
-    font-family: "Inter", sans-serif;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: "Inter", sans-serif;
-  }
-
-  footer,
-  button,
-  p,
-  span,
-  form {
-    font-family: "N27", sans-serif;
   }
 </style>
 

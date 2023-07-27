@@ -1,11 +1,28 @@
 <button
-  class="w-[30px] h-[30px] flex flex-col items-center justify-center gap-2 border-0 bg-transparent opacity-70 hover:opacity-100 sm:hidden"
-  id="hambuger"
+  class="w-7 h-7 flex flex-col items-center justify-around border-0 bg-transparent opacity-70 hover:opacity-100 md:hidden haburger"
 >
-  <span class="bg-amber-50 h-[2px] w-full rounded transition-all origin-left"
+  <span
+    class="dark:bg-[#F5F9FF] bg-[#0A0C10] h-[2px] w-full rounded transition-all origin-left duration-500"
   ></span>
-  <span class="bg-amber-50 h-[2px] w-full rounded transition-all origin-left"
+  <span
+    class="dark:bg-[#F5F9FF] bg-[#0A0C10] h-[2px] w-full rounded transition-all duration-500"
   ></span>
-  <span class="bg-amber-50 h-[2px] w-full rounded transition-all origin-left"
+  <span
+    class="dark:bg-[#F5F9FF] bg-[#0A0C10] h-[2px] w-full rounded transition-all origin-left duration-500"
   ></span>
 </button>
+<style>
+  .haburger.active span:first-child {
+    transform: rotate(45deg) translate(3px, -3px);
+  }
+
+  .haburger.active span:nth-child(2) {
+    opacity: 0;
+    margin-left: -28px;
+    transition: opacity 0.4s ease-in-out, margin-left 0.5s ease-in-out;
+  }
+
+  .haburger.active span:last-child {
+    transform: rotate(-45deg) translate(2px, 3.5px);
+  }
+</style>
