@@ -1,9 +1,13 @@
+---
+import ButtonContact from "../ButtonContact.astro";
+---
+
 <nav
-  class="w-auto h-full max-md:bg-[#F5F9FF] max-md:dark:bg-[#0A0C10] border-2 border-[#96F]/5 md:border-none md:bg-none rounded p-4 max-lg:px-4 max-md:hidden max-md:fixed max-md:top-full max-md:right-0 max-md:w-1/2 max-md:h-screen menu-nav"
+  class="w-full h-full max-md:bg-[#F5F9FF] max-md:dark:bg-[#0A0C10] border-2 border-[#96F]/5 flex flex-col items-center justify-center md:border-none md:bg-none rounded p-4 max-lg:px-4 max-md:hidden max-md:fixed max-md:top-full max-md:right-0 max-md:w-4/5 max-md:h-screen md:w-auto menu-nav"
   id="backdrop"
 >
   <ul
-    class="w-full h-full flex flex-col md:flex-row md:items-center p-0 [&>li]:rounded-lg gap-4 md:w-auto md:gap-0 max-md:text-sm [&>li]:list-none [&>li]:py-2 [&>li]:px-4 [&>li] [&>li]:inline-flex [&>li]:items-center [&>li>a]:items-center [&>li>a]:no-underline [&>li>a]:pt-1"
+    class="w-auto flex flex-col items-center md:flex-row md:items-center p-0 [&>li]:rounded-lg gap-4 md:w-auto md:gap-0 max-md:text-sm [&>li]:list-none [&>li]:py-2 [&>li]:px-4 [&>li] [&>li]:inline-flex [&>li]:items-center [&>li>a]:items-center [&>li>a]:no-underline [&>li>a]:pt-1"
   >
     <li>
       <a
@@ -54,6 +58,9 @@
         Libros</a
       >
     </li>
+    <ButtonContact
+      style="w-28 mt-10 z-50 border-2 border-[#96F]/90 bg-zinc-100 text-zinc-950 rounded-md bg-opacity-90 hover:bg-opacity-100 transition-opacity duration-20 py-1.5 px-3 text-sm shadow-[0px_0px_15px_2px] shadow-purple-500/50 block md:hidden"
+    />
   </ul>
 </nav>
 

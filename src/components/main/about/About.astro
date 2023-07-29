@@ -1,4 +1,9 @@
 ---
+import Github from "../../contactIcons/Github.astro";
+import Instagram from "../../contactIcons/Instagram.astro";
+import LinkedIn from "../../contactIcons/LinkedIn.astro";
+import Gmail from "../../contactIcons/Mail.astro";
+import Twitter from "../../contactIcons/Twitter.astro";
 import TechnologyStack from "./TechnologyStack.astro";
 ---
 
@@ -11,6 +16,13 @@ import TechnologyStack from "./TechnologyStack.astro";
   >
     Sobre mí
   </h2>
+  <section class="w-auto flex">
+    <Gmail />
+    <LinkedIn />
+    <Github hyperlink="https://github.com/ypnqh" />
+    <Instagram />
+    <Twitter />
+  </section>
   <div class="w-full flex flex-col gap-8 items-center">
     <section
       class="w-full flex flex-col gap-2 dark:text-[#F5F9FF]/60 text-[#0A0C10]/70 max-md:gap-2 max-sm:gap-1 max-sm:text-sm"
