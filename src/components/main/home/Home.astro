@@ -1,20 +1,17 @@
 ---
 import ButtonContact from "../../ButtonContact.astro";
 import Hobbies from "../../Hobbies.astro";
-import Github from "../../contactIcons/Github.astro";
-import LinkedIn from "../../contactIcons/LinkedIn.astro";
-import Gmail from "../../contactIcons/Mail.astro";
-
+import StarGithub from "../../StarGithub.astro";
+import { ToggleSwitch } from "../../ToggleSwitch";
 import { IconDownload } from "../../icons/Icons";
-import ThreadsCard from "./ThreadsCard.astro";
-import Xcard from "./Xcard.astro";
+import CardHome from "./CardHome.astro";
 ---
 
 <section
   id="home"
-  class="lg:container lg:mx-auto w-full flex flex-col gap-4 md:flex-row py-6 px-3 lg:px-0 md:py-8"
+  class="lg:container lg:mx-auto w-full flex gap-4 flex-col py-6 px-3 lg:px-0 md:py-8 lg:flex-row"
 >
-  <div class="w-auto flex flex-col gap-5">
+  <div class="w-auto flex flex-col gap-8">
     <div class="flex flex-col gap-4 md:gap-6">
       <span
         class="text-purple-500 text-base md:text-lg font-semibold drop-shadow-[0px_0px_10px_rgb(168,85,247,0.6)]"
@@ -22,7 +19,7 @@ import Xcard from "./Xcard.astro";
         ¡Bienvenido a mi sitio!</span
       >
       <h1
-        class="lg:text-7xl font-black text-zinc-950 dark:text-zinc-100 md:text-5xl text-3xl"
+        class="lg:text-7xl font-black text-zinc-950 dark:text-zinc-100 md:text-5xl text-4xl"
       >
         Hola, soy<strong class="font-black"> Humberto Yupanqui Apaza</strong>,
         desarrollador Fullstack
@@ -55,19 +52,15 @@ import Xcard from "./Xcard.astro";
       <ButtonContact
         style="border-2 border-[#96F]/20 bg-zinc-800 text-zinc-100 rounded-md bg-opacity-90 hover:bg-opacity-100 transition-opacity duration-20 py-2 px-4 text-sm shadow-[0px_0px_15px_2px] shadow-purple-500/50"
       />
-      <section class="flex flex-wrap gap-2">
-        <Gmail />
-        <LinkedIn />
-        <Github hyperlink="https://github.com/ypnqh" />
-      </section>
     </section>
   </div>
-  <div class="w-full flex flex-col items-center gap-5 pt-4 sm:w-auto">
+  <div class="w-full flex flex-col items-center gap-5 pt-4 sm:w-auto relative">
     <Hobbies />
-    <article class="flex flex-col gap-4">
-      <Xcard />
-      <ThreadsCard />
-    </article>
+    <CardHome />
+    <aside class="flex gap-4 items-center justify-center">
+      <StarGithub />
+      <ToggleSwitch />
+    </aside>
   </div>
 </section>
 

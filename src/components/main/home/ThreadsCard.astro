@@ -1,44 +1,70 @@
 ---
+import {
+  IconBrandThreads,
+  IconHeart,
+  IconMessageCircle,
+  IconSend,
+  IconShareArrow,
+} from "../../icons/Icons";
 ---
 
-<aside class="w-96 bg-[#16181C] p-4 rounded-2xl flex flex-col gap-4">
-  <header class="w-full flex gap-3">
-    <img
-      class="w-10 h-10 rounded-full"
-      src="https://pbs.twimg.com/profile_images/1685076669432758274/P2SW5cdz_200x200.jpg"
-      loading="lazy"
-      alt="Avatar de Humberto Yupanqui Apaza"
-    />
-    <section class="w-full flex justify-between items-center">
-      <div>
-        <h1 class="font-bold text-[15px] text-[#E7E9EA] line-clamp-1">
-          Humberto Yupanqui Apaza
-        </h1>
-        <p class="text-[#71767B] text-[15px]">@ypnqh_</p>
+<article class="w-auto md:w-96 bg-[#1e1e1e] p-4 rounded-2xl flex gap-3">
+  <aside class="w-10 h-auto flex flex-col justify-between items-center gap-2">
+    <picture class="w-10">
+      <img
+        class="w-10 h-10 rounded-full"
+        src="https://pbs.twimg.com/profile_images/1685076669432758274/P2SW5cdz_200x200.jpg"
+        loading="lazy"
+        alt="Avatar de Humberto Yupanqui Apaza"
+      />
+    </picture>
+    <span class="h-full w-[3px] rounded-full bg-[#333]"></span>
+    <picture class="w-7">
+      <img
+        class="w-7 h-7 rounded-full"
+        src="https://pbs.twimg.com/profile_images/1685076669432758274/P2SW5cdz_200x200.jpg"
+        loading="lazy"
+        alt="Avatar de Humberto Yupanqui Apaza"
+      />
+    </picture>
+  </aside>
+  <aside class="flex flex-col gap-4">
+    <header class="flex gap-3">
+      <section class="w-full flex justify-between items-center">
+        <div>
+          <h1 class="font-bold text-[15px] text-[#E7E9EA] line-clamp-1">
+            Humberto Yupanqui Apaza
+          </h1>
+          <p class="text-[#71767B] text-[15px] hidden">@ypnqh_</p>
+        </div>
+        <IconBrandThreads />
+      </section>
+    </header>
+    <main class="flex flex-col gap-3 text-[#E7E9EA]">
+      <p class="line-clamp-4 text-[15px]">
+        Hola, soy nuevo en Twitter y no me gustan mucho las redes sociales 🙃
+        Estoy buscando conectarme con otros desarrolladores y aprender sobre lo
+        último en desarrollo web 🤗.
+      </p>
+      <div class="flex gap-2">
+        <IconHeart />
+        <IconMessageCircle />
+        <IconShareArrow />
+        <IconSend />
       </div>
-      <div>
-        <a
-          class="bg-[#eff3f4] text-[#0f1419] text-sm font-bold py-2 px-4 rounded-full transition-opacity hover:opacity-90 duration-500"
-          href="https://twitter.com/ypnqh_">Seguir</a
+    </main>
+    <footer class="flex gap-2 text-[15px] items-center">
+      <aside class="flex gap-1">
+        <p class="text-[#e7e9ea] font-medium">4</p><span class="text-[#71767b]"
+          >Respuestas</span
         >
-      </div>
-    </section>
-  </header>
-  <main class="text-[#E7E9EA] line-clamp-4 text-[15px]">
-    Hola, soy nuevo en Twitter y no me gustan mucho las redes sociales 🙃 Estoy
-    buscando conectarme con otros desarrolladores y aprender sobre lo último en
-    desarrollo web 🤗.
-  </main>
-  <footer class="flex gap-5 text-[15px]">
-    <aside class="flex gap-1">
-      <p class="text-[#e7e9ea] font-bold">1.2k</p><span class="text-[#71767b]"
-        >Siguiendo</span
-      >
-    </aside>
-    <aside class="flex gap-1">
-      <p class="text-[#e7e9ea] font-bold">414</p><span class="text-[#71767b]"
-        >Seguidores</span
-      >
-    </aside>
-  </footer>
-</aside>
+      </aside>
+      <span class="w-1 h-1 rounded-full bg-[#71767b]"></span>
+      <aside class="flex gap-1">
+        <p class="text-[#e7e9ea] font-medium">414</p><span
+          class="text-[#71767b]">Me gusta</span
+        >
+      </aside>
+    </footer>
+  </aside>
+</article>

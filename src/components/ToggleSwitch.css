@@ -7,7 +7,7 @@
   height: 2em;
   transform-style: preserve-3d;
   perspective: 500px;
-  animation: toggle__animation 3s infinite;
+  animation: toggle_animation 3s infinite;
 }
 
 .switch::before {
@@ -17,7 +17,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  filter: blur(20px);
+  filter: blur(5px);
   z-index: -1;
   border-radius: 50px;
   background-color: #d8ff99;
@@ -78,7 +78,7 @@
   transform: translateX(1.5em);
 }
 
-@keyframes toggle__animation {
+@keyframes toggle_-_animation {
 
   0%,
   100% {
