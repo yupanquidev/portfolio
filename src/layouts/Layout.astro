@@ -15,8 +15,9 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="view-transition" content="same-origin" />
   </head>
-  <body class="w-full h-full bg-zinc-100 dark:bg-zinc-950 flex flex-col">
+  <body class="bg-zinc-100 dark:bg-zinc-950 w-full h-full flex flex-col">
     <slot />
   </body>
 </html>
@@ -98,6 +99,45 @@ const { title } = Astro.props;
   body::-webkit-scrollbar-thumb:hover,
   textarea::-webkit-scrollbar-thumb:hover {
     background-color: #96f;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 10s;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-from-right {
+    from {
+      transform: translateX(30px);
+    }
+  }
+
+  @keyframes slide-to-left {
+    to {
+      transform: translateX(-30px);
+    }
+  }
+
+  ::view-transition-old(root) {
+    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+      700ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+  }
+
+  ::view-transition-new(root) {
+    animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+      700ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
   }
 </style>
 

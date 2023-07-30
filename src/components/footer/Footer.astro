@@ -5,21 +5,19 @@ import LinkedIn from "../contactIcons/LinkedIn.astro";
 import Twitter from "../contactIcons/Twitter.astro";
 ---
 
-<footer
-  class="w-full bg-blue-200 py-10 dark:bg-[#08152C] dark:bg-opacity-40 pointer-events-auto max-sm:pb-14"
->
+<footer class="w-full bg-blue-200 py-14 dark:bg-[#08152C] dark:bg-opacity-40">
   <section
-    class="container mx-auto px-60 flex flex-col gap-8 max-xl:px-5 max-lg:gap-6"
+    class="lg:container lg:mx-auto items-center px-3 grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row md:justify-between lg:px-0"
   >
     <p
-      class="w-full text-base max-sm:text-sm text-[#0A0C10]/70 dark:text-[#F5F9FF]/60"
+      class="w-full text-base max-sm:text-sm text-[#0A0C10]/70 dark:text-[#F5F9FF]/50"
     >
       Diseñado en
       <a
         href="https://www.figma.com/"
         target="_blank"
         rel="noreferrer"
-        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-purple-600 dark:hover:text-[#96F] focus-visible:text-[#90F] transition-all dark:focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-purple-600 dark:hover:text-[#96F] focus-visible:text-[#90F] transition-all dark:focus-visible:text-[#96F] font-medium"
         >Figma</a
       >
       y codificado en
@@ -27,21 +25,21 @@ import Twitter from "../contactIcons/Twitter.astro";
         href="https://code.visualstudio.com/"
         target="_blank"
         rel="noreferrer"
-        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-purple-600 dark:hover:text-[#96F] focus-visible:text-[#90F] transition-all dark:focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-purple-600 dark:hover:text-[#96F] focus-visible:text-[#90F] transition-all dark:focus-visible:text-[#96F] font-medium"
         >Visual Studio Code</a
       > por mí mismo. Construido con
       <a
         href="https://astro.build/"
         target="_blank"
         rel="noreferrer"
-        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-purple-600 dark:hover:text-[#96F] focus-visible:text-[#90F] transition-all dark:focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-purple-600 dark:hover:text-[#96F] focus-visible:text-[#90F] transition-all dark:focus-visible:text-[#96F] font-medium"
         >Astro</a
       > y
       <a
         href="https://tailwindcss.com/"
         target="_blank"
         rel="noreferrer"
-        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-purple-600 dark:hover:text-[#96F] focus-visible:text-[#90F] transition-all dark:focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-purple-600 dark:hover:text-[#96F] focus-visible:text-[#90F] transition-all dark:focus-visible:text-[#96F] font-medium"
         >Tailwind CSS</a
       >
       , desplegado en
@@ -49,38 +47,29 @@ import Twitter from "../contactIcons/Twitter.astro";
         href="https://fly.io/"
         target="_blank"
         rel="noreferrer"
-        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] transition-all dark:focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] transition-all dark:focus-visible:text-[#96F] font-medium"
         >Fly.io</a
       >
-      . Las tipografías utilizadas son
+      . Las tipografía utilizada es
 
       <a
         href="https://rsms.me/inter/"
-        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] transition-all dark:focus-visible:text-[#96F]"
+        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] transition-all dark:focus-visible:text-[#96F] font-medium"
         target="_blank"
         rel="noreferrer">Inter</a
-      >
-      y
-      <a
-        href="https://www.atipofoundry.com/fonts/n27"
-        target="_blank"
-        rel="noreferrer"
-        class="text-[#0A0C10] dark:text-[#F5F9FF] hover:text-[#90F] focus-visible:text-[#90F] dark:hover:text-[#96F] transition-all dark:focus-visible:text-[#96F]"
-        >N27</a
       >.
     </p>
-    <span class="w-full h-[1px] bg-gray-400 dark:bg-gray-700"></span>
-    <div
-      class="w-full flex items-center justify-between gap-2 max-md:gap-1 max-sm:flex-col max-sm:justify-center [&>div>a>svg]:w-6 [&>div]:px-0"
-    >
+    <span
+      class="w-auto md:w-10 h-[1px] bg-gray-400 dark:bg-gray-700 md:opacity-0"
+    ></span>
+    <div class="w-full flex flex-col gap-2 [&>div>a>svg]:w-6 [&>div]:px-0">
       <p
-        class="w-full text-sm max-sm:text-xs text-[#0A0C10]/70 dark:text-[#F5F9FF]/60"
+        class="text-sm max-sm:text-xs text-[#0A0C10]/70 dark:text-[#F5F9FF]/40"
       >
-        © 2023 Humberto Yupanqui | FullStack Developer - Freelancer
+        © 2023 Humberto Yupanqui, todos los derechos reservados. FullStack
+        Developer, Freelancer.
       </p>
-      <div
-        class="flex items-center justify-center gap-2 max-lg:justify-end max-lg:gap-6 max-sm:justify-center max-sm:gap-1"
-      >
+      <div class="flex gap-2 justify-center md:justify-start">
         <Github hyperlink="https://github.com/ypnqh" />
         <Instagram />
         <Twitter />
@@ -89,3 +78,9 @@ import Twitter from "../contactIcons/Twitter.astro";
     </div>
   </section>
 </footer>
+
+<style>
+  p {
+    text-wrap: balance;
+  }
+</style>
