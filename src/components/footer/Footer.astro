@@ -62,14 +62,14 @@ import Twitter from "../contactIcons/Twitter.astro";
     <span
       class="w-auto md:w-10 h-[1px] bg-gray-400 dark:bg-gray-700 md:opacity-0"
     ></span>
-    <div class="w-full flex flex-col gap-2 [&>div>a>svg]:w-6 [&>div]:px-0">
-      <p
-        class="text-sm max-sm:text-xs text-[#0A0C10]/70 dark:text-[#F5F9FF]/40"
-      >
+    <div class="w-full flex flex-col gap-2 [&>div]:px-0">
+      <p class="text-sm text-[#0A0C10]/70 dark:text-[#F5F9FF]/40">
         © 2023 Humberto Yupanqui, todos los derechos reservados. FullStack
         Developer, Freelancer.
       </p>
-      <div class="flex gap-2 justify-center md:justify-start">
+      <div
+        class="flex gap-2 justify-center md:justify-start [&>a]:bg-purple-950/5 [&>a]:w-10 [&>a]:h-10 [&>a]:rounded-full [&>a]:p-2.5 [&>a>svg]:w-5 [&>a>svg]:h-5"
+      >
         <Github hyperlink="https://github.com/ypnqh" />
         <Instagram />
         <Twitter />

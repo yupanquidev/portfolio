@@ -6,7 +6,7 @@ export function ToggleSwitch () {
   return (
     <div className=''>
       <label
-        className='switch ' id='dark_mode'
+        className='switch ' id='dark_mode_c'
         aria-label='ChangeTheme'
       >
         <input type='checkbox' className='input__check' checked={isDarkMode} onChange={() => setIsDarkMode(!isDarkMode)} />

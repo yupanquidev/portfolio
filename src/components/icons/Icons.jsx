@@ -33,7 +33,7 @@ export function IconDownload () {
 
 export function IconCode () {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-[#0A0C10] dark:stroke-[#F5F9FF] hover:stroke-purple-600 hover:scale-125 dark:hover:stroke-purple-600 transition-all duration-500 focus-visible:text-[#96F] opacity-70 hover:opacity-100' width='30' height='30' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
+    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-[#0A0C10] dark:stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 opacity-70 hover:opacity-100' width='30' height='30' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M7 8l-4 4l4 4' />
       <path d='M17 8l4 4l-4 4' />
@@ -88,11 +88,32 @@ export function IconStar () {
   )
 }
 
-export function IconShareArrow () {
+export function IconLink () {
   return (
-    <svg className='stroke-[#181818] dark:stroke-[#E7E9EA] fill-[#181818] dark:fill-[#E7E9EA]' width='21' height='21' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-      <path d='M5.4001 4.85449L9.3002 8.49764L8.0999 9.78242L6.28009 8.08404V15.5199C6.28009 16.4879 7.06856 17.2799 8.04006 17.2799H12.88V19.0399H8.04006C6.09617 19.0399 4.52011 17.4647 4.52011 15.5199V8.08404L2.7003 9.78242L1.5 8.49764L5.4001 4.85449ZM15.9599 6.72006H11.12V4.96009H15.9599C17.9038 4.96009 19.4799 6.53527 19.4799 8.48004V15.9159L21.2997 14.2176L22.5 15.5023L18.5999 19.1455L14.6998 15.5023L15.9001 14.2176L17.7199 15.9159V8.48004C17.7199 7.51205 16.9314 6.72006 15.9599 6.72006Z' fill='#E7E9EA' />
+    <svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-link' width='20' height='20' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
+      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+      <path d='M9 15l6 -6' />
+      <path d='M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464' />
+      <path d='M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463' />
     </svg>
+  )
+}
 
+export function IconBrandGithub () {
+  return (
+    <svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-brand-github' width='20' height='20' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
+      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+      <path d='M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5' />
+    </svg>
+  )
+}
+
+export function IconArrowUpRight () {
+  return (
+    <svg xmlns='http://www.w3.org/2000/svg' class='stroke-[#0A0C10] dark:stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 rotate-180' width='20' height='20' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
+      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+      <path d='M17 7l-10 10' />
+      <path d='M8 7l9 0l0 9' />
+    </svg>
   )
 }

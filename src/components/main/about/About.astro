@@ -9,42 +9,58 @@ import TechnologyStack from "./TechnologyStack.astro";
 
 <section
   id="about"
-  class="container mx-auto px-60 flex flex-col gap-6 max-xl:px-5 max-md:gap-2"
+  class="lg:container lg:mx-auto w-full flex gap-4 flex-col py-10 px-3 lg:px-0 md:py-8"
 >
   <h2
-    class="w-full text-4xl uppercase font-black text-purple-600 dark:text-[#96F] max-lg:text-3xl max-md:text-2xl"
+    class="w-full text-5xl uppercase font-black text-purple-700 dark:text-purple-600 mb-10"
   >
     Sobre mí
   </h2>
-  <section class="w-auto flex">
-    <Gmail />
-    <LinkedIn />
-    <Github hyperlink="https://github.com/ypnqh" />
-    <Instagram />
-    <Twitter />
-  </section>
-  <div class="w-full flex flex-col gap-8 items-center">
+  <div class="w-full grid grid-cols-2 gap-10">
+    <section>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <aside class="flex flex-col items-center gap-2 text-center">
+          <span class="text-4xl font-black">20</span>
+          <span class="text-sm font-semibold text-zinc-950 dark:text-gray-600"
+            >Años de edad</span
+          >
+        </aside>
+        <aside class="flex flex-col items-center gap-2 text-center">
+          <span class="text-4xl font-black">1+</span>
+          <span class="text-sm font-semibold text-zinc-950 dark:text-gray-600"
+            >Años desarrollador web</span
+          >
+        </aside>
+        <aside class="flex flex-col items-center gap-2 text-center">
+          <span class="text-4xl font-black">3</span>
+          <span class="text-sm font-semibold text-zinc-950 dark:text-gray-600"
+            >Gato Increible</span
+          >
+        </aside>
+        <aside class="flex flex-col items-center gap-2 text-center">
+          <span class="text-4xl font-black">4000</span>
+          <span class="text-sm font-semibold text-zinc-950 dark:text-gray-600"
+            >Commits</span
+          >
+        </aside>
+      </div>
+      <div
+        class="flex flex-wrap justify-center gap-2 mt-10 [&>a]:bg-purple-950/30 [&>a]:rounded-full [&>a]:p-3 [&>a>svg]:w-8 [&>a>svg]:h-8 [&>a]:w-14 [&>a]:h-14"
+      >
+        <Gmail />
+        <LinkedIn />
+        <Github hyperlink='https://github.com/ypnqh"' />
+        <Instagram />
+        <Twitter />
+      </div>
+    </section>
+
     <section
-      class="w-full flex flex-col gap-2 dark:text-[#F5F9FF]/60 text-[#0A0C10]/70 max-md:gap-2 max-sm:gap-1 max-sm:text-sm"
+      class="flex flex-col gap-4 dark:text-[#F5F9FF]/60 text-[#0A0C10]/70 max-sm:text-sm mb-8"
     >
-      <p class="text-[#0A0C10]/70 dark:text-[#F5F9FF]/60">
-        Comencé mi carrera de
-        <a
-          href="https://www.senati.edu.pe/especialidades/tecnologias-de-la-informacion/ingenieria-de-software-con-inteligencia-artificial"
-          target="_blank"
-          rel="noreferrer"
-          class="text-opacity-100 text-[#0A0C10] dark:text-[#F5F9FF] hover:text-purple-600 focus-visible:text-[#90F] dark:hover:text-[#96F] transition-all dark:focus-visible:text-[#96F]"
-        >
-          Ingeniería de Software e Inteligencia Artifical
-        </a> en
-        <a
-          href="https://www.senati.edu.pe/"
-          target="_blank"
-          rel="noreferrer"
-          class="text-opacity-100 text-[#0A0C10] dark:text-[#F5F9FF] hover:text-purple-600 focus-visible:text-[#90F] dark:hover:text-[#96F] transition-all dark:focus-visible:text-[#96F]"
-          >SENATI</a
-        > , en el año 2021, donde aprendí los fundamentos de la programación y el
-        desarrollo de software.
+      <p>
+        Desarrollador web, con tecnologías React, Tailwind CSS, Go. para crear
+        hermosas experiencias de usuario y desarrollador que traigan placer.
       </p>
       <p class="text-[#0A0C10] dark:text-[#F5F9FF]">
         Mi objetivo es crear productos que ofrezcan experiencias excepcionales,
@@ -55,14 +71,21 @@ import TechnologyStack from "./TechnologyStack.astro";
         nuevos desafíos laborales que me permitan seguir creciendo
         profesionalmente.
       </p>
+      <p>La mayor parte de eso sigue siendo cierto hoy en día.</p>
     </section>
-    <div class="flex flex-col gap-4">
-      <h3
-        class="text-2xl uppercase font-bold text-purple-600 dark:text-[#96F] max-lg:text-xl max-md:text-lg max-sm:text-base"
-      >
-        Tecnologías
-      </h3>
-      <TechnologyStack />
-    </div>
+  </div>
+  <div class="flex flex-col gap-4 mt-7">
+    <h3 class="text-2xl uppercase font-bold text-purple-600 dark:text-[#96F]">
+      Tecnologías
+    </h3>
+    <TechnologyStack />
   </div>
 </section>
+
+<style>
+  aside > span:first-child {
+    background-image: linear-gradient(45deg, #a855f7, #8200fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

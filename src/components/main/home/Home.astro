@@ -9,7 +9,7 @@ import CardHome from "./CardHome.astro";
 
 <section
   id="home"
-  class="lg:container lg:mx-auto w-full flex gap-4 flex-col py-6 px-3 lg:px-0 md:py-8 lg:flex-row"
+  class="lg:container lg:mx-auto w-full flex gap-10 flex-col py-6 px-3 lg:px-0 md:py-8 lg:flex-row"
 >
   <div class="w-auto flex flex-col gap-8">
     <div class="flex flex-col gap-4 md:gap-6">
@@ -21,7 +21,7 @@ import CardHome from "./CardHome.astro";
       <h1
         class="lg:text-7xl font-black text-zinc-950 dark:text-zinc-100 md:text-5xl text-4xl"
       >
-        Hola, soy<strong class="font-black"> Humberto Yupanqui Apaza</strong>,
+        Hola, soy<span class="font-black"> Humberto Yupanqui Apaza</span>,
         desarrollador Fullstack
       </h1>
       <p
@@ -69,10 +69,11 @@ import CardHome from "./CardHome.astro";
 </section>
 
 <style>
-  strong {
-    background-image: linear-gradient(45deg, #a855f7, #9333ea);
+  h1 > span {
+    background-image: linear-gradient(45deg, #954dd8, #6300c0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 900;
   }
 
   h1 {
