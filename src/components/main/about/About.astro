@@ -12,11 +12,11 @@ import TechnologyStack from "./TechnologyStack.astro";
   class="lg:container lg:mx-auto w-full flex gap-4 flex-col py-10 px-3 lg:px-0 md:py-8"
 >
   <h2
-    class="w-full text-5xl uppercase font-black text-purple-700 dark:text-purple-600 mb-10"
+    class="w-full text-4xl md:text-5xl uppercase font-black text-purple-700 dark:text-purple-600 mb-10"
   >
     Sobre mí
   </h2>
-  <div class="w-full grid grid-cols-2 gap-10">
+  <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-10">
     <section>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <aside class="flex flex-col items-center gap-2 text-center">
@@ -45,7 +45,7 @@ import TechnologyStack from "./TechnologyStack.astro";
         </aside>
       </div>
       <div
-        class="flex flex-wrap justify-center gap-2 mt-10 [&>a]:bg-purple-950/30 [&>a]:rounded-full [&>a]:p-3 [&>a>svg]:w-8 [&>a>svg]:h-8 [&>a]:w-14 [&>a]:h-14"
+        class="flex flex-wrap justify-center gap-2 mt-10 [&>a]:bg-purple-300/50 dark:[&>a]:bg-purple-950/30 [&>a]:rounded-full [&>a]:p-3 [&>a>svg]:w-8 [&>a>svg]:h-8 [&>a]:w-14 [&>a]:h-14"
       >
         <Gmail />
         <LinkedIn />
@@ -54,7 +54,6 @@ import TechnologyStack from "./TechnologyStack.astro";
         <Twitter />
       </div>
     </section>
-
     <section
       class="flex flex-col gap-4 dark:text-[#F5F9FF]/60 text-[#0A0C10]/70 max-sm:text-sm mb-8"
     >

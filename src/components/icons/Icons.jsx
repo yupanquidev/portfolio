@@ -33,7 +33,7 @@ export function IconDownload () {
 
 export function IconCode () {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-[#0A0C10] dark:stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 opacity-70 hover:opacity-100' width='30' height='30' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
+    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-[#0A0C10] dark:stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 hover:opacity-100' width='30' height='30' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M7 8l-4 4l4 4' />
       <path d='M17 8l4 4l-4 4' />
@@ -53,7 +53,7 @@ export function IconBrandThreads () {
 
 export function IconHeart () {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-[#181818] dark:stroke-[#E7E9EA]' width='20' height='20' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
+    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-black dark:stroke-white group-hover:stroke-[#f91880] transition-colors duration-200' width='20' height='20' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572' />
     </svg>
@@ -62,7 +62,7 @@ export function IconHeart () {
 
 export function IconMessageCircle () {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-[#181818] dark:stroke-[#E7E9EA]' width='20' height='20' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
+    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-black dark:stroke-white group-hover:stroke-[#00ba7c] transition-colors duration-200 ' width='20' height='20' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'>
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1' />
     </svg>
@@ -115,5 +115,11 @@ export function IconArrowUpRight () {
       <path d='M17 7l-10 10' />
       <path d='M8 7l9 0l0 9' />
     </svg>
+  )
+}
+
+export function IconX () {
+  return (
+    <svg viewBox='0 0 24 24' aria-hidden='true' class='r-1nao33i r-4qtqp9 r-yyyyoo r-16y2uox r-lwhw9o r-dnmrzs r-bnwqim r-1plcrui r-lrvibr'><g><path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z' /></g></svg>
   )
 }
