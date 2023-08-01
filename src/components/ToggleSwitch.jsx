@@ -1,17 +1,15 @@
-import { useState } from 'react'
-import './ToggleSwitch.css'
+import './src/css/stylesToggleSwitch.css'
+/*
+const ThemeContext = createContext() */
 
 export function ToggleSwitch () {
-  const [isDarkMode, setIsDarkMode] = useState(true)
   return (
-    <div className=''>
-      <label
-        className='switch ' id='dark_mode_c'
-        aria-label='ChangeTheme'
-      >
-        <input type='checkbox' className='input__check' checked={isDarkMode} onChange={() => setIsDarkMode(!isDarkMode)} />
-        <span className='slider round' />
-      </label>
-    </div>
+    <label class='switch' aria-label='ChangeTheme'>
+      <input
+        type='checkbox' class='input__check chec' id='switch-theme'
+      />
+      <span class='slider round' />
+    </label>
+
   )
 }
