@@ -2,7 +2,7 @@
 import ButtonContact from "../../ButtonContact.astro";
 import Hobbies from "../../Hobbies.astro";
 import StarGithub from "../../StarGithub.astro";
-import { ToggleSwitch } from "../../ToggleSwitch.jsx";
+import ToggleSwitch from "../../ToggleSwitch.astro";
 import { IconDownload } from "../../icons/Icons";
 import CardHome from "./CardHome.astro";
 ---
@@ -60,7 +60,7 @@ import CardHome from "./CardHome.astro";
   <div class="w-full flex flex-col items-center gap-5 pt-4 sm:w-auto relative">
     <Hobbies />
     <CardHome />
-    <aside class="flex gap-4 items-center justify-center">
+    <aside class="flex gap-4 items-center justify-center mt-4">
       <StarGithub />
       <ToggleSwitch />
     </aside>
