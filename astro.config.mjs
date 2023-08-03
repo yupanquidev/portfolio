@@ -10,4 +10,4 @@ export default defineConfig({
     port: 8080
   },
   integrations: [tailwind(), react()]
-})
+});

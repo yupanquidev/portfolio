@@ -21,8 +21,5 @@
   },
   "devDependencies": {
     "@flydotio/dockerfile": "0.3.3"
-  },
-  "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json"
   }
 }
