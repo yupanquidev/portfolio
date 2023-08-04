@@ -34,8 +34,8 @@ import MenuToggle from "./MenuToggle.astro";
 </header>
 
 <script>
-  const button = document.querySelector(".haburger");
-  const menu = document.querySelector(".menu-nav");
+  const button = document.querySelector(".haburger") as HTMLButtonElement;
+  const menu = document.querySelector(".menu-nav") as HTMLDivElement;
 
   button.addEventListener("click", () => {
     menu.classList.toggle("active");
