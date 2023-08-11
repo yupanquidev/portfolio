@@ -73,15 +73,28 @@ const { title } = Astro.props;
     font-family: "Aileron";
     src: url("/public/fonts/Aileron-Heavy.woff2") format("woff2"),
       url("/public/fonts/Aileron-Heavy.woff") format("woff"),
-      url("/public/fonts/Aileron-Heavy.otf") format("pentype");
+      url("/public/fonts/Aileron-Heavy.otf") format("opentype");
     font-weight: 900;
     font-display: swap;
   }
 
-  *,
-  html,
+  @font-face {
+    font-family: "Cunia";
+    src: url("/public/fonts/Cunia-Bold.woff2") format("woff2"),
+      url("/public/fonts/Cunia-Bold.woff") format("woff"),
+      url("/public/fonts/Cunia.otf") format("opentype");
+    font-weight: 900;
+    font-display: swap;
+  }
+
   body {
     font-family: "Aileron", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Cunia", sans-serif;
   }
 
   body::-webkit-scrollbar,
