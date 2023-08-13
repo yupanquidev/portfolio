@@ -7,10 +7,29 @@ const { style } = Astro.props;
 ---
 
 <a
-  class={style}
+  class=`relative before:content-[''] before:absolute
+    before:-left-[0.125rem] before:-right-[0.125rem] 
+    before:top-1 before:-bottom-[0.125rem] before:-z-10
+    before:bg-clip-padding before:opacity-60 before:blur-md
+    before:transition-all before:duration-150 before:filter
+    ${style}`
   href="mailto:hyupanquia24@gmail.com"
   target="_blank"
   rel="noopener noreferrer"
 >
   ¡A trabajar!
 </a>
+
+<style>
+  a::before {
+    background-image: linear-gradient(
+      120deg,
+      #ec6192,
+      #ec4c34,
+      #ffbd2b,
+      #ebde56,
+      #57c754,
+      #53a1eb
+    );
+  }
+</style>
