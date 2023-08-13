@@ -14,12 +14,10 @@ if (isDarkModeMachine) {
   toggleSwitch.checked = false
 }
 
+const sun = document.querySelector('button svg:first-child')
+const moon = document.querySelector('button svg:last-child')
 
-const sun = document.querySelector('#sun')
-const moon = document.querySelector('#moon')
-
-
-const toggleChange = document.querySelector('#dark_mode')
+const toggleChange = document.querySelector('button')
 
 toggleChange.addEventListener('click', (e) => {
   const toggle = document.documentElement.classList.toggle('dark')
