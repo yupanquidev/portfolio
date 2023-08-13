@@ -1,3 +1,115 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  /* "breadcrumbs.enabled": false,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Cascadia Code PL', monospace",
+  "editor.fontSize": 13,
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.guides.indentation": true,
+  "editor.linkedEditing": true,
+  "editor.matchBrackets": "never",
+  "editor.glyphMargin": false,
+  "editor.cursorBlinking": "expand",
+  "editor.guides.bracketPairs": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "errorLens.fontFamily": "JetBrains Mono",
+  "errorLens.fontStyleItalic": true,
+  "errorLens.fontSize": "11.5px",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "javascript.format.semicolons": "remove",
+  "javascript.preferences.quoteStyle": "single",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "terminal.integrated.fontFamily": "'MesloLGM NF'",
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.format.semicolons": "remove",
+  "oneDarkPro.bold": true,
+  "oneDarkPro.vivid": true,
+  "oneDarkPro.editorTheme": "One Dark Pro Darker",
+  "workbench.sideBar.location": "right",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.editor.wrapTabs": true,
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.showTabs": false,
+  "workbench.startupEditor": "none",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "standard.vscode-standard",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "standard.vscode-standard",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "standard.vscode-standard",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true,
+    "source.fixAll": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "entity.name.type.class",
+          "keyword",
+          "constant",
+          "storage.modifier",
+          "storage.type"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "keyword.operator",
+          "constant.numeric"
+        ],
+        "settings": {
+          "fontStyle": "italic bold"
+        }
+      }
+    ]
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+  "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.format.config.singleQuote": true,
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": false,
+  "workbench.layoutControl.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "terminal.integrated.env.windows": {},
+  "explorer.fileNesting.enabled": true,
+  "css.lint.unknownAtRules": "ignore" */
 }
