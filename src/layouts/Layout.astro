@@ -117,7 +117,7 @@ const { title } = Astro.props;
     background-color: #96f;
   }
 
-  .avatar,
+  img,
   svg {
     view-timeline-name: --image;
     view-timeline-axis: block;
@@ -125,31 +125,17 @@ const { title } = Astro.props;
     animation-timeline: --image;
     animation-name: show;
 
-    animation-range: entry 25% cover 25%;
+    animation-range: entry 0% cover 50%;
     animation-fill-mode: both;
   }
 
   @keyframes show {
     from {
       opacity: 0;
-      scale: 25%;
     }
 
     to {
       opacity: 1;
-      scale: 100%;
     }
   }
 </style>
-
-<script>
-  // CHANGE TITLE WHEN USER CHANEGS TAB
-  let docTitle = document.title;
-  window.addEventListener("blur", () => {
-    document.title = "Come back - Humberto Yupanqui Apaza ";
-  });
-
-  window.addEventListener("focus", () => {
-    document.title = docTitle;
-  });
-</script>
