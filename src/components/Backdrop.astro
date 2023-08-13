@@ -1,18 +1,19 @@
 <div
   id="menu-backdrop"
   class={`
-  absolute border-2 border-[#96F]/90 blur-[1px]  rounded-md
+  absolute bg-purple-700/40  blur-md rounded-sm  
   translate-x-[var(--left)] translate-y-[var(--top)]
-  left-0 top-0 bg-transparent
+  left-0 top-0  invisible
   w-[var(--width)] h-[var(--height)]
-  transition-all duration-700
-  ease-in-out  pointer-events-none z-50 
+  transition-all duration-500 
+  ease-in-out  pointer-events-none -z-50 
 `}
 >
+  /40
 </div>
 
 <script>
-  const listItem = document.querySelectorAll("#backdrop li");
+  const listItem = document.querySelectorAll("#backdrop li a");
   const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement;
 
   listItem.forEach((item) => {
