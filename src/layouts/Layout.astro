@@ -18,7 +18,6 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Humberto Yupanqui Apaza</title>
     <meta name="view-transition" content="same-origin" />
-    <link rel="stylesheet" href="/src/css/styles.css" />
     <script src="/src/utils/darkMode.js"></script>
   </head>
   <body class="bg-zinc-100 dark:bg-zinc-950 w-full h-full flex flex-col">
@@ -138,5 +137,21 @@ const { title } = Astro.props;
     to {
       opacity: 1;
     }
+  }
+
+  .download-cv > svg path {
+    transition: all 0.5s;
+  }
+
+  .download-cv:hover > svg path:nth-child(2) {
+    d: path("M4 18v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2");
+  }
+
+  .download-cv:hover > svg path:nth-child(3) {
+    d: path("M7 9l5 5l5 -5");
+  }
+
+  .download-cv:hover > svg path:last-child {
+    d: path("M12 2l0 12");
   }
 </style>

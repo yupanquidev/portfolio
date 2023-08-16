@@ -3,7 +3,7 @@ import ButtonContact from "../../ButtonContact.astro";
 import Hobbies from "../../Hobbies.astro";
 import StarGithub from "../../StarGithub.astro";
 import ToggleSwitch from "../../ToggleSwitch.astro";
-import { IconDownload } from "../../icons/Icons";
+import ButtonDownloadCV from "../../buttons/ButtonDownloadCV.astro";
 import CardHome from "./CardHome.astro";
 ---
 
@@ -45,15 +45,7 @@ import CardHome from "./CardHome.astro";
       </p>
     </div>
     <section class="w-auto flex gap-4 items-center flex-wrap">
-      <a
-        href="/resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group font-normal px-4 py-[7px] flex gap-1 items-center text-sm text-zinc-50 rounded-lg bg-purple-700 hover:bg-purple-600 transition-colors duration-200 border-purple-600 border-2 download-cv"
-      >
-        <span>Descargar CV</span>
-        <IconDownload />
-      </a>
+      <ButtonDownloadCV />
       <ButtonContact style="bg-zinc-800 text-zinc-100 hover:bg-zinc-900/80" />
     </section>
   </div>
