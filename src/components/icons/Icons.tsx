@@ -97,3 +97,22 @@ export const IconX = () => {
     <svg viewBox='0 0 24 24' aria-hidden='true' className='r-1nao33i r-4qtqp9 r-yyyyoo r-16y2uox r-lwhw9o r-dnmrzs r-bnwqim r-1plcrui r-lrvibr'><g><path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z' /></g></svg>
   )
 }
+
+export const IconSun = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className="stroke-[#0A0C10] dark:stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 hover:opacity-100" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+   <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+  </svg>
+  )
+}
+
+export const IconMoon = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className="stroke-[#0A0C10] dark:stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 hover:opacity-100" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+  </svg>
+  )
+}
