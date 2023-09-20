@@ -1,0 +1,64 @@
+html,
+body {
+  font-family: "N27", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cunia", sans-serif;
+}
+
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background-color: #90f;
+  border-radius: 0.1rem;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #96f;
+}
+
+img,
+svg {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+
+  animation-range: entry 0% cover 50%;
+  animation-fill-mode: both;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.download-cv>svg path {
+  transition: all 0.5s;
+}
+
+.download-cv:hover>svg path:nth-child(2) {
+  d: path("M4 18v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2");
+}
+
+.download-cv:hover>svg path:nth-child(3) {
+  d: path("M7 9l5 5l5 -5");
+}
+
+.download-cv:hover>svg path:last-child {
+  d: path("M12 2l0 12");
+}
