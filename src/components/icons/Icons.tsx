@@ -8,7 +8,7 @@ export const IconDownload = () => (
 )
 
 export const IconCode = () => (
-  <svg xmlns='http://www.w3.org/2000/svg' className='stroke-[#0A0C10] dark:stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 hover:opacity-100' width='30' height='30' viewBox='0 0 24 24' strokeWidth='2' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
+  <svg xmlns='http://www.w3.org/2000/svg' className='stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 hover:opacity-100' width='30' height='30' viewBox='0 0 24 24' strokeWidth='2' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
     <path stroke='none' d='M0 0h24v24H0z' fill='none' />
     <path d='M7 8l-4 4l4 4' />
     <path d='M17 8l4 4l-4 4' />
@@ -27,7 +27,7 @@ export const IconBrandThreads = () => {
 
 export const IconHeart = () => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-black dark:stroke-white group-hover:stroke-[#f91880] transition-colors duration-200' width='20' height='20' viewBox='0 0 24 24' strokeWidth='2' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
+    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-white group-hover:stroke-[#f91880] transition-colors duration-200' width='20' height='20' viewBox='0 0 24 24' strokeWidth='2' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572' />
     </svg>
@@ -36,7 +36,7 @@ export const IconHeart = () => {
 
 export const IconMessageCircle = () => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-black dark:stroke-white group-hover:stroke-[#00ba7c] transition-colors duration-200 ' width='20' height='20' viewBox='0 0 24 24' strokeWidth='2' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
+    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-white group-hover:stroke-[#00ba7c] transition-colors duration-200 ' width='20' height='20' viewBox='0 0 24 24' strokeWidth='2' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1' />
     </svg>
@@ -84,7 +84,7 @@ export const IconBrandGithub = () => {
 
 export const IconArrowUpRight = () => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-[#0A0C10] dark:stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 rotate-180' width='20' height='20' viewBox='0 0 24 24' strokeWidth='1.5' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
+    <svg xmlns='http://www.w3.org/2000/svg' className='stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 rotate-180' width='20' height='20' viewBox='0 0 24 24' strokeWidth='1.5' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M17 7l-10 10' />
       <path d='M8 7l9 0l0 9' />
@@ -100,7 +100,7 @@ export const IconX = () => {
 
 export const IconSun = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="stroke-[#0A0C10] dark:stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 hover:opacity-100" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" className="stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 hover:opacity-100" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
    <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
@@ -110,7 +110,7 @@ export const IconSun = () => {
 
 export const IconMoon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="stroke-[#0A0C10] dark:stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 hover:opacity-100" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" className="stroke-[#F5F9FF] group-hover:stroke-purple-600 group-hover:scale-105 group-dark:hover:stroke-purple-600 transition-all duration-200 focus-visible:text-[#96F] opacity-70 group-hover:opacity-100 hover:opacity-100" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
   </svg>

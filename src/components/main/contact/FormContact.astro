@@ -1,5 +1,5 @@
 <form
-  class="w-full h-auto flex flex-col items-center justify-center gap-6 px-4 py-6 cursor-pointer transition-all rounded-lg border-1 shadow-[0_0px_20px_0px_#CFD9E4] hover:shadow-[0_0px_20px_0px_#CFD9E4] dark:border-[#172554] dark:shadow-[0_0px_5px_0px_#172554] hover:bg-blue-200 dark:hover:bg-blue-950 max-sm:gap-4"
+  class="w-full h-auto flex flex-col items-center justify-center gap-6 px-4 py-6 cursor-pointer transition-all rounded-lg border-1 shadow-[0_0px_20px_0px_#CFD9E4] dark:border-[#172554] dark:shadow-[0_0px_5px_0px_#172554] hover:bg-blue-200 dark:hover:bg-blue-950 max-sm:gap-4"
   id="contact-form"
   action=""
 >
@@ -67,7 +67,7 @@
 <script>
   const form = document.querySelector("#contact-form");
   const personalEmail = document.querySelector(
-    "#personal-email"
+    "#personal-email",
   ) as HTMLElement;
 
   const handleSubmit = (event) => {
@@ -76,8 +76,8 @@
     personalEmail.setAttribute(
       "href",
       `mailto:hypanquia24@gmail.com?subject=${formData.get(
-        "name"
-      )}${formData.get("email")}&body=${formData.get("message")}`
+        "name",
+      )}${formData.get("email")}&body=${formData.get("message")}`,
     );
     personalEmail.click();
   };

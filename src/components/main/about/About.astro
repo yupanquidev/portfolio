@@ -13,7 +13,7 @@ import Experience from "./experience/Experience.astro";
   class="lg:container lg:mx-auto w-full flex gap-4 flex-col py-10 px-3 lg:px-10 md:py-8"
 >
   <h2
-    class="w-full text-4xl md:text-[2.5rem] uppercase font-black text-purple-700 dark:text-purple-600 mb-10"
+    class="w-full text-4xl md:text-[2.5rem] uppercase font-black text-purple-600 mb-10"
   >
     Sobre mí
   </h2>
@@ -22,31 +22,27 @@ import Experience from "./experience/Experience.astro";
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <aside class="flex flex-col items-center gap-2 text-center">
           <span class="text-4xl font-black">20</span>
-          <span class="text-sm font-semibold text-zinc-950 dark:text-gray-600"
-            >Años de edad</span
-          >
+          <span class="text-sm font-semibold text-gray-600">Años de edad</span>
         </aside>
         <aside class="flex flex-col items-center gap-2 text-center">
           <span class="text-4xl font-black">1+</span>
-          <span class="text-sm font-semibold text-zinc-950 dark:text-gray-600"
+          <span class="text-sm font-semibold text-gray-600"
             >Años desarrollador web</span
           >
         </aside>
         <!--  <aside class="flex flex-col items-center gap-2 text-center">
           <span class="text-4xl font-black">3</span>
-          <span class="text-sm font-semibold text-zinc-950 dark:text-gray-600"
+          <span class="text-sm font-semibold text-gray-600"
             >Gatos Increibles</span
           >
         </aside> -->
         <aside class="flex flex-col items-center gap-2 text-center">
           <span class="text-4xl font-black">473</span>
-          <span class="text-sm font-semibold text-zinc-950 dark:text-gray-600"
-            >Commits</span
-          >
+          <span class="text-sm font-semibold text-gray-600">Commits</span>
         </aside>
       </div>
       <div
-        class="flex flex-wrap justify-center gap-2 mt-10 [&>a]:bg-purple-300/50 dark:[&>a]:bg-purple-950/30 [&>a]:rounded-full [&>a]:p-3 [&>a>svg]:w-8 [&>a>svg]:h-8 [&>a]:w-14 [&>a]:h-14"
+        class="flex flex-wrap justify-center gap-2 mt-10 [&>a]:bg-purple-950/30 [&>a]:rounded-full [&>a]:p-3 [&>a>svg]:w-8 [&>a>svg]:h-8 [&>a]:w-14 [&>a]:h-14"
       >
         <Gmail />
         <LinkedIn />
@@ -55,14 +51,12 @@ import Experience from "./experience/Experience.astro";
         <Twitter />
       </div>
     </section>
-    <section
-      class="flex flex-col gap-4 dark:text-[#F5F9FF]/60 text-[#0A0C10]/70 max-sm:text-sm mb-8"
-    >
+    <section class="flex flex-col gap-4 text-[#F5F9FF]/60 max-sm:text-sm mb-8">
       <p>
         Desarrollador web, con tecnologías React, Tailwind CSS, Go. para crear
         hermosas experiencias de usuario y desarrollador que traigan placer.
       </p>
-      <p class="text-[#0A0C10] dark:text-[#F5F9FF]">
+      <p class="text-[#F5F9FF]">
         Mi objetivo es crear productos que ofrezcan experiencias excepcionales,
         con un diseño atractivo, intuitivo y de alta calidad.
       </p>
@@ -75,19 +69,11 @@ import Experience from "./experience/Experience.astro";
     </section>
   </div>
   <div class="flex flex-col gap-4 mt-7">
-    <h3
-      class="text-2xl md:text-3xl font-bold text-purple-700 dark:text-purple-600"
-    >
-      Tecnologías
-    </h3>
+    <h3 class="text-2xl md:text-3xl font-bold text-purple-600">Tecnologías</h3>
     <TechnologyStack />
   </div>
   <div class="flex flex-col gap-2 mt-7">
-    <h3
-      class="text-2xl md:text-3xl font-bold text-purple-700 dark:text-purple-600"
-    >
-      Experiencia
-    </h3>
+    <h3 class="text-2xl md:text-3xl font-bold text-purple-600">Experiencia</h3>
     <Experience />
   </div>
 </section>
