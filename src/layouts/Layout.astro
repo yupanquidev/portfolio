@@ -16,6 +16,9 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="copyright" content="Diseñado por yupanqui.dev" />
+    <meta name="author" content="Humberto Yupanqui Apaza" />
+    <meta name="description" content="Humberto Yupanqui Apaza" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Humberto Yupanqui Apaza</title>
@@ -150,18 +153,19 @@ const { title } = Astro.props;
 
       body::-webkit-scrollbar,
       textarea::-webkit-scrollbar {
-        width: 0.7rem;
+        width: 0.5rem;
       }
 
       body::-webkit-scrollbar-thumb,
       textarea::-webkit-scrollbar-thumb {
-        background-color: #90f;
-        border-radius: 0.1rem;
+        background-color: #0284c7;
+        border-radius: 1rem;
+        transition: all 0.5s;
       }
 
       body::-webkit-scrollbar-thumb:hover,
       textarea::-webkit-scrollbar-thumb:hover {
-        background-color: #96f;
+        background-color: #0369a1;
       }
 
       img,
