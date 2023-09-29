@@ -1,0 +1,17 @@
+---
+interface Props {
+  href: string;
+  textMenu: string;
+}
+
+const { href, textMenu } = Astro.props;
+---
+
+<li>
+  <a
+    class="py-2 px-4 font-normal text-base opacity-80 hover:opacity-100 transition-opacity duration-200"
+    href={href}
+  >
+    {textMenu}
+  </a>
+</li>
