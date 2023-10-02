@@ -1,0 +1,80 @@
+---
+import JavaScript from "../../tags/JavaScript.astro";
+import TypeScript from "../../tags/TypeScript.astro";
+import Experience from "./Experience.astro";
+---
+
+<section
+  class="w-full flex justify-between gap-10 mt-10 flex-col lg:container lg:mx-auto px-3 lg:px-10"
+>
+  <h2 class="w-full text-2xl uppercase font-black text-purple-600">
+    Experiencia
+  </h2>
+  <div class="flex flex-col">
+    <Experience
+      role="Full Stack Developer"
+      company="ITETNIA"
+      current="Actual"
+      date="Comenzó en febrero de 2023"
+    >
+      <svg
+        slot="icon"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+        ></path>
+        <path d="M16 3l0 4"></path>
+        <path d="M8 3l0 4"></path>
+        <path d="M4 11l16 0"></path>
+        <path d="M8 15h2v2h-2z"></path>
+      </svg>
+      <p class="text-sm opacity-60 dark:opacity-40" slot="description">
+        Crear nuevas funcionalidades, pantallas y comportamientos, basados ​​en
+        la diseño predefinido para cada proyecto. Desarrollar los componentes
+        solicitados dentro de los entornos establecidos, asegurando la uso
+        previsto de la solución.
+      </p>
+      <section class="py-2 flex gap-2" slot="technologies">
+        <TypeScript />
+        <JavaScript />
+      </section>
+    </Experience>
+    <Experience
+      role="Estudiante de ING. Software con IA"
+      company="SENATI"
+      date="inicio"
+      current="Actual"
+    >
+      <svg
+        slot="icon"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+        <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+      </svg>
+    </Experience>
+  </div>
+</section>
+
+<style>
+  p {
+    text-wrap: balance;
+  }
+</style>

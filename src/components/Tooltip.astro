@@ -1,0 +1,13 @@
+---
+interface Props {
+  description: string;
+}
+
+const { description } = Astro.props;
+---
+
+<span
+  class="group-hover:block hidden py-2 px-3 border-2 border-zinc-700/80 bg-zinc-900/50 rounded-md w-max font-light text-xs -bottom-12 absolute text-zinc-200"
+>
+  {description}
+</span>
