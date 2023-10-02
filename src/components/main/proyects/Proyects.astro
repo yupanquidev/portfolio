@@ -1,5 +1,5 @@
 ---
-import Github from "../../contactIcons/Github.astro";
+import { Image } from "astro:assets";
 import { IconArrowUpRight, IconBrandGithub, IconLink } from "../../icons/Icons";
 import Astrojs from "../../tags/Astrojs.astro";
 import TailwindCSS from "../../tags/TailwindCSS.astro";
@@ -12,14 +12,8 @@ import Portfolio from "/public/portfolio.webp";
   class="lg:container lg:mx-auto w-full flex gap-4 flex-col py-10 px-3 lg:px-10 md:py-8"
 >
   <aside class="mb-8">
-    <h2
-      class="w-full text-4xl md:text-[2.5rem] uppercase font-black text-purple-600 mb-4"
-    >
-      Proyectos
-    </h2>
-    <p class="text-zinc-950 dark:text-zinc-200 font-light">
-      Revisa mi trabajo.
-    </p>
+    <h2 class="w-full text-3xl font-black text-sky-500 mb-4">Proyectos</h2>
+    <p class="text-zinc-200 font-light">Revisa mi trabajo.</p>
   </aside>
   <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
     <article
@@ -28,7 +22,7 @@ import Portfolio from "/public/portfolio.webp";
       <section
         class="w-auto h-90 rounded-md object-cover object-center [mask-image:linear-gradient(180deg,#fff_16.35%,rgb(255_255_255_/_0%)_91.66%)]"
       >
-        <img
+        <Image
           class="w-full h-90 rounded-md"
           loading="lazy"
           src={Portfolio}
@@ -55,7 +49,6 @@ import Portfolio from "/public/portfolio.webp";
               >
                 <IconArrowUpRight />
               </a>
-              <Github hyperlink="https://github.com/ypnqh/portfolio" />
             </div>
           </aside>
           <aside class="py-2">

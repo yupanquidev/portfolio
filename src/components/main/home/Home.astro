@@ -4,19 +4,19 @@ import ContactInfo from "../../ContactInfo.astro";
 import Hobbies from "../../Hobbies.astro";
 import Tooltip from "../../Tooltip.astro";
 import ButtonDownloadCV from "../../buttons/ButtonDownloadCV.astro";
-import CardHome from "./CardHome.astro";
+import Xcard from "./Xcard.astro";
 ---
 
 <section
   id="home"
-  class="lg:container lg:mx-auto w-full flex gap-10 flex-col py-6 px-3 lg:px-10 md:py-8 lg:flex-row"
+  class="lg:container lg:mx-auto w-full flex gap-5 flex-col py-6 px-3 lg:px-10 md:py-8 md:flex-row xl:gap-10"
 >
   <div class="w-auto flex flex-col gap-8">
     <div class="flex flex-col gap-4 md:gap-6">
       <span class="text-emerald-300 text-base font-light">
         ¡Bienvenido a mi sitio!
       </span>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-300">
+      <h1 class="text-4xl lg:text-6xl font-black text-zinc-300">
         Hola, soy<span
           class="font-black bg-gradient-to-r to-sky-400 from-emerald-500 bg-clip-text text-transparent"
         >
@@ -47,7 +47,7 @@ import CardHome from "./CardHome.astro";
   </div>
   <div class="w-full flex flex-col items-center gap-5 pt-4 sm:w-auto relative">
     <Hobbies />
-    <CardHome />
+    <Xcard />
     <aside class="flex gap-2 items-center justify-center mt-4">
       <ContactInfo
         style="hover:bg-yellow-500 hover:border-yellow-600 "
@@ -199,6 +199,21 @@ import CardHome from "./CardHome.astro";
 
     to {
       opacity: 1;
+    }
+  }
+
+  article {
+    animation: animate-float 5s infinite;
+  }
+
+  @keyframes animate-float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(5px);
     }
   }
 </style>
