@@ -1,5 +1,5 @@
 <article
-  class="w-full bg-[#16181C] sm:w-80 lg:w-96 border-2 border-zinc-700 p-4 rounded-2xl flex flex-col gap-4"
+  class="w-full bg-[#16181C] sm:w-80 lg:w-96 border-2 border-zinc-700 p-4 rounded-2xl flex flex-col gap-4 motion"
 >
   <header class="w-full flex gap-3">
     <img
@@ -39,3 +39,20 @@
     </aside>
   </footer>
 </article>
+
+<style>
+  .motion {
+    animation: animate-float 5s infinite;
+  }
+
+  @keyframes animate-float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(5px);
+    }
+  }
+</style>

@@ -9,7 +9,7 @@ import Xcard from "./Xcard.astro";
 
 <section
   id="home"
-  class="mx-auto max-w-7xl w-full flex gap-5 flex-col py-6 px-3 lg:px-10 md:py-8 md:flex-row xl:gap-10"
+  class="mx-auto max-w-6xl w-full flex gap-5 flex-col py-6 px-3 md:py-8 md:flex-row xl:gap-10"
 >
   <div class="w-auto flex flex-col gap-8">
     <div class="flex flex-col gap-4 md:gap-6">
@@ -199,21 +199,6 @@ import Xcard from "./Xcard.astro";
 
     to {
       opacity: 1;
-    }
-  }
-
-  article {
-    animation: animate-float 5s infinite;
-  }
-
-  @keyframes animate-float {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-
-    50% {
-      transform: translateY(5px);
     }
   }
 </style>
