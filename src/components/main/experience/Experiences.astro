@@ -1,7 +1,7 @@
 ---
 import JavaScript from "../../tags/JavaScript.astro";
 import TypeScript from "../../tags/TypeScript.astro";
-import Experience from "./Experience.astro";
+import ExperienceTimeline from "./ExperienceTimeline.astro";
 ---
 
 <section
@@ -9,7 +9,7 @@ import Experience from "./Experience.astro";
 >
   <h2 class="w-full text-3xl font-black text-sky-500">Experiencia</h2>
   <div class="flex flex-col md:flex-row md:gap-5 lg:gap-10">
-    <Experience
+    <ExperienceTimeline
       role="Full Stack Developer"
       company="ITETNIA"
       current="Actual"
@@ -45,8 +45,8 @@ import Experience from "./Experience.astro";
         <TypeScript />
         <JavaScript />
       </section>
-    </Experience>
-    <Experience
+    </ExperienceTimeline>
+    <ExperienceTimeline
       role="Estudiante de ING. Software con IA"
       company="SENATI"
       date="inicio"
@@ -67,7 +67,7 @@ import Experience from "./Experience.astro";
         <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
         <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
       </svg>
-    </Experience>
+    </ExperienceTimeline>
   </div>
 </section>
 

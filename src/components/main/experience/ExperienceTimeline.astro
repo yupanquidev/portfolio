@@ -18,33 +18,25 @@ const { role, company, date, current } = Astro.props;
       </span>
     </div>
     <div class="w-10 h-full flex justify-center items-center">
-      <div class="w-[2px] h-full bg-[#F5F9FF] opacity-30 rounded-full"></div>
+      <span class="w-[2px] h-full bg-[#F5F9FF] opacity-30 rounded-full"></span>
     </div>
   </section>
   <section
     class="w-full flex flex-col gap-2 text-[#F5F9FF] justify-between items-center max-sm:flex-col max-sm:gap-2 max-sm:justify-start"
   >
-    <div
-      class="w-full flex justify-between gap-2 max-sm:flex-col max-sm:w-full max-sm:justify-start"
-    >
-      <div
-        class="w-full flex flex-col gap-1 max-sm:justify-start max-sm:items-start"
-      >
-        <div
-          class="flex gap-1 max-sm:w-full max-sm:flex max-sm:justify-between max-sm:gap-0"
+    <div class="w-full flex flex-col gap-2">
+      <div class="flex justify-between">
+        <span class="font-bold text-lg">{role}</span>
+        <span
+          class="font-light text-xs p-1 rounded text-[#F5F9FF] bg-[#113B73] flex items-center justify-center"
         >
-          <h4 class="font-bold text-base max-sm:p-0">{role}</h4>
-          <span
-            class="font-light text-xs p-1 rounded text-[#F5F9FF] bg-[#113B73] flex items-center justify-center"
-          >
-            {current}
-          </span>
-        </div>
-        <p class="text-xs font-bold opacity-60 dark:opacity-40">
-          {date}
-        </p>
+          {current}
+        </span>
       </div>
       <p class="font-bold text-base opacity-80 max-sm:w-full">{company}</p>
+      <p class="text-xs font-bold opacity-60 dark:opacity-40">
+        {date}
+      </p>
     </div>
     <section class="py-2 max-sm:py-1">
       <slot name="description" />
