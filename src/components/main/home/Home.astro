@@ -48,9 +48,9 @@ import Xcard from "./Xcard.astro";
   <div class="w-full flex flex-col items-center gap-5 pt-14 sm:w-auto relative">
     <Hobbies />
     <Xcard />
-    <aside class="flex gap-2 items-center justify-center mt-4">
+    <ul class="flex gap-2 items-center justify-center mt-4">
       <ContactInfo
-        style="hover:bg-yellow-500 hover:border-yellow-600 "
+        style="hover:bg-yellow-500 hover:border-yellow-600"
         href="https://github.com/ypnqh/portfolio/stargazers"
       >
         <svg
@@ -73,7 +73,6 @@ import Xcard from "./Xcard.astro";
       </ContactInfo>
       <ContactInfo href="#">
         <svg
-          class="icon icon-tabler icon-tabler-brand-github"
           width="20"
           height="20"
           viewBox="0 0 24 24"
@@ -92,7 +91,6 @@ import Xcard from "./Xcard.astro";
       </ContactInfo>
       <ContactInfo href="#" style="">
         <svg
-          class="icon icon-tabler icon-tabler-mail"
           width="20"
           height="20"
           viewBox="0 0 24 24"
@@ -172,7 +170,7 @@ import Xcard from "./Xcard.astro";
         </svg>
         <Tooltip description="X" />
       </ContactInfo>
-    </aside>
+    </ul>
   </div>
 </section>
 

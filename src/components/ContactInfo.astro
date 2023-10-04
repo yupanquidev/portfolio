@@ -7,15 +7,16 @@ interface Props {
 const { href, style } = Astro.props;
 ---
 
-<a
-  class=`cursor-pointer group w-[38px] h-[38px] border-2 
-        border-zinc-700/80 bg-zinc-900/50 
-        rounded-full relative flex justify-center 
-        items-center transition-all duration-300 
+<li class="list-none">
+  <a
+    class=`cursor-pointer group w-9 h-9 border-2 
+        border-zinc-700/80 bg-zinc-900/50 flex items-center justify-center
+        rounded-full relative transition-all duration-300 
         ${style}`
-  href={href}
-  rel="noopener noreferrer"
-  target="_blank"
->
-  <slot />
-</a>
+    href={href}
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <slot />
+  </a>
+</li>

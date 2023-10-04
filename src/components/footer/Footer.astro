@@ -4,9 +4,9 @@ import Tooltip from "../Tooltip.astro";
 import ResourceLinks from "./ResourceLinks.astro";
 ---
 
-<footer class="w-full py-10 bg-zinc-900/60 text-zinc-300">
+<footer class="w-full py-16 bg-zinc-900/60 text-zinc-300">
   <section
-    class="mx-auto max-w-6xl items-center px-3 flex flex-col gap-4 md:gap-8 md:flex-row md:justify-between text-base font-light"
+    class="mx-auto max-w-6xl px-4 flex flex-col items-center gap-4 md:gap-8 md:justify-between text-base font-light"
   >
     <p class="w-full">
       Diseñado en <ResourceLinks name="Figma" href="https://www.figma.com" /> y
@@ -25,14 +25,13 @@ import ResourceLinks from "./ResourceLinks.astro";
         href="https://github.com/mona-sans"
       />.
     </p>
-    <span class="w-full md:w-10 h-[1px] bg-zinc-800 md:hidden"></span>
-    <div class="w-full flex flex-col gap-2 [&>div]:px-0">
-      <p class="">
-        © 2023 Humberto Yupanqui, todos los derechos reservados. FullStack
-        Developer, Freelancer.
-      </p>
-      <div class="flex gap-1 justify-center md:justify-start">
-        <ContactInfo href="#">
+    <span class="w-full h-[1px] bg-zinc-800"></span>
+    <div
+      class="w-full flex flex-col items-center gap-2 md:flex-row md:justify-between"
+    >
+      <p class="">© 2023 Humberto Yupanqui, todos los derechos reservados.</p>
+      <ul class="flex gap-1">
+        <ContactInfo href="https://github.com/yupanquidev">
           <svg
             width="20"
             height="20"
@@ -50,7 +49,7 @@ import ResourceLinks from "./ResourceLinks.astro";
           </svg>
           <Tooltip description="GitHub" />
         </ContactInfo>
-        <ContactInfo href="#" style="">
+        <ContactInfo href="mailto:hyupanquia24@gmail.com" style="">
           <svg
             width="20"
             height="20"
@@ -69,7 +68,7 @@ import ResourceLinks from "./ResourceLinks.astro";
           </svg>
           <Tooltip description="Email" />
         </ContactInfo>
-        <ContactInfo href="#">
+        <ContactInfo href="https://linkedin.com/in/yupanquidev">
           <svg
             width="20"
             height="20"
@@ -91,7 +90,7 @@ import ResourceLinks from "./ResourceLinks.astro";
           </svg>
           <Tooltip description="LinkedIn" />
         </ContactInfo>
-        <ContactInfo href="#">
+        <ContactInfo href="https://instagram.com/yupanquidev">
           <svg
             width="20"
             height="20"
@@ -111,7 +110,7 @@ import ResourceLinks from "./ResourceLinks.astro";
           </svg>
           <Tooltip description="Instagram" />
         </ContactInfo>
-        <ContactInfo href="#">
+        <ContactInfo href="https://x.com/yupanquidev">
           <svg
             width="20"
             height="20"
@@ -128,7 +127,7 @@ import ResourceLinks from "./ResourceLinks.astro";
           </svg>
           <Tooltip description="X" />
         </ContactInfo>
-        <ContactInfo href="#">
+        <ContactInfo href="https://facebook.com/yupanquidev">
           <svg
             width="20"
             height="20"
@@ -146,7 +145,7 @@ import ResourceLinks from "./ResourceLinks.astro";
           </svg>
           <Tooltip description="Facebook" />
         </ContactInfo>
-        <ContactInfo href="#">
+        <ContactInfo href="https://tiktok.com/@yupanquidev">
           <svg
             width="20"
             height="20"
@@ -164,7 +163,7 @@ import ResourceLinks from "./ResourceLinks.astro";
           </svg>
           <Tooltip description="TikTok" />
         </ContactInfo>
-        <ContactInfo href="#">
+        <ContactInfo href="https://threads.net/@yupanquidev">
           <svg
             width="20"
             height="20"
@@ -182,7 +181,7 @@ import ResourceLinks from "./ResourceLinks.astro";
           </svg>
           <Tooltip description="Threads" />
         </ContactInfo>
-      </div>
+      </ul>
     </div>
   </section>
 </footer>
