@@ -1,7 +1,6 @@
 ---
 import Backdrop from "../Backdrop.astro";
 import ButtonContact from "../buttons/ButtonContact.astro";
-import { IconCode } from "../icons/Icons";
 import Navbar from "./Navbar.astro";
 import MenuToggle from "./MenuToggle.astro";
 ---
@@ -12,15 +11,27 @@ import MenuToggle from "./MenuToggle.astro";
   <div class="mx-auto max-w-6xl flex justify-between items-center px-3">
     <Backdrop />
     <a class="w-auto h-full py-4 flex items-center" href="/">
-      <IconCode />
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M7 8l-4 4l4 4"></path>
+        <path d="M17 8l4 4l-4 4"></path>
+        <path d="M14 4l-4 16"></path>
+      </svg>
       <span class="text-blue-500 pl-2">Beta</span>
     </a>
     <Navbar />
     <section class="flex items-center gap-4 [&>a>svg]:w-6">
       <a href="https://github.com/ypnqh/" target="_blank" rel="">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-brand-github"
           width="20"
           height="20"
           viewBox="0 0 24 24"
