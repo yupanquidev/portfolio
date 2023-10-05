@@ -1,16 +1,11 @@
 <button
   class="w-6 h-6 flex flex-col items-center justify-around border-0 bg-transparent opacity-70 hover:opacity-100 md:hidden haburger"
 >
-  <span
-    class="dark:bg-[#F5F9FF] bg-[#0A0C10] h-[2px] w-full rounded transition-all origin-left duration-500"
-  ></span>
-  <span
-    class="dark:bg-[#F5F9FF] bg-[#0A0C10] h-[2px] w-full rounded transition-all duration-500"
-  ></span>
-  <span
-    class="dark:bg-[#F5F9FF] bg-[#0A0C10] h-[2px] w-full rounded transition-all origin-left duration-500"
-  ></span>
+  <span class="menuToggleLine origin-left"></span>
+  <span class="menuToggleLine"></span>
+  <span class="menuToggleLine origin-left"></span>
 </button>
+
 <style>
   button.active span:first-child {
     transform: rotate(45deg) translate(2px, -2px);
@@ -20,7 +15,9 @@
   button.active span:nth-child(2) {
     opacity: 0;
     margin-left: -28px;
-    transition: opacity 0.6s ease-in-out, margin-left 0.6s ease-in-out;
+    transition:
+      opacity 0.6s ease-in-out,
+      margin-left 0.6s ease-in-out;
   }
 
   button.active span:last-child {
