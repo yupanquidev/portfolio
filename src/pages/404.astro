@@ -1,38 +1,56 @@
 ---
 import { Image } from "astro:assets";
+import Button from "../components/buttons/Button.astro";
 import Layout from "../layouts/Layout.astro";
 import Error404 from "/public/404.gif";
 ---
 
 <Layout title="Error 404, no lo he encontrado">
   <main class="w-full">
-    <div
-      class="mx-auto max-w-7xl flex items-center flex-col-reverse py-6 px-3 lg:px-0 md:py-8 md:flex-row"
+    <section
+      class="mx-auto max-w-6xl min-h-screen flex flex-col items-center justify-center p-4 gap-y-10"
     >
-      <section class="flex flex-col justify-center">
-        <h1
-          class="text-3xl font-extrabold text-purple-800 dark:text-purple-500 md:text-4xl"
-        >
-          ¿TE HAS EQUIVOCADO DE CAMINO?
-        </h1>
-        <p class="text-base font-light text-zinc-100 my-8">
-          Parece que te has perdido. ¿Sabes qué ayuda mucho en esta clase de
-          situación? Un tazón de fideos bien calentito. Siéntate, estamos
-          trabajando a tope para preparar algo genial. ¿Quieres algo para leer?
-          Esto podría ayudarte:
-        </p>
-        <a
-          href="/"
-          class="w-auto border-2 border-[#96F]/20 bg-zinc-800 text-zinc-100 rounded-md bg-opacity-90 hover:bg-opacity-100 transition-opacity duration-20 py-2 px-4 font-light shadow-[0px_0px_15px_2px] shadow-purple-500/50 text-lg my-8 mx-auto md:my-4"
-          >Volver a la página de inicio</a
-        >
-      </section>
-      <Image
-        class="w-80 rounded py-10 md:ml-20"
-        src={Error404}
-        alt="Este gif es un error 404, no found"
-        loading="lazy"
-      />
-    </div>
+      <div class="text-sky-500 flex items-end gap-2 py-8">
+        <h1 class="text-9xl font-black">404</h1>
+        <span class="font-medium opacity-80 text-lg">Not Found</span>
+      </div>
+      <div class="flex flex-col-reverse items-center md:flex-row">
+        <section class="flex flex-col items-center justify-center gap-8">
+          <h2 class="text-3xl font-extrabold text-sky-500 md:text-4xl">
+            ¿TE HAS EQUIVOCADO DE CAMINO?
+          </h2>
+          <p class="text-base font-light text-zinc-100 my-8">
+            Parece que te has perdido. ¿Sabes qué ayuda mucho en esta clase de
+            situación? Un tazón de fideos bien calentito. Siéntate, estamos
+            trabajando a tope para preparar algo genial. ¿Quieres algo para
+            leer? Esto podría ayudarte:
+          </p>
+          <Button href="/" buttonName="Volver a la página de inicio">
+            <svg
+              slot="icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M5 12l14 0"></path>
+              <path d="M5 12l6 6"></path>
+              <path d="M5 12l6 -6"></path>
+            </svg>
+          </Button>
+        </section>
+        <Image
+          class="w-96 rounded py-10 md:ml-16"
+          src={Error404}
+          alt="Este gif es un error 404, no found"
+          loading="lazy"
+        />
+      </div>
+    </section>
   </main>
 </Layout>

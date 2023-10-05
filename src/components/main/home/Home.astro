@@ -2,8 +2,8 @@
 import ContactInfo from "../../ContactInfo.astro";
 import Hobbies from "../../Hobbies.astro";
 import Tooltip from "../../Tooltip.astro";
+import Button from "../../buttons/Button.astro";
 import ButtonContact from "../../buttons/ButtonContact.astro";
-import ButtonDownloadCV from "../../buttons/ButtonDownloadCV.astro";
 import Xcard from "./Xcard.astro";
 ---
 
@@ -39,7 +39,28 @@ import Xcard from "./Xcard.astro";
       </p>
     </div>
     <section class="w-auto flex gap-8 items-center flex-wrap">
-      <ButtonDownloadCV />
+      <Button
+        buttonName="Descargar CV"
+        href="/public/resume.pdf"
+        rel="noopener noreferrer"
+        target="_blank"
+        className="download-cv flex-row-reverse"
+      >
+        <svg
+          slot="icon"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path><path
+            d="M7 11l5 5l5 -5"></path><path d="M12 4l0 12"></path></svg
+        >
+      </Button>
       <ButtonContact
         style="bg-zinc-900 py-2.5 text-zinc-100 hover:bg-sky-600"
       />
@@ -198,5 +219,21 @@ import Xcard from "./Xcard.astro";
     to {
       opacity: 1;
     }
+  }
+
+  .download-cv > svg path {
+    transition: all 0.3s;
+  }
+
+  .download-cv:hover > svg path:nth-child(2) {
+    d: path("M4 18v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2");
+  }
+
+  .download-cv:hover > svg path:nth-child(3) {
+    d: path("M7 9l5 5l5 -5");
+  }
+
+  .download-cv:hover > svg path:last-child {
+    d: path("M12 2l0 12");
   }
 </style>
