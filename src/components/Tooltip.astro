@@ -6,8 +6,6 @@ interface Props {
 const { description } = Astro.props;
 ---
 
-<span
-  class="group-hover:block hidden py-1.5 px-2.5 border-2 border-zinc-700/80 bg-zinc-900/50 rounded-md w-max font-light text-xs -bottom-10 absolute text-zinc-200"
->
+<span class="group-hover:block hidden -bottom-10 absolute tooltip">
   {description}
 </span>

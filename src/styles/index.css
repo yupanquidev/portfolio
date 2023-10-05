@@ -1,9 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html,
+body {
+  font-family: "N27", sans-serif;
+  color-scheme: dark light;
+}
 
-@layer components {
-  .tags {
-    @apply font-medium text-xs py-0.5 px-2.5 rounded-xl;
-  }
+h1,
+h2,
+h3 {
+  font-family: "Mona Sans", sans-serif;
+}
+
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background-color: #0284c7;
+  border-radius: 1rem;
+  transition: all 0.5s;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #0369a1;
 }
