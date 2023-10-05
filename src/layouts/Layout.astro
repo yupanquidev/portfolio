@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/footer/Footer.astro";
 import Header from "../components/header/Header.astro";
+import "../styles/index.css";
 
 interface Props {
   title: string;
@@ -22,7 +23,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Humberto Yupanqui Apaza</title>
-    <link rel="stylesheet" href="src/styles/index.css" />
+    <link rel="stylesheet" href="../src/styles/index.css" />
     <ViewTransitions />
   </head>
   <body class="w-full flex flex-col bg-zinc-950">
