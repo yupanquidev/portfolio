@@ -2,45 +2,52 @@
 interface Props {
   role: string;
   company: string;
-  date: string;
+  startDate: string;
+  finishDate: string;
   current: string;
+  location: string;
+  locationType: string;
+  amountOfTime: string;
+  jobType: string;
 }
-const { role, company, date, current } = Astro.props;
+
+const {
+  role,
+  company,
+  startDate,
+  finishDate,
+  current,
+  location,
+  locationType,
+  amountOfTime,
+  jobType,
+} = Astro.props;
 ---
 
-<article class="w-full flex gap-2 pb-4 transition-all rounded-lg border-1">
-  <section class="w-auto flex flex-col gap-1 justify-center items-center">
-    <div class="w-10 h-10 flex justify-center items-center">
+<section class="w-full flex gap-1 transition-all rounded-lg border-1">
+  <aside class="w-10 h-auto flex flex-col gap-0.5 justify-center items-center">
+    <span class="p-1.5 rounded-full bg-sky-900">
+      <slot name="icon" />
+    </span>
+    <span class="w-[1px] h-full bg-zinc-700 rounded-full"></span>
+  </aside>
+  <article class="w-full flex flex-col pt-1 text-zinc-100 gap-2">
+    <span class="flex justify-between">
+      <span class="font-bold text-base">{role}</span>
       <span
-        class="w-[38px] h-[38px] rounded-full flex justify-center items-center bg-[#113B73]"
+        class="font-light text-xs p-1 rounded bg-blue-800 flex items-center justify-center"
       >
-        <slot name="icon" />
+        {current}
       </span>
-    </div>
-    <div class="w-10 h-full flex justify-center items-center">
-      <span class="w-[2px] h-full bg-[#F5F9FF] opacity-30 rounded-full"></span>
-    </div>
-  </section>
-  <section
-    class="w-full flex flex-col gap-2 text-[#F5F9FF] justify-between items-center max-sm:flex-col max-sm:gap-2 max-sm:justify-start"
-  >
-    <div class="w-full flex flex-col gap-2">
-      <div class="flex justify-between">
-        <span class="font-bold text-lg">{role}</span>
-        <span
-          class="font-light text-xs p-1 rounded text-[#F5F9FF] bg-[#113B73] flex items-center justify-center"
-        >
-          {current}
-        </span>
-      </div>
-      <p class="font-bold text-base opacity-80 max-sm:w-full">{company}</p>
-      <p class="text-xs font-bold opacity-60 dark:opacity-40">
-        {date}
-      </p>
-    </div>
-    <section class="py-2 max-sm:py-1">
-      <slot name="description" />
-      <slot name="technologies" />
-    </section>
-  </section>
-</article>
+    </span>
+    <p class="text-sm flex flex-col gap-1">
+      <span class="font-normal opacity-90">{company} · {jobType}</span>
+      <span class="font-light flex flex-col opacity-70">
+        <span>{startDate} - {finishDate} · {amountOfTime}</span>
+        <span>{location} · {locationType}</span>
+      </span>
+    </p>
+    <slot name="description" />
+    <slot name="aptitudes" />
+  </article>
+</section>

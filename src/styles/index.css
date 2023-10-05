@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .tags {
+    @apply font-medium text-xs py-0.5 px-2.5 rounded-xl;
+  }
+}

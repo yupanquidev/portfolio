@@ -1,0 +1,13 @@
+---
+interface Props {
+  name: string;
+  bgColor: string;
+  textColor: string;
+}
+
+const { name, bgColor, textColor } = Astro.props;
+---
+
+<span class=`tags ${bgColor} ${textColor}`>
+  {name}
+</span>

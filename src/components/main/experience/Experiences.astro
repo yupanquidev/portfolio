@@ -1,73 +1,101 @@
 ---
-import JavaScript from "../../tags/JavaScript.astro";
-import TypeScript from "../../tags/TypeScript.astro";
+import TechnologyTags from "../../technologyTags.astro";
 import ExperienceTimeline from "./ExperienceTimeline.astro";
 ---
 
 <section
-  class="w-full flex justify-between gap-10 mt-10 flex-col mx-auto max-w-6xl px-3"
+  class="w-full flex justify-between my-10 flex-col mx-auto max-w-6xl px-3"
 >
   <h2 class="w-full text-3xl font-black text-sky-500">Experiencia</h2>
-  <div class="flex flex-col md:flex-row md:gap-5 lg:gap-10">
-    <ExperienceTimeline
-      role="Full Stack Developer"
-      company="ITETNIA"
-      current="Actual"
-      date="Comenzó en febrero de 2023"
-    >
-      <svg
-        slot="icon"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+  <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8">
+    <section class="flex flex-col gap-0.5">
+      <h3 class="text-xl py-4 font-bold text-sky-600">Experiencia</h3>
+      <ExperienceTimeline
+        role="Full Stack Developer"
+        company="ITETNIA"
+        current="Actual"
+        startDate="Ago. 2021"
+        finishDate="Actualidad"
+        location="Cusco, Perú"
+        locationType="Presencial"
+        amountOfTime="3 meses"
+        jobType="Contrato de prácticas"
       >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-        ></path>
-        <path d="M16 3l0 4"></path>
-        <path d="M8 3l0 4"></path>
-        <path d="M4 11l16 0"></path>
-        <path d="M8 15h2v2h-2z"></path>
-      </svg>
-      <p class="text-sm opacity-60 dark:opacity-40" slot="description">
-        Crear nuevas funcionalidades, pantallas y comportamientos, basados ​​en
-        la diseño predefinido para cada proyecto. Desarrollar los componentes
-        solicitados dentro de los entornos establecidos, asegurando la uso
-        previsto de la solución.
-      </p>
-      <section class="py-2 flex gap-2" slot="technologies">
-        <TypeScript />
-        <JavaScript />
-      </section>
-    </ExperienceTimeline>
-    <ExperienceTimeline
-      role="Estudiante de ING. Software con IA"
-      company="SENATI"
-      date="inicio"
-      current="Actual"
-    >
-      <svg
-        slot="icon"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        <svg
+          slot="icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+          ></path>
+          <path d="M16 3l0 4"></path>
+          <path d="M8 3l0 4"></path>
+          <path d="M4 11l16 0"></path>
+          <path d="M8 15h2v2h-2z"></path>
+        </svg>
+        <p class="text-sm opacity-95 font-normal" slot="description">
+          Crear nuevas funcionalidades, pantallas y comportamientos, basados
+          ​​en la diseño predefinido para cada proyecto. Desarrollar los
+          componentes solicitados dentro de los entornos establecidos,
+          asegurando la uso previsto de la solución.
+        </p>
+        <section class="py-2 flex gap-1.5 pb-5" slot="aptitudes">
+          <TechnologyTags
+            name="JavaScript"
+            textColor="text-black"
+            bgColor="bg-yellow-400"
+          />
+          <TechnologyTags
+            name="CSS"
+            textColor="text-black"
+            bgColor="bg-sky-400"
+          />
+          <TechnologyTags
+            name="HTML"
+            textColor="text-white"
+            bgColor="bg-orange-600"
+          />
+        </section>
+      </ExperienceTimeline>
+    </section>
+    <section class="flex flex-col gap-0.5">
+      <h3 class="text-xl py-4 font-bold text-sky-600">Educación</h3>
+      <ExperienceTimeline
+        role="Ingeniería de Software e Inteligencia Artificial"
+        company="SENATI"
+        startDate="Marzo 2021"
+        finishDate="Actualidad"
+        current="Actual"
+        location="Cusco, Perú"
+        locationType="Semipresencial"
+        amountOfTime="3 años"
+        jobType="Educación"
       >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
-        <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
-      </svg>
-    </ExperienceTimeline>
+        <svg
+          slot="icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+          <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+        </svg>
+      </ExperienceTimeline>
+    </section>
   </div>
 </section>
 
