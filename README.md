@@ -13,8 +13,6 @@ The tools I used to build this project are:
 To design and layout use Figma:
 - Use a single page layout to simplify navigation.
 - Use a responsive design so that the site looks good on different devices and screen sizes.
-- Use a dark theme because some users like it.
-
 ## 📷 Screenshots
 Here are some screenshots of the site on different devices and screen sizes:
 > 💻 Desktop, tablet and mobile.
