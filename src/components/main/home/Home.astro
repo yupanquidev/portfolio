@@ -9,7 +9,7 @@ import Xcard from "./Xcard.astro";
 
 <section
   id="home"
-  class="mx-auto max-w-6xl w-full flex gap-5 flex-col py-6 px-3 md:py-8 md:flex-row xl:gap-10"
+  class="mx-auto max-w-6xl w-full min-h-screen justify-center flex gap-5 flex-col px-3 md:py-8 md:flex-row xl:gap-10"
 >
   <div class="w-auto flex flex-col gap-8">
     <div class="flex flex-col gap-4 md:gap-6">
@@ -41,7 +41,7 @@ import Xcard from "./Xcard.astro";
     <section class="w-auto flex gap-8 items-center flex-wrap">
       <Button
         buttonName="Descargar CV"
-        href="/public/resume.pdf"
+        href="/resume.pdf"
         rel="noopener noreferrer"
         target="_blank"
         className="download-cv flex-row-reverse"
@@ -71,7 +71,7 @@ import Xcard from "./Xcard.astro";
     <Xcard />
     <ul class="flex gap-2 items-center justify-center mt-4">
       <ContactInfo
-        style="hover:bg-yellow-500 hover:border-yellow-600"
+        className="hover:bg-yellow-500 hover:border-yellow-600"
         href="https://github.com/ypnqh/portfolio/stargazers"
       >
         <svg
@@ -110,7 +110,7 @@ import Xcard from "./Xcard.astro";
         </svg>
         <Tooltip description="GitHub" />
       </ContactInfo>
-      <ContactInfo href="mailto:hyupanquia24@gmail.com" style="">
+      <ContactInfo href="mailto:hyupanquia24@gmail.com">
         <svg
           width="20"
           height="20"

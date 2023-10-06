@@ -1,15 +1,15 @@
 ---
 interface Props {
   href: string;
-  style?: string;
+  className?: string;
 }
 
-const { href, style } = Astro.props;
+const { href, className } = Astro.props;
 ---
 
 <li class="list-none">
   <a
-    class=`group flex items-center justify-center relative transition-all duration-300 contactInfo ${style}`
+    class=`group flex items-center justify-center relative transition-all duration-300 contactInfo ${className}`
     href={href}
     rel="noopener noreferrer"
     target="_blank"
