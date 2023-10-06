@@ -9,10 +9,10 @@ import Xcard from "./Xcard.astro";
 
 <section
   id="home"
-  class="mx-auto max-w-6xl w-full min-h-screen justify-center flex gap-5 flex-col px-3 md:py-8 md:flex-row xl:gap-10"
+  class="mx-auto max-w-6xl w-full min-h-screen justify-center items-center flex gap-5 flex-col px-3 md:flex-row xl:gap-10"
 >
   <div class="w-auto flex flex-col gap-8">
-    <div class="flex flex-col gap-4 md:gap-6">
+    <section class="flex flex-col gap-4 md:gap-6">
       <span class="text-emerald-300 text-base font-light">
         ¡Bienvenido a mi sitio!
       </span>
@@ -37,7 +37,7 @@ import Xcard from "./Xcard.astro";
           sobre Astro y Svelte.
         </span>
       </p>
-    </div>
+    </section>
     <section class="w-auto flex gap-8 items-center flex-wrap">
       <Button
         buttonName="Descargar CV"
@@ -66,7 +66,7 @@ import Xcard from "./Xcard.astro";
       />
     </section>
   </div>
-  <div class="w-full flex flex-col items-center gap-5 pt-14 sm:w-auto relative">
+  <div class="w-full flex flex-col items-center gap-5 sm:w-auto relative">
     <Hobbies />
     <Xcard />
     <ul class="flex gap-2 items-center justify-center mt-4">
