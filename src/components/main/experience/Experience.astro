@@ -3,8 +3,11 @@ import TechnologyTags from "../../technologyTags.astro";
 import ExperienceTimeline from "./ExperienceTimeline.astro";
 ---
 
-<section class="w-full flex justify-center flex-col mx-auto max-w-6xl px-3">
-  <h2 class="w-full text-3xl font-black text-sky-500">Experiencia</h2>
+<section
+  id="experience"
+  class="w-full flex justify-center flex-col mx-auto max-w-6xl px-3"
+>
+  <h2 class="w-full text-3xl font-black text-sky-500">Experiencias</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8">
     <section class="flex flex-col gap-0.5">
       <h3 class="text-xl py-4 font-bold text-sky-600">Experiencia</h3>
@@ -45,7 +48,7 @@ import ExperienceTimeline from "./ExperienceTimeline.astro";
           componentes solicitados dentro de los entornos establecidos,
           asegurando la uso previsto de la solución.
         </p>
-        <section class="py-2 flex gap-1.5 pb-5" slot="aptitudes">
+        <section class="py-2 flex gap-1.5 pb-5 flex-wrap" slot="aptitudes">
           <TechnologyTags
             name="JavaScript"
             textColor="text-black"
@@ -60,6 +63,26 @@ import ExperienceTimeline from "./ExperienceTimeline.astro";
             name="HTML"
             textColor="text-white"
             bgColor="bg-orange-600"
+          />
+          <TechnologyTags
+            name="MySQL"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+          <TechnologyTags
+            name="PHP"
+            textColor="text-white"
+            bgColor="bg-purple-600"
+          />
+          <TechnologyTags
+            name="Laravel"
+            textColor="text-white"
+            bgColor="bg-red-600"
+          />
+          <TechnologyTags
+            name="Vue.js"
+            textColor="text-white"
+            bgColor="bg-green-500"
           />
         </section>
       </ExperienceTimeline>
@@ -92,6 +115,93 @@ import ExperienceTimeline from "./ExperienceTimeline.astro";
           <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
           <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
         </svg>
+        <section class="py-2 flex gap-1.5 pb-5 flex-wrap" slot="aptitudes">
+          <TechnologyTags
+            name="JavaScript"
+            textColor="text-black"
+            bgColor="bg-yellow-400"
+          />
+          <TechnologyTags
+            name="CSS"
+            textColor="text-black"
+            bgColor="bg-sky-400"
+          />
+          <TechnologyTags
+            name="HTML"
+            textColor="text-white"
+            bgColor="bg-orange-600"
+          />
+          <TechnologyTags
+            name="MySQL"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+          <TechnologyTags
+            name="PHP"
+            textColor="text-white"
+            bgColor="bg-purple-600"
+          />
+          <TechnologyTags
+            name="Laravel"
+            textColor="text-white"
+            bgColor="bg-red-600"
+          />
+          <TechnologyTags
+            name="Vue.js"
+            textColor="text-white"
+            bgColor="bg-green-500"
+          />
+          <TechnologyTags
+            name="Python"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+          <TechnologyTags
+            name="Java"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+          <TechnologyTags
+            name="C#"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+          <TechnologyTags
+            name="Oracle Database"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+          <TechnologyTags
+            name="SQL Server"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+          <TechnologyTags
+            name="Angular"
+            textColor="text-white"
+            bgColor="bg-red-600"
+          />
+          <TechnologyTags
+            name="Patrones de diseño"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+          <TechnologyTags
+            name="Metodologías ágiles"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+          <TechnologyTags
+            name="Patrones de diseño"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+          <TechnologyTags
+            name="Inteligencia artificial"
+            textColor="text-white"
+            bgColor="bg-[#3E6E93]"
+          />
+        </section>
       </ExperienceTimeline>
     </section>
   </div>
