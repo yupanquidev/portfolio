@@ -1,17 +1,16 @@
 ---
 interface Props {
   href: string;
-  textMenu: string;
 }
 
-const { href, textMenu } = Astro.props;
+const { href } = Astro.props;
 ---
 
-<li>
+<li class="w-full md:w-auto">
   <a
-    class="py-2 px-4 font-normal text-base opacity-80 hover:opacity-100 transition-opacity duration-200"
+    class="flex w-full md:items-center items-end justify-center md:pt-[10px] md:pb-1.5 md:px-[18px] font-normal text-base opacity-80 leading-5 hover:opacity-100 transition-opacity duration-200 md:w-auto"
     href={href}
   >
-    {textMenu}
+    <slot />
   </a>
 </li>

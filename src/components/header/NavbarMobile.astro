@@ -1,0 +1,77 @@
+---
+import ButtonContact from "../buttons/ButtonContact.astro";
+import ListOfMenu from "./ListOfMenu.astro";
+---
+
+<nav
+  class="w-full h-screen gap-20 right-0 left-0 bottom-0 hidden fixed top-full bg-zinc-950 border-2 border-sky-950/30 rounded backdrop-blur-xl z-50 py-8 px-4 md:hidden menu-nav"
+  id="backdrop"
+>
+  <ul class="w-full flex flex-col justify-center items-center gap-10">
+    <ListOfMenu href="/#experience">
+      <span>Experiencia</span>
+      <div
+        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      >
+      </div>
+      <span class="text-sm opacity-80">Mi experiencia profesional.</span>
+    </ListOfMenu>
+    <ListOfMenu href="/#proyect">
+      <span>Potafolio</span>
+      <div
+        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      >
+      </div>
+      <span class="text-sm opacity-80">Trabajos que hice.</span>
+    </ListOfMenu>
+    <ListOfMenu href="/blog">
+      <span>Blog</span>
+      <div
+        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      >
+      </div>
+      <span class="text-sm opacity-80">Algunos blogs que escribé.</span>
+    </ListOfMenu>
+    <ListOfMenu href="/photos">
+      <span>Fotos</span>
+      <div
+        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      >
+      </div>
+      <span class="text-sm opacity-80">Lugares que visité.</span>
+    </ListOfMenu>
+    <ListOfMenu href="/books">
+      <span>Libros</span>
+      <div
+        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      >
+      </div>
+      <span class="text-sm opacity-80">Libros que leí.</span>
+    </ListOfMenu>
+    <ListOfMenu href="/resources">
+      <span>Recursos</span>
+      <div
+        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      >
+      </div>
+      <span class="text-sm opacity-80">Recursos que uso.</span>
+    </ListOfMenu>
+    <ButtonContact
+      style="bg-zinc-200 mt-16 text-zinc-950 hover:bg-zinc-200/80 py-3 px-6 font-bold text-lg"
+    />
+  </ul>
+</nav>
+
+<style>
+  @media (max-width: 768px) {
+    .menu-nav.active {
+      display: block;
+      transition: all 0.9s ease-in-out;
+      transform-origin: left;
+    }
+  }
+
+  nav {
+    --line-color: #a1a1aa;
+  }
+</style>

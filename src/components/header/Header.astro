@@ -1,14 +1,15 @@
 ---
 import Backdrop from "../Backdrop.astro";
 import ButtonContact from "../buttons/ButtonContact.astro";
-import Navbar from "./Navbar.astro";
+import NavbarDesktop from "./NavbarDesktop.astro";
 import MenuToggle from "./MenuToggle.astro";
+import NavbarMobile from "./NavbarMobile.astro";
 ---
 
 <header
-  class="w-full h-auto backdrop-blur-lg font-light text-base sticky top-0 z-10 border-2 border-[#96F]/5 bg-zinc-950/50 text-[#F5F9FF]"
+  class="w-full h-auto backdrop-blur-lg font-light text-base sticky top-0 z-10 border-2 border-sky-950/10 bg-zinc-950/50 text-[#F5F9FF]"
 >
-  <div class="mx-auto max-w-6xl flex justify-between items-center px-3">
+  <div class="mx-auto max-w-6xl flex justify-between items-center px-3 py-2">
     <Backdrop />
     <a class="w-auto h-full py-4 flex items-center" href="/">
       <svg
@@ -28,7 +29,8 @@ import MenuToggle from "./MenuToggle.astro";
       </svg>
       <span class="text-blue-500 pl-2">Beta</span>
     </a>
-    <Navbar />
+    <NavbarDesktop />
+    <NavbarMobile />
     <section class="flex items-center gap-4 [&>a>svg]:w-6">
       <a href="https://github.com/ypnqh/" target="_blank" rel="">
         <svg
