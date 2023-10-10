@@ -22,4 +22,12 @@
   .button {
     @apply font-normal px-4 py-2 text-sm border-2 rounded-lg border-sky-500 text-zinc-50 bg-sky-800 hover:bg-sky-600;
   }
+
+  .listOfMenu {
+    @apply w-full hover:text-sky-500 md:pt-[8px] md:pb-[4px] md:px-[18px] md:font-normal md:text-base md:w-auto transition-all duration-300 opacity-80 hover:opacity-100 md:items-center;
+  }
+
+  .backdrop {
+    @apply absolute left-0 top-0 border rounded bg-sky-950/20 border-sky-500/40 invisible transition-all duration-300 delay-200 ease-in-out pointer-events-none -z-50 translate-x-[var(--left)] translate-y-[var(--top)] w-[var(--width)] h-[var(--height)];
+  }
 }
