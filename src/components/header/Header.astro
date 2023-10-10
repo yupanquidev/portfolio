@@ -6,12 +6,30 @@ import MenuToggle from "./MenuToggle.astro";
 import NavbarMobile from "./NavbarMobile.astro";
 ---
 
-<header
-  class="w-full h-auto backdrop-blur-lg font-light text-base sticky top-0 z-10 border-2 border-sky-950/10 bg-zinc-950/50 text-[#F5F9FF]"
->
-  <div class="mx-auto max-w-6xl flex justify-between items-center px-3 py-2">
-    <Backdrop />
-    <a class="w-auto h-full py-4 flex items-center" href="/">
+<div class="fixedSize flex justify-between items-center py-2">
+  <Backdrop />
+  <a class="w-auto h-full py-4 flex items-center" href="/">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M7 8l-4 4l4 4"></path>
+      <path d="M17 8l4 4l-4 4"></path>
+      <path d="M14 4l-4 16"></path>
+    </svg>
+    <span class="text-blue-500 pl-2">Beta</span>
+  </a>
+  <NavbarDesktop />
+  <NavbarMobile />
+  <section class="flex items-center gap-4 [&>a>svg]:w-6">
+    <a href="https://github.com/yupanquidev" target="_blank" rel="">
       <svg
         width="20"
         height="20"
@@ -23,39 +41,17 @@ import NavbarMobile from "./NavbarMobile.astro";
         stroke-linejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M7 8l-4 4l4 4"></path>
-        <path d="M17 8l4 4l-4 4"></path>
-        <path d="M14 4l-4 16"></path>
+        <path
+          d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+        ></path>
       </svg>
-      <span class="text-blue-500 pl-2">Beta</span>
     </a>
-    <NavbarDesktop />
-    <NavbarMobile />
-    <section class="flex items-center gap-4 [&>a>svg]:w-6">
-      <a href="https://github.com/yupanquidev" target="_blank" rel="">
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path
-            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-          ></path>
-        </svg>
-      </a>
-      <MenuToggle />
-      <ButtonContact
-        style="bg-zinc-200 text-zinc-950 hover:bg-zinc-200/80 hidden md:block"
-      />
-    </section>
-  </div>
-</header>
+    <MenuToggle />
+    <ButtonContact
+      style="bg-zinc-200 text-zinc-950 hover:bg-zinc-200/80 hidden md:block"
+    />
+  </section>
+</div>
 
 <script>
   const button = document.querySelector(".haburger") as HTMLButtonElement;

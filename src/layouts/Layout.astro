@@ -28,9 +28,17 @@ const { title } = Astro.props;
     <title>{title} - Humberto Yupanqui Apaza</title>
     <ViewTransitions />
   </head>
-  <body class="w-full flex flex-col bg-zinc-950">
-    <Header />
-    <slot />
-    <Footer />
+  <body class="app">
+    <header class="header">
+      <Header />
+    </header>
+    <main>
+      <div class="fixedSize flex flex-col items-center gap-20 py-8">
+        <slot />
+      </div>
+    </main>
+    <footer class="footer">
+      <Footer />
+    </footer>
   </body>
 </html>
