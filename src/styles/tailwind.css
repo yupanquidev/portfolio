@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  .app {
+    @apply w-full flex flex-col bg-zinc-950;
+  }
+
   .tags {
     @apply font-medium text-xs py-0.5 px-2.5 rounded-full;
   }
@@ -33,10 +37,6 @@
 
   .fixedSize {
     @apply w-full mx-auto max-w-6xl px-3;
-  }
-
-  .app {
-    @apply w-full flex flex-col bg-zinc-950;
   }
 
   .header {
