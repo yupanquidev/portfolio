@@ -4,66 +4,60 @@ import ListOfMenu from "./ListOfMenu.astro";
 ---
 
 <nav class="navMobile menu-nav w-full h-screen">
-  <ul class="w-full flex flex-col justify-center items-center gap-10">
+  <ul class="w-full flex flex-col justify-center items-center gap-5">
     <ListOfMenu href="/#experience">
-      <span>Experiencia</span>
-      <div
-        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      <span slot="title">Experiencia</span>
+      <p
+        slot="description"
+        class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
       >
-      </div>
-      <span class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
-        >Mi experiencia profesional.</span
-      >
+        Mi experiencia profesional.
+      </p>
     </ListOfMenu>
     <ListOfMenu href="/#proyect">
-      <span>Portafolio</span>
-      <div
-        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      <span slot="title">Portafolio</span>
+      <p
+        slot="description"
+        class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
       >
-      </div>
-      <span class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
-        >Trabajos que hice.</span
-      >
+        Trabajos que hice.
+      </p>
     </ListOfMenu>
     <ListOfMenu href="/blogs">
-      <span>Blog</span>
-      <div
-        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      <span slot="title">Blog</span>
+      <p
+        slot="description"
+        class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
       >
-      </div>
-      <span class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
-        >Algunos blogs que escribé.</span
-      >
+        Algunos blogs que escribé.
+      </p>
     </ListOfMenu>
     <ListOfMenu href="/photos">
-      <span>Fotos</span>
-      <div
-        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      <span slot="title">Fotos</span>
+      <p
+        slot="description"
+        class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
       >
-      </div>
-      <span class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
-        >Lugares que visité.</span
-      >
+        Lugares que visité.
+      </p>
     </ListOfMenu>
     <ListOfMenu href="/books">
-      <span>Libros</span>
-      <div
-        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      <span slot="title">Libros</span>
+      <p
+        slot="description"
+        class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
       >
-      </div>
-      <span class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
-        >Libros que leí.</span
-      >
+        Libros que leí.
+      </p>
     </ListOfMenu>
     <ListOfMenu href="/resources">
-      <span>Recursos</span>
-      <div
-        class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      <span slot="title">Recursos</span>
+      <p
+        slot="description"
+        class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
       >
-      </div>
-      <span class="text-sm text-zinc-300 group-hover:text-opacity-90 opacity-90"
-        >Recursos que uso.</span
-      >
+        Recursos que uso.
+      </p>
     </ListOfMenu>
     <ButtonContact
       style="bg-zinc-200 mt-16 text-zinc-950 hover:bg-zinc-200/80 py-3 px-6 font-bold text-lg"
