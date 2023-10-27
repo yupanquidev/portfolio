@@ -16,9 +16,6 @@ To design and layout use Figma:
 ## 📷 Screenshots
 Here are some screenshots of the site on different devices and screen sizes:
 > 💻 Desktop, tablet and mobile.
-
-[![Screenshots](/public/design.png)](#)
-
 ## Resources
 Here are some resources I used to learn about the tools and techniques I used:
 - **[The Astro documentation.](https://astro.build)**
