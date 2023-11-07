@@ -28,7 +28,7 @@
   }
 
   .listOfMenu {
-    @apply w-full group-hover:text-sky-500 md:pt-[8px] md:pb-[4px] md:px-[18px] leading-none md:font-normal md:text-base md:w-auto transition-all duration-300 opacity-80 group-hover:opacity-100 md:items-center;
+    @apply w-full group-hover:text-sky-500 md:pt-[10px] md:pb-[6px] md:px-[18px] leading-none md:font-normal md:text-base md:w-auto transition-all duration-300 opacity-80 group-hover:opacity-100 md:items-center py-4;
   }
 
   .backdrop {

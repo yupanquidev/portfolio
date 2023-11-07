@@ -7,7 +7,7 @@ const { href } = Astro.props;
 ---
 
 <li class="group w-full md:w-auto">
-  <a class="flex items-end justify-center py-4 listOfMenu" href={href}>
+  <a class="flex items-end justify-center listOfMenu" href={href}>
     <slot name="title" />
     <div
       class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px] md:hidden"
