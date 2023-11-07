@@ -10,9 +10,10 @@ const { href } = Astro.props;
   <a class="flex items-end justify-center py-4 listOfMenu" href={href}>
     <slot name="title" />
     <div
-      class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px]"
+      class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px] md:hidden"
     >
     </div>
+    <slot />
     <slot name="description" />
   </a>
 </li>
