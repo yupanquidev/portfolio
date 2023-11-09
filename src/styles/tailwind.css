@@ -31,10 +31,6 @@
     @apply w-full group-hover:text-sky-500 md:pt-[10px] md:pb-[6px] md:px-[18px] leading-none md:font-normal md:text-base md:w-auto transition-all duration-300 opacity-80 group-hover:opacity-100 md:items-center py-4;
   }
 
-  .backdrop {
-    @apply absolute left-0 top-0 border rounded bg-sky-950/20 border-sky-500/40 invisible transition-all duration-300 delay-200 ease-in-out pointer-events-none -z-50 translate-x-[var(--left)] translate-y-[var(--top)] w-[var(--width)] h-[var(--height)];
-  }
-
   .fixedSize {
     @apply w-full mx-auto max-w-6xl px-3;
   }

@@ -23,3 +23,27 @@
     });
   });
 </script>
+
+<style>
+  .backdrop {
+    --tw-translate-x: var(--left);
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-translate-y: var(--top);
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    z-index: -50;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    background-color: rgb(8 47 73 / 0.2);
+    border: 1px solid rgb(14 165 233 / 0.4);
+    border-radius: 0.25rem;
+  }
+</style>
