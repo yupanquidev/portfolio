@@ -1,13 +1,24 @@
 ---
 interface Props {
   name: string;
-  bgColor: string;
-  textColor: string;
 }
 
-const { name, bgColor, textColor } = Astro.props;
+const { name } = Astro.props;
 ---
 
-<span class=`tags ${bgColor} ${textColor}`>
+<span>
   {name}
 </span>
+
+<style>
+  span {
+    background-color: rgb(24 24 27 / 0.5);
+    color: rgb(228 228 231);
+    border: 1px solid rgb(63 63 70 / 0.8);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 3px 10px;
+    border-radius: 1rem;
+  }
+</style>

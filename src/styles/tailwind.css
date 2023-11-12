@@ -7,10 +7,6 @@
     @apply w-full flex flex-col bg-zinc-950;
   }
 
-  .tags {
-    @apply font-medium text-xs py-0.5 px-2.5 rounded-full;
-  }
-
   .menuToggleLine {
     @apply bg-zinc-100 h-[2px] w-full rounded transition-all duration-500;
   }

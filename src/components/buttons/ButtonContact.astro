@@ -7,24 +7,47 @@ const { style } = Astro.props;
 ---
 
 <a
-  class=`relative before:content-[''] before:absolute
-    before:-left-[0.125rem] before:-right-[0.125rem] 
-    before:top-1 before:-bottom-[0.125rem] before:-z-10
-    before:bg-clip-padding before:opacity-60 before:blur-md
-    before:transition-all before:duration-150 before:filter
-    border-2 border-sky-500 rounded-lg py-2 px-4 text-sm 
-    font-normal duration-150 transition-colors 
-    before:saturate-150 hover:before:scale-105 w-max
-    ${style}`
+  class=`hover:before:scale-105 ${style}`
   href="mailto:hyupanquia24@gmail.com"
   target="_blank"
   rel="noopener noreferrer"
 >
-  ¡A trabajar!
+  <span class=""></span>
+   ¡A trabajar!
 </a>
 
 <style>
+  a {
+    width: max-content;
+    position: relative;
+    padding: 8px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    border: 2px solid rgb(14 165 233);
+    border-radius: 8px;
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
   a::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    --blur: blur(12px);
+    --saturate: saturate(1.5);
+    filter: var(--blur) var(--tw-brightness) var(--tw-contrast)
+      var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--saturate)
+      var(--tw-sepia) var(--tw-drop-shadow);
+    background-clip: padding-box;
+    opacity: 0.6;
+    transition: all 0.2s ease-in-out;
     background-image: linear-gradient(
       120deg,
       #ec6192,
