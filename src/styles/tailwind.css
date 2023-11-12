@@ -19,10 +19,6 @@
     @apply font-normal px-4 py-2 text-sm border-2 rounded-lg border-sky-500 text-zinc-50 bg-sky-800 hover:bg-sky-600;
   }
 
-  .listOfMenu {
-    @apply w-full group-hover:text-sky-500 md:pt-[10px] md:pb-[6px] md:px-[18px] leading-none md:font-normal md:text-base md:w-auto transition-all duration-300 opacity-80 group-hover:opacity-100 md:items-center py-4;
-  }
-
   .fixedSize {
     @apply w-full mx-auto max-w-6xl px-3;
   }

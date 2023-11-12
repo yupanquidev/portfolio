@@ -6,14 +6,65 @@ interface Props {
 const { href } = Astro.props;
 ---
 
-<li class="group w-full md:w-auto">
-  <a class="flex items-end justify-center listOfMenu" href={href}>
+<li>
+  <a href={href}>
     <slot name="title" />
-    <div
-      class="mx-2 mb-1.5 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px] md:hidden"
-    >
-    </div>
+    <div></div>
     <slot />
     <slot name="description" />
   </a>
 </li>
+
+<style>
+  li {
+    width: 100%;
+  }
+
+  a {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 16px 0;
+    transition-property: all 0.15s ease-in-out;
+    opacity: 0.8;
+  }
+
+  div {
+    --line-color: #a1a1aa;
+    height: 1px;
+    background-image: linear-gradient(
+      90deg,
+      var(--line-color),
+      var(--line-color) 50%,
+      transparent 0,
+      transparent
+    );
+    background-size: 8px 1px;
+    flex: 1 1 0%;
+    margin: 0 8px 6px;
+  }
+
+  li:hover a {
+    opacity: 1;
+    color: rgb(14 165 233);
+  }
+
+  @media (min-width: 768px) {
+    li {
+      width: auto;
+    }
+
+    a {
+      width: auto;
+      padding: 10px 18px 6px 18px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    div {
+      display: none;
+    }
+  }
+</style>
