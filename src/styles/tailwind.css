@@ -11,10 +11,6 @@
     @apply font-medium text-xs py-0.5 px-2.5 rounded-full;
   }
 
-  .contactInfo {
-    @apply cursor-pointer w-9 h-9 border-2 border-zinc-700/80 bg-zinc-900/50 rounded-full;
-  }
-
   .menuToggleLine {
     @apply bg-zinc-100 h-[2px] w-full rounded transition-all duration-500;
   }

@@ -9,7 +9,7 @@ const { href, className } = Astro.props;
 
 <li class="list-none">
   <a
-    class=`group flex items-center justify-center relative transition-all duration-300 contactInfo ${className}`
+    class=`group ${className}`
     href={href}
     rel="noopener noreferrer"
     target="_blank"
@@ -17,3 +17,19 @@ const { href, className } = Astro.props;
     <slot />
   </a>
 </li>
+
+<style>
+  a {
+    width: 36px;
+    height: 36px;
+    background-color: rgb(24 24 27 / 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s;
+    border: 2px solid rgb(63 63 70 / 0.8);
+    border-radius: 100%;
+    cursor: pointer;
+  }
+</style>
