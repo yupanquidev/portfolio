@@ -4,10 +4,8 @@ import Tooltip from "../Tooltip.astro";
 import ResourceLinks from "./ResourceLinks.astro";
 ---
 
-<section
-  class="fixedSize flex flex-col items-center gap-4 md:gap-8 md:justify-between"
->
-  <p class="w-full">
+<section>
+  <p>
     Diseñado en <ResourceLinks name="Figma" href="https://www.figma.com" /> y
     codificado en <ResourceLinks
       name="Visual Studio Code"
@@ -21,12 +19,10 @@ import ResourceLinks from "./ResourceLinks.astro";
       href="https://www.atipofoundry.com/fonts/n27"
     /> y <ResourceLinks name="Mona Sans" href="https://github.com/mona-sans" />.
   </p>
-  <span class="footerLine"></span>
-  <div
-    class="w-full flex flex-col items-center gap-2 md:flex-row md:justify-between"
-  >
+  <span></span>
+  <div>
     <p>© 2023 Humberto Yupanqui, todos los derechos reservados.</p>
-    <ul class="flex gap-1">
+    <ul>
       <ContactInfo href="https://github.com/yupanquidev">
         <svg
           class="group-hover:scale-105"
@@ -188,3 +184,47 @@ import ResourceLinks from "./ResourceLinks.astro";
     </ul>
   </div>
 </section>
+
+<style>
+  section {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1152px;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  span {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(39 39 42);
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  ul {
+    display: flex;
+    gap: 4px;
+  }
+
+  @media (min-width: 768px) {
+    div {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    section {
+      gap: 32px;
+      justify-content: space-between;
+    }
+  }
+</style>

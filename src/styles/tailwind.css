@@ -30,8 +30,4 @@
   .footer {
     @apply w-full py-16 bg-zinc-900/60 text-zinc-300 text-base font-light;
   }
-
-  .footerLine {
-    @apply w-full h-px bg-zinc-800;
-  }
 }
