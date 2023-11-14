@@ -7,11 +7,20 @@ interface Props {
 const { name, href } = Astro.props;
 ---
 
-<a
-  href={href}
-  target="_blank"
-  rel="noreferrer"
-  class="opacity-50 transition-all duration-300 hover:opacity-100 hover:text-sky-400 hover:underline underline-offset-4"
->
+<a href={href} target="_blank" rel="noreferrer">
   {name}
 </a>
+
+<style>
+  a {
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+    text-underline-offset: 4px;
+  }
+
+  a:hover {
+    opacity: 1;
+    color: rgb(56 189 248);
+    text-decoration-line: underline;
+  }
+</style>
