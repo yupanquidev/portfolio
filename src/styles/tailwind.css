@@ -11,10 +11,6 @@
     @apply bg-zinc-100 h-[2px] w-full rounded transition-all duration-500;
   }
 
-  .button {
-    @apply font-normal px-4 py-2 text-sm border-2 rounded-lg border-sky-500 text-zinc-50 bg-sky-800 hover:bg-sky-600;
-  }
-
   .fixedSize {
     @apply w-full mx-auto max-w-6xl px-3;
   }
