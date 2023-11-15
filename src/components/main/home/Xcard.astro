@@ -1,48 +1,159 @@
-<article
-  class="w-full bg-[#16181C] sm:w-80 lg:w-96 border-2 border-zinc-700 p-4 rounded-2xl flex flex-col gap-4 motion"
->
-  <header class="w-full flex gap-3">
-    <img
-      class="w-10 h-10 rounded-full avatar"
-      src="https://pbs.twimg.com/profile_images/1685076669432758274/P2SW5cdz_200x200.jpg"
-      loading="lazy"
-      alt="Avatar de Humberto Yupanqui Apaza"
+---
+import { Image } from "astro:assets";
+
+interface CardProps {
+  avatar: string;
+  fullName: string;
+  username: string;
+  xUrl: string;
+  tweet: string;
+  following: number;
+  followers: number;
+}
+
+const {
+  fullName,
+  username,
+  avatar,
+  following,
+  followers,
+  tweet,
+  xUrl,
+}: CardProps = {
+  fullName: "Humberto Yupanqui Apaza",
+  username: "@yupanquidev",
+  avatar: "https://github.com/yupanquidev.png",
+  xUrl: "https://twitter.com/yupanquidev",
+  following: 40,
+  followers: 1,
+  tweet:
+    "Hola, soy nuevo en Twitter y no me gustan mucho las redes sociales 🙃 Estoy buscando conectarme con otros desarrolladores y aprender sobre lo último en desarrollo web 🤗",
+};
+---
+
+<article class="x-card">
+  <header class="x-card-header">
+    <Image
+      class="avatar"
+      src={avatar}
+      alt=`Avatar de ${fullName}, desarrollador web.`
+      width={40}
+      height={40}
     />
-    <section class="w-full flex justify-between items-center">
+    <section class="user-information">
       <div>
-        <h5 class="font-bold text-[15px] text-[#E7E9EA] line-clamp-1">
-          Humberto Yupanqui Apaza
-        </h5>
-        <p class="text-[#71767B] text-sm">@yupanquidev</p>
+        <h5 class="full-name">{fullName}</h5>
+        <p class="username">{username}</p>
       </div>
-      <div>
-        <a
-          class="bg-[#eff3f4] text-[#0f1419] text-sm font-bold py-2 px-4 rounded-full transition-opacity hover:opacity-90 duration-500"
-          href="https://twitter.com/yupanquidev">Seguir</a
-        >
-      </div>
+      <a class="follow-button" href={xUrl}>Seguir</a>
     </section>
   </header>
-  <main class="text-zinc-100 font-light text-sm">
-    Hola, soy nuevo en Twitter y no me gustan mucho las redes sociales 🙃 Estoy
-    buscando conectarme con otros desarrolladores y aprender sobre lo último en
-    desarrollo web 🤗.
-  </main>
-  <footer class="flex gap-5 text-sm">
-    <aside class="flex gap-1">
-      <p class="text-[#e7e9ea] font-light">40</p>
-      <span class="text-[#71767b]">Siguiendo</span>
-    </aside>
-    <aside class="flex gap-1">
-      <p class="text-[#e7e9ea] font-light">1</p>
-      <span class="text-[#71767b]">Seguidores</span>
-    </aside>
+  <main class="x-card-main">{tweet}</main>
+  <footer class="x-card-footer">
+    <section class="following-followers">
+      <p class="number">{following}</p>
+      <span class="text">Siguiendo</span>
+    </section>
+    <section class="following-followers">
+      <p class="number">{followers}</p>
+      <span class="text">Seguidores</span>
+    </section>
   </footer>
 </article>
 
 <style>
-  .motion {
+  .x-card {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background-color: rgb(22 24 28);
+    border: 2px solid rgb(63 63 70);
+    border-radius: 16px;
     animation: animate-float 5s infinite;
+  }
+
+  .x-card-header {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+  }
+
+  .avatar {
+    border-radius: 100%;
+  }
+
+  .user-information {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .full-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(231 233 234);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .username {
+    color: rgb(113 118 123);
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .follow-button {
+    background-color: rgb(239 243 244);
+    color: rgb(15 20 25);
+    border-radius: 100px;
+    transition: all 0.5 ease-in-out;
+    padding: 8px 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .follow-button:hover {
+    opacity: 0.9;
+  }
+
+  .x-card-main {
+    color: rgb(244 244 245);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .x-card-footer {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .following-followers {
+    display: flex;
+    gap: 4px;
+  }
+
+  .number {
+    color: rgb(231 233 234);
+    font-weight: 300;
+  }
+
+  .text {
+    color: rgb(113 118 123);
+  }
+
+  @media (min-width: 1024px) {
+    .x-card {
+      width: 100%;
+    }
   }
 
   @keyframes animate-float {
