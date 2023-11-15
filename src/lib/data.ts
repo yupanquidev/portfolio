@@ -1,4 +1,4 @@
-export interface Xcard {
+interface Xcard {
   avatar: string;
   fullName: string;
   username: string;
@@ -8,7 +8,7 @@ export interface Xcard {
   followers: number;
 }
 
-export const Xcard = {
+export const xcard: Xcard = {
   avatar: "https://github.com/yupanquidev.png",
   fullName: "Humberto Yupanqui Apaza",
   username: "@yupanquidev",
@@ -16,4 +16,4 @@ export const Xcard = {
   tweet: "Hola, soy nuevo en Twitter y no me gustan mucho las redes sociales 🙃 Estoy buscando conectarme con otros desarrolladores y aprender sobre lo último en desarrollo web 🤗",
   following: 40,
   followers: 1,
-}
+};

@@ -1,12 +1,7 @@
 ---
+import { xcard } from "@/lib/data";
 import { Image } from "astro:assets";
-import type { Xcard } from "../../../lib/data";
 
-interface Props {
-  xcard: Xcard;
-}
-
-const { xcard } = Astro.props;
 const { avatar, fullName, username, xUrl, tweet, following, followers } = xcard;
 ---
 
@@ -29,13 +24,13 @@ const { avatar, fullName, username, xUrl, tweet, following, followers } = xcard;
   </header>
   <main class="x-card-main">{tweet}</main>
   <footer class="x-card-footer">
-    <section class="following-followers">
-      <p class="number">{following}</p>
-      <span class="text">Siguiendo</span>
+    <section class="following">
+      <p class="number-followed">{following}</p>
+      <span class="text-followed">Siguiendo</span>
     </section>
-    <section class="following-followers">
-      <p class="number">{followers}</p>
-      <span class="text">Seguidores</span>
+    <section class="followers">
+      <p class="number-followers">{followers}</p>
+      <span class="text-followers">Seguidores</span>
     </section>
   </footer>
 </article>
@@ -115,17 +110,20 @@ const { avatar, fullName, username, xUrl, tweet, following, followers } = xcard;
     line-height: 20px;
   }
 
-  .following-followers {
+  .following,
+  .followers {
     display: flex;
     gap: 4px;
   }
 
-  .number {
+  .number-followed,
+  .number-followers {
     color: rgb(231 233 234);
     font-weight: 300;
   }
 
-  .text {
+  .text-followed,
+  .text-followers {
     color: rgb(113 118 123);
   }
 
