@@ -6,12 +6,12 @@ interface Props {
 const { description } = Astro.props;
 ---
 
-<span class="group-hover:block">
+<span class="group-hover:block tooltip">
   {description}
 </span>
 
 <style>
-  span {
+  .tooltip {
     position: absolute;
     width: max-content;
     height: auto;
