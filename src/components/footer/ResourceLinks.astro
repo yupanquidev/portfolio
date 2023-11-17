@@ -7,18 +7,18 @@ interface Props {
 const { name, href } = Astro.props;
 ---
 
-<a href={href} target="_blank" rel="noreferrer">
+<a class="resouce-link" href={href} target="_blank" rel="noreferrer">
   {name}
 </a>
 
 <style>
-  a {
+  .resouce-link {
     opacity: 0.5;
     transition: all 0.3s ease-in-out;
     text-underline-offset: 4px;
   }
 
-  a:hover {
+  .resouce-link:hover {
     opacity: 1;
     color: rgb(56 189 248);
     text-decoration-line: underline;
