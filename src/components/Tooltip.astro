@@ -1,13 +1,13 @@
 ---
 interface Props {
-  description: string;
+  name: string;
 }
 
-const { description } = Astro.props;
+const { name } = Astro.props;
 ---
 
 <span class="group-hover:block tooltip">
-  {description}
+  {name}
 </span>
 
 <style>
