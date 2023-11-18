@@ -2,9 +2,12 @@
 import ContactInfo from "../ContactInfo.astro";
 import Tooltip from "../Tooltip.astro";
 import ResourceLinks from "./ResourceLinks.astro";
+
+const date = new Date();
+const year = date.getFullYear();
 ---
 
-<section>
+<section class="footer-content">
   <p>
     Diseñado en <ResourceLinks name="Figma" href="https://www.figma.com" /> y
     codificado en <ResourceLinks
@@ -19,13 +22,14 @@ import ResourceLinks from "./ResourceLinks.astro";
       href="https://www.atipofoundry.com/fonts/n27"
     /> y <ResourceLinks name="Mona Sans" href="https://github.com/mona-sans" />.
   </p>
-  <span></span>
+  <span class="footer-line"></span>
   <div>
-    <p>© 2023 Humberto Yupanqui, todos los derechos reservados.</p>
+    <p>
+      © {year} Humberto Yupanqui, Reservados todos los derechos.
+    </p>
     <ul>
       <ContactInfo href="https://github.com/yupanquidev">
         <svg
-          class="group-hover:scale-105"
           width="20"
           height="20"
           viewBox="0 0 24 24"
@@ -44,7 +48,6 @@ import ResourceLinks from "./ResourceLinks.astro";
       </ContactInfo>
       <ContactInfo href="mailto:hyupanquia24@gmail.com">
         <svg
-          class="group-hover:scale-105"
           width="20"
           height="20"
           viewBox="0 0 24 24"
@@ -64,7 +67,6 @@ import ResourceLinks from "./ResourceLinks.astro";
       </ContactInfo>
       <ContactInfo href="https://linkedin.com/in/yupanquidev">
         <svg
-          class="group-hover:scale-105"
           width="20"
           height="20"
           viewBox="0 0 24 24"
@@ -87,7 +89,6 @@ import ResourceLinks from "./ResourceLinks.astro";
       </ContactInfo>
       <ContactInfo href="https://instagram.com/yupanquidev">
         <svg
-          class="group-hover:scale-105"
           width="20"
           height="20"
           viewBox="0 0 24 24"
@@ -108,7 +109,6 @@ import ResourceLinks from "./ResourceLinks.astro";
       </ContactInfo>
       <ContactInfo href="https://x.com/yupanquidev">
         <svg
-          class="group-hover:scale-105"
           width="20"
           height="20"
           viewBox="0 0 24 24"
@@ -126,7 +126,6 @@ import ResourceLinks from "./ResourceLinks.astro";
       </ContactInfo>
       <ContactInfo href="https://facebook.com/yupanquidev">
         <svg
-          class="group-hover:scale-105"
           width="20"
           height="20"
           viewBox="0 0 24 24"
@@ -145,7 +144,6 @@ import ResourceLinks from "./ResourceLinks.astro";
       </ContactInfo>
       <ContactInfo href="https://tiktok.com/@yupanquidev">
         <svg
-          class="group-hover:scale-105"
           width="20"
           height="20"
           viewBox="0 0 24 24"
@@ -164,7 +162,6 @@ import ResourceLinks from "./ResourceLinks.astro";
       </ContactInfo>
       <ContactInfo href="https://threads.net/@yupanquidev">
         <svg
-          class="group-hover:scale-105"
           width="20"
           height="20"
           viewBox="0 0 24 24"
@@ -186,7 +183,7 @@ import ResourceLinks from "./ResourceLinks.astro";
 </section>
 
 <style>
-  section {
+  .footer-content {
     width: 100%;
     margin: 0 auto;
     max-width: 1152px;
@@ -197,7 +194,7 @@ import ResourceLinks from "./ResourceLinks.astro";
     gap: 16px;
   }
 
-  span {
+  .footer-line {
     width: 100%;
     height: 1px;
     background-color: rgb(39 39 42);
@@ -222,7 +219,7 @@ import ResourceLinks from "./ResourceLinks.astro";
       justify-content: space-between;
     }
 
-    section {
+    .footer-content {
       gap: 32px;
       justify-content: space-between;
     }

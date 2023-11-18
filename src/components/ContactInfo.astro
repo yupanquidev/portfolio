@@ -7,9 +7,9 @@ interface Props {
 const { href, className } = Astro.props;
 ---
 
-<li class="list-none">
+<li>
   <a
-    class=`group ${className}`
+    class=`contact-info ${className}`
     href={href}
     rel="noopener noreferrer"
     target="_blank"
@@ -18,8 +18,14 @@ const { href, className } = Astro.props;
   </a>
 </li>
 
+<style is:inline>
+  .contact-info:hover svg {
+    transform: scaleX(1.05) scaleY(1.05);
+  }
+</style>
+
 <style>
-  a {
+  .contact-info {
     width: 36px;
     height: 36px;
     background-color: rgb(24 24 27 / 0.5);
