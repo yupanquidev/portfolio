@@ -6,21 +6,21 @@ interface Props {
 const { href } = Astro.props;
 ---
 
-<li>
-  <a href={href}>
+<li class="list-menu">
+  <a class="link-menu" href={href}>
     <slot name="title" />
-    <div></div>
+    <div class="dotted-lines"></div>
     <slot />
     <slot name="description" />
   </a>
 </li>
 
 <style>
-  li {
+  .list-menu {
     width: 100%;
   }
 
-  a {
+  .link-menu {
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -30,7 +30,7 @@ const { href } = Astro.props;
     opacity: 0.8;
   }
 
-  div {
+  .dotted-lines {
     --line-color: #a1a1aa;
     height: 1px;
     background-image: linear-gradient(
@@ -45,17 +45,17 @@ const { href } = Astro.props;
     margin: 0 8px 6px;
   }
 
-  li:hover a {
+  .list-menu:hover a {
     opacity: 1;
     color: rgb(14 165 233);
   }
 
   @media (min-width: 768px) {
-    li {
+    .list-menu {
       width: auto;
     }
 
-    a {
+    .link-menu {
       width: auto;
       padding: 10px 18px 6px 18px;
       font-weight: 400;
@@ -63,7 +63,7 @@ const { href } = Astro.props;
       line-height: 24px;
     }
 
-    div {
+    .dotted-lines {
       display: none;
     }
   }
