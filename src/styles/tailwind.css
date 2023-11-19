@@ -7,10 +7,6 @@
     @apply w-full flex flex-col bg-zinc-950;
   }
 
-  .menuToggleLine {
-    @apply bg-zinc-100 h-[2px] w-full rounded transition-all duration-500;
-  }
-
   .fixedSize {
     @apply w-full mx-auto max-w-6xl px-3;
   }
