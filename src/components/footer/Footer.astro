@@ -8,7 +8,7 @@ const year = date.getFullYear();
 ---
 
 <section class="footer-content">
-  <p>
+  <p class="footer-description">
     Diseñado en <ResourceLinks name="Figma" href="https://www.figma.com" /> y
     codificado en <ResourceLinks
       name="Visual Studio Code"
@@ -23,11 +23,11 @@ const year = date.getFullYear();
     /> y <ResourceLinks name="Mona Sans" href="https://github.com/mona-sans" />.
   </p>
   <span class="footer-line"></span>
-  <div>
-    <p>
-      © {year} Humberto Yupanqui, Reservados todos los derechos.
+  <div class="footer-made">
+    <p class="made">
+      {year} Humberto Yupanqui. Hecho con ❤️.
     </p>
-    <ul>
+    <ul class="social-list">
       <ContactInfo href="https://github.com/yupanquidev">
         <svg
           width="20"
@@ -200,7 +200,7 @@ const year = date.getFullYear();
     background-color: rgb(39 39 42);
   }
 
-  div {
+  .footer-made {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -208,19 +208,23 @@ const year = date.getFullYear();
     gap: 8px;
   }
 
-  ul {
+  .made {
+    opacity: 0.7;
+  }
+
+  .social-list {
     display: flex;
     gap: 4px;
   }
 
   @media (min-width: 768px) {
-    div {
-      flex-direction: row;
+    .footer-content {
+      gap: 32px;
       justify-content: space-between;
     }
 
-    .footer-content {
-      gap: 32px;
+    .footer-made {
+      flex-direction: row;
       justify-content: space-between;
     }
   }
