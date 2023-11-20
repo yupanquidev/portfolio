@@ -21,6 +21,7 @@ const { href, className } = Astro.props;
 <style is:inline>
   .contact-info:hover svg {
     transform: scaleX(1.05) scaleY(1.05);
+    transition: all 0.3s ease-in-out;
   }
 
   .contact-info:hover .tooltip {
@@ -37,7 +38,7 @@ const { href, className } = Astro.props;
     align-items: center;
     justify-content: center;
     position: relative;
-    transition: all 0.3s;
+    transition: all 0.5s ease-in-out;
     border: 2px solid rgb(63 63 70 / 0.8);
     border-radius: 100%;
     cursor: pointer;
