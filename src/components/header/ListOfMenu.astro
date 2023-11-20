@@ -31,7 +31,7 @@ const { href } = Astro.props;
   }
 
   .dotted-lines {
-    --line-color: #a1a1aa;
+    --line-color: rgb(161 161 170);
     height: 1px;
     background-image: linear-gradient(
       90deg,
@@ -48,6 +48,7 @@ const { href } = Astro.props;
   .list-menu:hover a {
     opacity: 1;
     color: rgb(14 165 233);
+    text-shadow: 0 0 5px rgb(14, 165, 233);
   }
 
   @media (min-width: 768px) {
