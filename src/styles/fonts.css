@@ -9,7 +9,7 @@
     url("/fonts/n27/WOFF/n27-light.woff2") format("woff2"),
     url("/fonts/n27/TTF/n27-light.ttf") format("truetype");
   font-weight: 300;
-  font-display: swap;
+  font-display: swap
   font-style: normal;
 }
 
