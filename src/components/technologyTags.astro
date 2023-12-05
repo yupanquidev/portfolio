@@ -1,24 +1,36 @@
 ---
 interface Props {
   name: string;
+  style: string;
 }
 
-const { name } = Astro.props;
+const { name, style } = Astro.props;
 ---
 
-<span class="tech-tags">
-  {name}
-</span>
+<li class="tech-tags">
+  <span class="circle" style=`background-color: ${style};`></span>
+  <span>{name}</span>
+</li>
 
 <style>
   .tech-tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
     background-color: rgb(24 24 27 / 0.5);
     color: rgb(228 228 231);
     border: 1px solid rgb(63 63 70 / 0.8);
     font-weight: 300;
     font-size: 12px;
-    line-height: 16px;
-    padding: 3px 10px;
+    padding: 3px 8px;
     border-radius: 1rem;
+    margin-right: 10px;
+  }
+
+  .circle {
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
   }
 </style>
