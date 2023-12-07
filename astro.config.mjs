@@ -6,6 +6,5 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
-
   integrations: [tailwind()]
 });
