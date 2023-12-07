@@ -1,15 +1,15 @@
 ---
 interface Props {
   name: string;
-  bgColor?: string;
+  className?: string;
 }
 
-const { name, bgColor = "default" } = Astro.props;
+const { name, className = "default" } = Astro.props;
 ---
 
 <li class="tech-tags">
-  <span class=`circle ${bgColor}`></span>
-  <span>{name}</span>
+  <span class=`circle ${className}`></span>
+  <span class="name">{name}</span>
 </li>
 
 <style>
@@ -30,8 +30,12 @@ const { name, bgColor = "default" } = Astro.props;
 
   .circle {
     border-radius: 100%;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .name {
+    opacity: 0.7;
   }
 
   .default {
@@ -58,7 +62,7 @@ const { name, bgColor = "default" } = Astro.props;
     background-color: #264de4;
   }
 
-  .vue {
+  .vuejs {
     background-color: #41b883;
   }
 

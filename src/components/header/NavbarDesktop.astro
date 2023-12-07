@@ -2,8 +2,8 @@
 import ListOfMenu from "./ListOfMenu.astro";
 ---
 
-<nav class="hidden md:block" id="backdrop">
-  <ul class="w-auto flex items-center">
+<nav class="navbar-menu" id="backdrop">
+  <ul class="menu-list">
     <ListOfMenu href="/#experience">Experiencia</ListOfMenu>
     <ListOfMenu href="/#proyect">Potafolio</ListOfMenu>
     <ListOfMenu href="/blogs">Blog</ListOfMenu>
@@ -12,3 +12,21 @@ import ListOfMenu from "./ListOfMenu.astro";
     <ListOfMenu href="/resources">Recursos</ListOfMenu>
   </ul>
 </nav>
+
+<style>
+  .navbar-menu {
+    display: none;
+  }
+
+  .menu-list {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .navbar-menu {
+      display: block;
+    }
+  }
+</style>

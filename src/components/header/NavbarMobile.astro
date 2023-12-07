@@ -1,5 +1,5 @@
 ---
-import ButtonContact from "../buttons/ButtonContact.astro";
+import Button from "../buttons/Button.astro";
 import ListOfMenu from "./ListOfMenu.astro";
 ---
 
@@ -59,8 +59,12 @@ import ListOfMenu from "./ListOfMenu.astro";
         Recursos que uso.
       </p>
     </ListOfMenu>
-    <ButtonContact
-      style="bg-zinc-200 mt-16 text-zinc-950 hover:bg-zinc-200/80 py-3 px-6 font-bold text-lg"
+    <Button
+      className="contact contact-header contact-header-mobile "
+      buttonName="¡A trabajar!"
+      href="mailto:hyupanquia24@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
     />
   </ul>
 </nav>

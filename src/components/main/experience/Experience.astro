@@ -1,13 +1,15 @@
 ---
+import IconCalendar from "../../icons/IconCalendar.astro";
+import IconSchool from "../../icons/IconSchool.astro";
 import TechnologyTags from "../../technologyTags.astro";
 import ExperienceTimeline from "./ExperienceCard.astro";
 ---
 
-<section class="flex justify-center flex-col" id="experience">
-  <h2 class="w-full text-3xl font-black text-sky-400">Experiencias</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8">
-    <section class="flex flex-col gap-0.5">
-      <h3 class="text-lg py-4 font-bold text-emerald-600">Experiencia</h3>
+<section class="experience-section" id="experience">
+  <h2 class="experiences-title">Experiencias</h2>
+  <div class="experience-cards">
+    <section class="experience-card">
+      <h3 class="experience-title">Experiencia</h3>
       <ExperienceTimeline
         role="Full Stack Developer"
         company="ITETNIA"
@@ -19,46 +21,27 @@ import ExperienceTimeline from "./ExperienceCard.astro";
         amountOfTime="3 meses"
         jobType="Contrato de prácticas"
       >
-        <svg
-          slot="icon"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path
-            d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-          ></path>
-          <path d="M16 3l0 4"></path>
-          <path d="M8 3l0 4"></path>
-          <path d="M4 11l16 0"></path>
-          <path d="M8 15h2v2h-2z"></path>
-        </svg>
-        <p class="text-sm opacity-95 font-normal" slot="description">
+        <IconCalendar slot="icon" />
+        <p class="timeline-description" slot="description">
           Crear nuevas funcionalidades, pantallas y comportamientos, basados
           ​​en la diseño predefinido para cada proyecto. Desarrollar los
           componentes solicitados dentro de los entornos establecidos,
           asegurando la uso previsto de la solución.
         </p>
-        <section class="py-2 flex gap-1.5 pb-5 flex-wrap" slot="aptitudes">
-          <TechnologyTags name="JavaScript" bgColor="javascript" />
-          <TechnologyTags name="PHP" bgColor="php" />
-          <TechnologyTags name="CSS" bgColor="css" />
-          <TechnologyTags name="HTML" bgColor="html" />
-          <TechnologyTags name="Vue.js" bgColor="vuejs" />
-          <TechnologyTags name="Laravel" bgColor="laravel" />
-          <TechnologyTags name="Tailwind CSS" bgColor="tailwindcss" />
-          <TechnologyTags name="MySQL" bgColor="mysql" />
-        </section>
+        <ul class="stack-tech-list" slot="aptitudes">
+          <TechnologyTags name="JavaScript" className="javascript" />
+          <TechnologyTags name="PHP" className="php" />
+          <TechnologyTags name="CSS" className="css" />
+          <TechnologyTags name="HTML" className="html" />
+          <TechnologyTags name="Vue.js" className="vuejs" />
+          <TechnologyTags name="Laravel" className="laravel" />
+          <TechnologyTags name="Tailwind CSS" className="tailwindcss" />
+          <TechnologyTags name="MySQL" className="mysql" />
+        </ul>
       </ExperienceTimeline>
     </section>
-    <section class="flex flex-col gap-0.5">
-      <h3 class="text-lg py-4 font-bold text-emerald-600">Educación</h3>
+    <section class="experience-card">
+      <h3 class="experience-title">Educación</h3>
       <ExperienceTimeline
         role="Ingeniería de Software e Inteligencia Artificial"
         company="SENATI"
@@ -70,43 +53,76 @@ import ExperienceTimeline from "./ExperienceCard.astro";
         amountOfTime="3 años"
         jobType="Educación"
       >
-        <svg
-          slot="icon"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
-          <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
-        </svg>
-        <section class="py-2 flex gap-1.5 pb-5 flex-wrap" slot="aptitudes">
-          <TechnologyTags name="Oracle Database" bgColor="oracledatabase" />
-          <TechnologyTags name="JavaScript" bgColor="javascript" />
-          <TechnologyTags name="Python" bgColor="python" />
-          <TechnologyTags name="Java" bgColor="java" />
-          <TechnologyTags name="PHP" bgColor="php" />
-          <TechnologyTags name="CSS" bgColor="css" />
-          <TechnologyTags name="HTML" bgColor="html" />
-          <TechnologyTags name="Laravel" bgColor="laravel" />
-          <TechnologyTags name="MySQL" bgColor="mysql" />
-          <TechnologyTags name="SQL Server" bgColor="sqlserver" />
+        <IconSchool slot="icon" />
+        <ul class="stack-tech-list" slot="aptitudes">
+          <TechnologyTags name="Oracle Database" className="oracledatabase" />
+          <TechnologyTags name="JavaScript" className="javascript" />
+          <TechnologyTags name="Python" className="python" />
+          <TechnologyTags name="Java" className="java" />
+          <TechnologyTags name="PHP" className="php" />
+          <TechnologyTags name="CSS" className="css" />
+          <TechnologyTags name="HTML" className="html" />
+          <TechnologyTags name="Laravel" className="laravel" />
+          <TechnologyTags name="MySQL" className="mysql" />
+          <TechnologyTags name="SQL Server" className="sqlserver" />
           <TechnologyTags name="Patrones de diseño" />
           <TechnologyTags name="Patrones de arquitectura" />
           <TechnologyTags name="Inteligencia artificial" />
-        </section>
+        </ul>
       </ExperienceTimeline>
     </section>
   </div>
 </section>
 
 <style>
-  p {
-    text-wrap: balance;
+  .experience-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .experiences-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(56 189 248);
+  }
+
+  .experience-cards {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .experience-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .experience-title {
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(5 150 105);
+  }
+
+  .timeline-description {
+    font-size: 14px;
+    opacity: 0.8;
+    font-weight: 400;
+  }
+
+  .stack-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .experience-cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+    }
   }
 </style>

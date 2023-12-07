@@ -1,9 +1,9 @@
 ---
 import Backdrop from "../Backdrop.astro";
-import ButtonContact from "../buttons/ButtonContact.astro";
 import NavbarDesktop from "./NavbarDesktop.astro";
 import MenuToggle from "./MenuToggle.astro";
 import NavbarMobile from "./NavbarMobile.astro";
+import Button from "../buttons/Button.astro";
 ---
 
 <div class="fixedSize flex justify-between items-center py-2">
@@ -47,8 +47,12 @@ import NavbarMobile from "./NavbarMobile.astro";
       </svg>
     </a>
     <MenuToggle />
-    <ButtonContact
-      style="bg-zinc-200 text-zinc-950 hover:bg-zinc-200/80 hidden md:block"
+    <Button
+      className="contact contact-header"
+      buttonName="¡A trabajar!"
+      href="mailto:hyupanquia24@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
     />
   </section>
 </div>
