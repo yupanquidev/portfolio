@@ -1,14 +1,14 @@
 ---
 interface Props {
   name: string;
-  style: string;
+  bgColor?: string;
 }
 
-const { name, style } = Astro.props;
+const { name, bgColor = "default" } = Astro.props;
 ---
 
 <li class="tech-tags">
-  <span class="circle" style=`background-color: ${style};`></span>
+  <span class=`circle ${bgColor}`></span>
   <span>{name}</span>
 </li>
 
@@ -32,5 +32,89 @@ const { name, style } = Astro.props;
     border-radius: 100%;
     width: 8px;
     height: 8px;
+  }
+
+  .default {
+    background-color: #fff;
+  }
+
+  .javascript {
+    background-color: #f0db4f;
+  }
+
+  .typescript {
+    background-color: #007acc;
+  }
+
+  .php {
+    background-color: #777bb3;
+  }
+
+  .html {
+    background-color: #e34c26;
+  }
+
+  .css {
+    background-color: #264de4;
+  }
+
+  .vue {
+    background-color: #41b883;
+  }
+
+  .react {
+    background-color: #61dbfb;
+  }
+
+  .angular {
+    background-color: #dd0031;
+  }
+
+  .node {
+    background-color: #026e00;
+  }
+
+  .laravel {
+    background-color: #f55247;
+  }
+
+  .mysql {
+    background-color: #4479a1;
+  }
+
+  .postgresql {
+    background-color: #336791;
+  }
+
+  .mongodb {
+    background-color: #13aa52;
+  }
+
+  .oracledatabase {
+    background-color: #f80000;
+  }
+
+  .sqlserver {
+    background-color: #cc2927;
+  }
+
+  .redis {
+    background-color: #dc382d;
+  }
+
+  .docker {
+    background-color: #2496ed;
+  }
+
+  .tailwindcss {
+    background-color: #06b6d4;
+  }
+
+  .python {
+    background-color: #3776ab;
+  }
+
+  .java {
+    background-color: #007396;
   }
 </style>

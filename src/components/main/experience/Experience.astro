@@ -1,9 +1,6 @@
 ---
-import { tagColors } from "@/lib/colors";
 import TechnologyTags from "../../technologyTags.astro";
 import ExperienceTimeline from "./ExperienceCard.astro";
-
-const { color } = tagColors;
 ---
 
 <section class="flex justify-center flex-col" id="experience">
@@ -49,14 +46,14 @@ const { color } = tagColors;
           asegurando la uso previsto de la solución.
         </p>
         <section class="py-2 flex gap-1.5 pb-5 flex-wrap" slot="aptitudes">
-          <TechnologyTags name="JavaScript" style={color.javascript} />
-          <TechnologyTags name="PHP" style={color.php} />
-          <TechnologyTags name="CSS" style={color.css} />
-          <TechnologyTags name="HTML" style={color.html} />
-          <TechnologyTags name="Vue.js" style={color.vue} />
-          <TechnologyTags name="Laravel" style={color.laravel} />
-          <TechnologyTags name="Tailwind CSS" style={color.taiwindcss} />
-          <TechnologyTags name="MySQL" style={color.mysql} />
+          <TechnologyTags name="JavaScript" bgColor="javascript" />
+          <TechnologyTags name="PHP" bgColor="php" />
+          <TechnologyTags name="CSS" bgColor="css" />
+          <TechnologyTags name="HTML" bgColor="html" />
+          <TechnologyTags name="Vue.js" bgColor="vuejs" />
+          <TechnologyTags name="Laravel" bgColor="laravel" />
+          <TechnologyTags name="Tailwind CSS" bgColor="tailwindcss" />
+          <TechnologyTags name="MySQL" bgColor="mysql" />
         </section>
       </ExperienceTimeline>
     </section>
@@ -89,25 +86,19 @@ const { color } = tagColors;
           <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
         </svg>
         <section class="py-2 flex gap-1.5 pb-5 flex-wrap" slot="aptitudes">
-          <TechnologyTags name="Oracle Database" style={color.oracledatabase} />
-          <TechnologyTags name="JavaScript" style={color.javascript} />
-          <TechnologyTags name="Python" style={color.python} />
-          <TechnologyTags name="Java" style={color.java} />
-          <TechnologyTags name="PHP" style={color.php} />
-          <TechnologyTags name="CSS" style={color.css} />
-          <TechnologyTags name="HTML" style={color.html} />
-          <TechnologyTags name="Laravel" style={color.laravel} />
-          <TechnologyTags name="MySQL" style={color.mysql} />
-          <TechnologyTags name="SQL Server" style={color.sqlserver} />
-          <TechnologyTags
-            name="Patrones de diseño"
-            style={color.patronesdediseño}
-          />
-          <TechnologyTags
-            name="Patrones de arquitectura"
-            style={color.patronesarquitectura}
-          />
-          <TechnologyTags name="Inteligencia artificial" style={color.ia} />
+          <TechnologyTags name="Oracle Database" bgColor="oracledatabase" />
+          <TechnologyTags name="JavaScript" bgColor="javascript" />
+          <TechnologyTags name="Python" bgColor="python" />
+          <TechnologyTags name="Java" bgColor="java" />
+          <TechnologyTags name="PHP" bgColor="php" />
+          <TechnologyTags name="CSS" bgColor="css" />
+          <TechnologyTags name="HTML" bgColor="html" />
+          <TechnologyTags name="Laravel" bgColor="laravel" />
+          <TechnologyTags name="MySQL" bgColor="mysql" />
+          <TechnologyTags name="SQL Server" bgColor="sqlserver" />
+          <TechnologyTags name="Patrones de diseño" />
+          <TechnologyTags name="Patrones de arquitectura" />
+          <TechnologyTags name="Inteligencia artificial" />
         </section>
       </ExperienceTimeline>
     </section>
