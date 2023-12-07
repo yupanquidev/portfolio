@@ -14,6 +14,6 @@ export const xcard: Xcard = {
   username: "@yupanquidev",
   xUrl: "https:x.com/yupanquidev",
   tweet: "Hola, soy nuevo en X y no me gustan mucho las redes sociales 🙃 Estoy buscando conectarme con otros desarrolladores y aprender sobre lo último en desarrollo web 🤗",
-  following: 40,
-  followers: 1,
+  following: 47,
+  followers: 2,
 };
