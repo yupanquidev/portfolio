@@ -1,0 +1,39 @@
+<article class="not-found-card">
+  <h1 class="not-found-title">404</h1>
+  <p class="not-found-description">Not Found</p>
+</article>
+
+<style>
+  .not-found-card {
+    width: min-content;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid rgb(13 163 232 / 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    background-image: radial-gradient(
+      circle farthest-side at 50% 100%,
+      rgb(3 105 161 / 0.2),
+      rgb(10 10 10)
+    );
+  }
+
+  .not-found-title {
+    --gradient-stops: rgb(16 183 127), rgb(13 162 231);
+    font-size: 10rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--gradient-stops));
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+  }
+
+  .not-found-description {
+    font-size: 20px;
+    font-weight: 200;
+    color: #0ea5e9;
+    text-shadow: 0 0 4px rgb(14 165 233);
+  }
+</style>

@@ -6,7 +6,7 @@ import NavbarMobile from "./NavbarMobile.astro";
 import Button from "../buttons/Button.astro";
 ---
 
-<div class="fixedSize flex justify-between items-center py-2">
+<div>
   <Backdrop />
   <a class="w-auto h-full py-4 flex items-center" href="/">
     <svg
@@ -56,6 +56,18 @@ import Button from "../buttons/Button.astro";
     />
   </section>
 </div>
+
+<style>
+  div {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 72rem /* 1152px */;
+    padding: 0.5rem /* 8px */ 0.75rem /* 12px */;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
 
 <script>
   const button = document.querySelector(".haburger") as HTMLButtonElement;

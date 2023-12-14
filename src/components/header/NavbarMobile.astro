@@ -3,7 +3,9 @@ import Button from "../buttons/Button.astro";
 import ListOfMenu from "./ListOfMenu.astro";
 ---
 
-<nav class="navMobile menu-nav w-full h-screen">
+<nav
+  class="menu-nav w-full h-screen gap-20 right-0 left-0 bottom-0 hidden fixed top-full bg-zinc-950 border-2 border-sky-950/30 rounded backdrop-blur-xl z-50 py-8 px-4 md:hidden"
+>
   <ul class="w-full flex flex-col justify-center items-center gap-5">
     <ListOfMenu href="/#experience">
       <span slot="title">Experiencia</span>

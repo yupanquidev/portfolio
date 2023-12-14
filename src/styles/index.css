@@ -4,12 +4,6 @@ body {
   color-scheme: dark light;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Mona Sans", sans-serif;
-}
-
 body::-webkit-scrollbar,
 textarea::-webkit-scrollbar {
   width: 0.5rem;

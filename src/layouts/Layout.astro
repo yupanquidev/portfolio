@@ -4,7 +4,6 @@ import Footer from "../components/footer/Footer.astro";
 import Header from "../components/header/Header.astro";
 import "../styles/fonts.css";
 import "../styles/index.css";
-import "../styles/tailwind.css";
 
 interface Props {
   title: string;
@@ -27,17 +26,64 @@ const { title } = Astro.props;
     <title>{title} - Humberto Yupanqui Apaza</title>
     <ViewTransitions />
   </head>
-  <body class="app">
+  <body>
     <header class="header">
       <Header />
     </header>
     <main>
-      <div class="fixedSize flex flex-col gap-20 py-8">
+      <div class="fixed-size flex flex-col gap-20 py-8">
         <slot />
       </div>
     </main>
-    <footer class="footer">
+    <footer>
       <Footer />
     </footer>
+    <style is:global>
+      html {
+        background-color: rgb(9 9 11);
+      }
+    </style>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(9 9 11);
+      }
+
+      header {
+        width: 100%;
+        height: auto;
+        font-weight: 300;
+        font-size: 1rem /* 16px */;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-width: 2px;
+        border-color: rgb(8 47 73 / 0.1);
+        background-color: rgb(9 9 11 / 0.5);
+        color: rgb(245 249 255);
+        backdrop-filter: blur(16px);
+      }
+
+      div {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 72rem /* 1152px */;
+        padding: 0 0.75rem /* 12px */;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem /* 80px */;
+      }
+
+      footer {
+        width: 100%;
+        padding: 4rem /* 64px */ 0;
+        background-color: rgb(24 24 27 / 0.6);
+        color: rgb(212 212 216);
+        font-size: 1rem /* 16px */;
+        font-weight: 300;
+      }
+    </style>
   </body>
 </html>

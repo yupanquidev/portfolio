@@ -1,9 +1,31 @@
 ---
-import Button from "../components/buttons/Button.astro";
+import NotFoundCard from "src/components/NotFoundCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Error 404, no lo he encontrado">
+  <div>
+    <NotFoundCard />
+    <a class="back-home-button" href="/">
+      Volver a la página de inicio
+      <svg
+        slot="icon"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 12l14 0"></path>
+        <path d="M5 12l6 6"></path>
+        <path d="M5 12l6 -6"></path>
+      </svg>
+    </a>
+  </div>
   <div class="flex flex-col justify-center items-center leading-none h-full">
     <h1
       class="text-[10rem] font-black bg-gradient-to-r to-sky-500 from-emerald-500 bg-clip-text text-transparent"
@@ -12,22 +34,28 @@ import Layout from "../layouts/Layout.astro";
     </h1>
     <span class="font-medium opacity-80 text-lg text-sky-500">Not Found</span>
   </div>
-  <Button href="/" buttonName="Volver a la página de inicio">
-    <svg
-      slot="icon"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M5 12l14 0"></path>
-      <path d="M5 12l6 6"></path>
-      <path d="M5 12l6 -6"></path>
-    </svg>
-  </Button>
 </Layout>
+
+<style>
+  div {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .back-home-button {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 2px solid rgb(13 163 232 / 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    background-image: radial-gradient(
+      circle farthest-side at 50% 100%,
+      rgb(3 105 161 / 0.2),
+      rgb(10 10 10)
+    );
+  }
+</style>
