@@ -8,7 +8,10 @@
     "paths": {
       "@/lib/*": [
         "src/lib/*"
-      ]
+      ],
+      "@/icons/*": [
+        "src/components/icons/*"
+      ],
     }
   }
 }
