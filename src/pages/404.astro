@@ -12,24 +12,20 @@ import IconArrowLeft from "@/icons/IconArrowLeft.astro";
       <IconArrowLeft />
     </a>
   </div>
-  <div class="flex flex-col justify-center items-center leading-none h-full">
-    <h1
-      class="text-[10rem] font-black bg-gradient-to-r to-sky-500 from-emerald-500 bg-clip-text text-transparent"
-    >
-      404
-    </h1>
-    <span class="font-medium opacity-80 text-lg text-sky-500">Not Found</span>
-  </div>
 </Layout>
 
 <style>
   div {
-    display: flex;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "not-found-card"
+      "back-home-button";
+    gap: 0.5rem;
   }
 
   .back-home-button {
-    width: max-content;
+    grid-area: back-home-button;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,5 +39,13 @@ import IconArrowLeft from "@/icons/IconArrowLeft.astro";
       rgb(3 105 161 / 0.2),
       rgb(10 10 10)
     );
+  }
+
+  @media (min-width: 768px) {
+    div {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "not-found-card not-found-card back-home-button";
+      gap: 0.5rem;
+    }
   }
 </style>
