@@ -16,6 +16,7 @@ import IconArrowLeft from "@/icons/IconArrowLeft.astro";
 
 <style>
   div {
+    height: 500px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -25,7 +26,7 @@ import IconArrowLeft from "@/icons/IconArrowLeft.astro";
   }
 
   .back-home-button {
-    grid-area: back-home-button;
+    grid-area: back-home;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,6 +44,7 @@ import IconArrowLeft from "@/icons/IconArrowLeft.astro";
 
   @media (min-width: 768px) {
     div {
+      height: 360px;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: "not-found not-found back-home";
       gap: 0.5rem;
