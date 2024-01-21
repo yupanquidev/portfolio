@@ -1,6 +1,6 @@
 # Portfolio
 
-This is a portfolio project that demonstrates my web development skills. The project is built with Astro and Tailwind, and is deployed on Fly.io.
+This is a portfolio project that demonstrates my web development skills. The project is built with Astro and Tailwind, and is deployed on [Vercel](https://vercel.com).
 
 ## 🧰 Used tools
 The tools I used to build this project are:
