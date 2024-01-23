@@ -10,10 +10,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const { currentLocale } = Astro;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -55,15 +56,15 @@ const { title } = Astro.props;
         width: 100%;
         height: auto;
         font-weight: 300;
-        font-size: 1rem /* 16px */;
+        font-size: 16px;
         position: sticky;
         top: 0;
         z-index: 10;
-        border-width: 2px;
-        border-color: rgb(8 47 73 / 0.1);
         background-color: rgb(9 9 11 / 0.5);
         color: rgb(245 249 255);
-        backdrop-filter: blur(16px);
+        animation: blur linear both;
+        animation-timeline: scroll();
+        animation-range: 0 500px;
       }
 
       div {
@@ -83,6 +84,16 @@ const { title } = Astro.props;
         color: rgb(212 212 216);
         font-size: 1rem /* 16px */;
         font-weight: 300;
+      }
+
+      @keyframes blur {
+        to {
+          box-shadow:
+            0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+            0px 5px 50px -5px rgba(0, 0, 0, 0.3);
+          background-color: rgb(9 9 11 / 0.5);
+          backdrop-filter: blur(10px);
+        }
       }
     </style>
   </body>

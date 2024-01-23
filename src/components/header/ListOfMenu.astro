@@ -18,12 +18,12 @@ const { href } = Astro.props;
 <style>
   .list-menu {
     width: 100%;
+    border-radius: 4px;
   }
 
   .link-menu {
     width: 100%;
-    display: flex;
-    align-items: flex-end;
+    display: inline-flex;
     justify-content: center;
     padding: 16px 0;
     transition-property: all 0.15s ease-in-out;
@@ -58,9 +58,8 @@ const { href } = Astro.props;
 
     .link-menu {
       width: auto;
-      padding: 10px 18px 6px 18px;
+      padding: 8px 14px;
       font-weight: 400;
-      font-size: 16px;
       line-height: 24px;
     }
 
