@@ -3,7 +3,7 @@ import Backdrop from "../Backdrop.astro";
 import NavbarDesktop from "./NavbarDesktop.astro";
 import MenuToggle from "./MenuToggle.astro";
 import NavbarMobile from "./NavbarMobile.astro";
-import Button from "@/components/buttons/Button.astro";
+import LangSelector from "../LangSelector.astro";
 ---
 
 <div>
@@ -46,14 +46,8 @@ import Button from "@/components/buttons/Button.astro";
         ></path>
       </svg>
     </a>
+    <LangSelector />
     <MenuToggle />
-    <Button
-      className="contact contact-header"
-      buttonName="¡A trabajar!"
-      href="mailto:hyupanquia24@gmail.com"
-      target="_blank"
-      rel="noopener noreferrer"
-    />
   </section>
 </div>
 
@@ -61,8 +55,8 @@ import Button from "@/components/buttons/Button.astro";
   div {
     width: 100%;
     margin: 0 auto;
-    max-width: 72rem /* 1152px */;
-    padding: 0.5rem /* 8px */ 0.75rem /* 12px */;
+    max-width: 48rem;
+    padding: 0.5rem 0.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
