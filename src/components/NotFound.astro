@@ -1,0 +1,21 @@
+---
+import Section from "@/components/Section.astro";
+---
+
+<Section
+  className="flex-col justify-center space-y-8 h-dvh sm:flex-row sm:items-center sm:gap-6 relative"
+>
+  <article class="flex flex-col gap-8">
+    <h1 class="text-4xl font-bold text-sky-500">Página no encontrada</h1>
+    <div class="space-y-4">
+      <p class="font-semibold text-zinc-400">
+        Lamentablemente, no podemos encontrar la página que estás buscando.
+      </p>
+      <p class="text-base font-light text-zinc-100">
+        Por favor, revisa la URL e inténtalo de nuevo o que hayas escrito la
+        dirección incorrectamente.
+      </p>
+    </div>
+  </article>
+  <span class="text-[10rem] text-center font-bold">404</span>
+</Section>
