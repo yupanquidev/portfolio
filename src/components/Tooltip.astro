@@ -1,13 +1,13 @@
 ---
 interface Props {
-  name: string;
+  network: string;
 }
 
-const { name } = Astro.props;
+const { network } = Astro.props;
 ---
 
 <span class="tooltip">
-  {name}
+  {network}
 </span>
 
 <style>
@@ -24,6 +24,6 @@ const { name } = Astro.props;
     border: 2px solid rgb(63 63 70 / 0.8);
     border-radius: 6px;
     display: none;
-    bottom: -40px;
+    top: -40px;
   }
 </style>

@@ -1,0 +1,32 @@
+---
+import ContactIconLink from "@/components/ContactIconLink.astro";
+import Section from "@/components/Section.astro";
+import Tooltip from "@/components/Tooltip.astro";
+
+import { CONTACT_INFO } from "@/utils/contactInfo";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="w-full py-4">
+  <Section
+    className="flex flex-col items-center gap-4 sm:flex-row-reverse sm:justify-between"
+  >
+    <ul class="flex gap-1">
+      {
+        CONTACT_INFO.map(({ network, link, icon }) => {
+          const Icon = icon;
+          return (
+            <ContactIconLink href={link} network={network}>
+              <Icon width="18" height="18" />
+              <Tooltip network={network} />
+            </ContactIconLink>
+          );
+        })
+      }
+    </ul>
+    <p class="font-normal text-zinc-400">
+      &copy; {currentYear} Humberto Yupanqui Apaza.
+    </p>
+  </Section>
+</footer>

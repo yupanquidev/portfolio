@@ -1,37 +1,37 @@
 ---
 interface Props {
   href: string;
-  className?: string;
+  network: string;
 }
 
-const { href, className } = Astro.props;
+const { href, network } = Astro.props;
 ---
 
 <li>
   <a
-    class=`contact-info ${className}`
     href={href}
     rel="noopener noreferrer"
     target="_blank"
+    aria-label=`Visitar a ${network}`
   >
     <slot />
   </a>
 </li>
 
 <style is:inline>
-  .contact-info:hover svg {
+  a:hover svg {
     transform: scaleX(1.05) scaleY(1.05);
     transition: all 0.3s ease-in-out;
   }
 
-  .contact-info:hover .tooltip {
+  a:hover .tooltip {
     display: block;
     transition: all 0.3s ease-in-out;
   }
 </style>
 
 <style>
-  .contact-info {
+  a {
     width: 36px;
     height: 36px;
     background-color: rgb(24 24 27 / 0.5);
