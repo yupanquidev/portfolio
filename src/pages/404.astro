@@ -1,53 +1,8 @@
 ---
-import NotFoundCard from "@/components/NotFoundCard.astro";
-import IconArrowLeft from "@/icons/IconArrowLeft.astro";
+import NotFound from "@/components/NotFound.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="Error 404, no lo he encontrado">
-  <div>
-    <NotFoundCard />
-    <a class="back-home-button" href="/">
-      Volver a la página de inicio
-      <IconArrowLeft />
-    </a>
-  </div>
+  <NotFound />
 </Layout>
-
-<style>
-  div {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "not-found"
-      "back-home";
-    gap: 0.5rem;
-  }
-
-  .back-home-button {
-    grid-area: back-home;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    border: 2px solid rgb(13 163 232 / 0.4);
-    border-radius: 10px;
-    padding: 20px;
-    background-image: radial-gradient(
-      circle farthest-side at 50% 100%,
-      rgb(3 105 161 / 0.2),
-      rgb(10 10 10)
-    );
-  }
-
-  @media (min-width: 768px) {
-    div {
-      height: 360px;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "not-found not-found back-home";
-      gap: 0.5rem;
-    }
-  }
-</style>
