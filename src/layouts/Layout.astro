@@ -1,9 +1,8 @@
 ---
-import Footer from "@/components/footer/Footer.astro";
-import Header from "@/components/header/Header.astro";
+import Footer from "@/components/sections/Footer.astro";
+import Header from "@/components/sections/Header.astro";
 import "@/styles/fonts.css";
 import "@/styles/index.css";
-import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -25,75 +24,166 @@ const { currentLocale } = Astro;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Humberto Yupanqui Apaza</title>
-    <ViewTransitions />
   </head>
-  <body class="relative">
-    <header class="header">
-      <Header />
-    </header>
-    <main>
-      <div class="fixed-size flex flex-col gap-20 py-8">
-        <slot />
-      </div>
+  <body>
+    <Header />
+    <main class="space-y-10">
+      <slot />
     </main>
-    <footer>
-      <Footer />
-    </footer>
-    <style is:global>
-      html {
-        background-color: rgb(9 9 11);
-      }
-    </style>
-
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(9 9 11);
-      }
-
-      header {
-        width: 100%;
-        height: auto;
-        font-weight: 300;
-        font-size: 16px;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        background-color: rgb(9 9 11 / 0.5);
-        color: rgb(245 249 255);
-        animation: blur linear both;
-        animation-timeline: scroll();
-        animation-range: 0 500px;
-      }
-
-      div {
-        width: 100%;
-        margin: 0 auto;
-        max-width: 48rem;
-        padding: 0 0.75rem;
-        display: flex;
-        flex-direction: column;
-        gap: 5rem /* 80px */;
-      }
-
-      footer {
-        width: 100%;
-        padding: 4rem 0;
-        color: rgb(212 212 216);
-        font-size: 1rem /* 16px */;
-        font-weight: 300;
-      }
-
-      @keyframes blur {
-        to {
-          box-shadow:
-            0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-            0px 5px 50px -5px rgba(0, 0, 0, 0.3);
-          background-color: rgb(9 9 11 / 0.5);
-          backdrop-filter: blur(10px);
-        }
-      }
-    </style>
+    <Footer />
   </body>
 </html>
+
+<style is:global>
+  @font-face {
+    font-family: "N27";
+    src:
+      url("/fonts/n27/n27-light.woff") format("woff"),
+      url("/fonts/n27/n27-light.woff2") format("woff2"),
+      url("/fonts/n27/n27-light.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "N27";
+    src:
+      url("/fonts/n27/n27-regular.woff") format("woff"),
+      url("/fonts/n27/n27-regular.woff2") format("woff2"),
+      url("/fonts/n27/n27-regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "N27";
+    src:
+      url("/fonts/n27/n27-medium.woff") format("woff"),
+      url("/fonts/n27/n27-medium.woff2") format("woff2"),
+      url("/fonts/n27/n27-medium.ttf") format("truetype");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "N27";
+    src:
+      url("/fonts/n27/n27-bold.woff") format("woff"),
+      url("/fonts/n27/n27-bold.woff2") format("woff2"),
+      url("/fonts/n27/n27-bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "N27";
+    src:
+      url("/fonts/n27/n27-lightitalic.woff") format("woff"),
+      url("/fonts/n27/n27-lightitalic.woff2") format("woff2"),
+      url("/fonts/n27/n27-lightitalic.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "N27";
+    src:
+      url("/fonts/n27/n27-regularitalic.woff") format("woff"),
+      url("/fonts/n27/n27-regularitalic.woff2") format("woff2"),
+      url("/fonts/n27/n27-regularitalic.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "N27";
+    src:
+      url("/fonts/n27/n27-mediumitalic.woff") format("woff"),
+      url("/fonts/n27/n27-mediumitalic.woff2") format("woff2"),
+      url("/fonts/n27/n27-mediumitalic.ttf") format("truetype");
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "N27";
+    src:
+      url("/fonts/n27/n27-bolditalic.woff") format("woff"),
+      url("/fonts/n27/n27-bolditalic.woff2") format("woff2"),
+      url("/fonts/n27/n27-bolditalic.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Geist";
+    src:
+      url("/fonts/geist/VF.ttf") format("truetype"),
+      url("/fonts/geist/VF.woff2") format("woff2-variations"),
+      url("/fonts/geist/VF.woff") format("woff supports variations");
+    font-weight: 100 900;
+    font-stretch: 50% 200%;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  html {
+    background-color: rgb(9, 9, 11);
+  }
+
+  img,
+  video,
+  svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+    font-family: "Geist";
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+</style>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(9 9 11);
+  }
+
+  div {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 48rem;
+    padding: 0 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem /* 80px */;
+  }
+
+  footer {
+    width: 100%;
+    padding: 4rem 0;
+    color: rgb(212 212 216);
+    font-size: 1rem /* 16px */;
+    font-weight: 300;
+  }
+</style>
