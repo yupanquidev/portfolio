@@ -1,8 +1,6 @@
 ---
 import Footer from "@/components/sections/Footer.astro";
 import Header from "@/components/sections/Header.astro";
-import "@/styles/fonts.css";
-import "@/styles/index.css";
 
 interface Props {
   title: string;
@@ -133,6 +131,29 @@ const { currentLocale } = Astro;
     font-stretch: 50% 200%;
     font-display: swap;
     font-style: normal;
+  }
+
+  html,
+  body {
+    font-family: "N27", sans-serif;
+    color-scheme: dark light;
+  }
+
+  body::-webkit-scrollbar,
+  textarea::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  body::-webkit-scrollbar-thumb,
+  textarea::-webkit-scrollbar-thumb {
+    background-color: #0284c7;
+    border-radius: 1rem;
+    transition: all 0.5s;
+  }
+
+  body::-webkit-scrollbar-thumb:hover,
+  textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #0369a1;
   }
 
   html {
