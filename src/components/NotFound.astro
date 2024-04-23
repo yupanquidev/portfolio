@@ -1,11 +1,12 @@
 ---
 import Section from "@/components/Section.astro";
+import ArrowLeft from "@/icons/ArrowLeft.astro";
 ---
 
 <Section
   className="flex-col justify-center space-y-8 h-dvh sm:flex-row sm:items-center sm:gap-6 relative"
 >
-  <article class="flex flex-col gap-8">
+  <article class="flex flex-col gap-8 mr-10 text-center">
     <h1 class="text-4xl font-bold text-sky-500">Página no encontrada</h1>
     <div class="space-y-4">
       <p class="font-semibold text-zinc-400">
@@ -17,5 +18,18 @@ import Section from "@/components/Section.astro";
       </p>
     </div>
   </article>
-  <span class="text-[10rem] text-center font-bold">404</span>
+  <div class="flex flex-col items-center">
+    <span class="text-[10rem] text-center font-bold">404</span>
+    <a
+      class="group inline-flex gap-2 py-2 px-4 bg-sky-950 rounded-lg border-2 border-sky-600 text-base hover:bg-sky-600 transition-colors duration-300 ease-in-out"
+      href="/"
+    >
+      <ArrowLeft
+        width="24"
+        height="24"
+        className="group-hover:-translate-x-1 group-hover:duration-500"
+      />
+      Regresar
+    </a>
+  </div>
 </Section>
