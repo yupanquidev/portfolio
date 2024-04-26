@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  description: string;
+  link?: string;
+  date: string;
+  technologies: { name: string; color: string }[];
+}
+
+const { title, company, description, date, technologies } = Astro.props;
+---
+
+<article
+  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-zinc-500 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4"
+>
+  <div class="pb-12 md:col-span-2">
+    <span class="text-sky-400 -left-[42px] absolute rounded-full text-5xl">
+      &bull;
+    </span>
+    <h3 class="text-xl font-bold text-sky-400">{title}</h3>
+    <h4 class="font-semibold text-xl text-white">
+      {company}
+    </h4>
+    <time class="p-0 m-0 text-sm text-zinc-200/80">
+      {date}
+    </time>
+  </div>
+  <p class="relative flex flex-col gap-2 pb-4 text-zinc-400 md:col-span-3">
+    {description}
+  </p>
+  <section class="inline-flex gap-2 w-full">
+    {
+      technologies.map(({ name, color }) => (
+        <div class="text-sm text-zinc-200/80">
+          <span class={`bg-[#${color}] w-4 h-4 rounded-full `} />
+          <span>{name}</span>
+        </div>
+      ))
+    }
+  </section>
+</article>
