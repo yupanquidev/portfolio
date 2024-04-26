@@ -1,0 +1,12 @@
+---
+const { href, nemuName } = Astro.props;
+---
+
+<li class="list-none">
+  <a
+    class="flex font-medium text-zinc-300/90 hover:text-sky-500 transition-colors duration-200 ease-out w-min sm:py-2 sm:px-4"
+    href={href}
+  >
+    {nemuName}
+  </a>
+</li>
