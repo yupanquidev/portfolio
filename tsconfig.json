@@ -1,19 +1,10 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "types": [
-      "astro/client"
-    ],
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
-      ],
-      "@/lib/*": [
-        "src/lib/*"
-      ],
-      "@/icons/*": [
-        "src/components/icons/*"
       ],
       "@/layouts/*": [
         "src/layouts/*"
@@ -21,6 +12,9 @@
       "@/i18n/*": [
         "src/i18n/*"
       ],
+      "@/flags/*": [
+        "src/components/flags/*"
+      ]
     }
   }
 }
