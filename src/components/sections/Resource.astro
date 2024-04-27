@@ -1,0 +1,55 @@
+---
+import ResourceItem from "@/components/ResourceItem.astro";
+import Section from "@/components/Section.astro";
+
+import { APIS } from "@/utils/apis";
+import { FONTS } from "@/utils/fonts";
+import { HOSTINGS } from "@/utils/hostings";
+import { ICONS } from "@/utils/icons";
+---
+
+<Section className="flex-col space-y-4" title="Fuentes">
+  <p>En este proyecto se utilizan las siguientes fuentes:</p>
+  <ol>
+    {FONTS.map(({ font, link }) => <ResourceItem resource={font} url={link} />)}
+  </ol>
+</Section>
+
+<Section className="flex-col space-y-4" title="Iconos">
+  <p>En este proyecto se utilizan las siguientes fuentes:</p>
+  <ol>
+    {
+      ICONS.map(({ icons, link }) => (
+        <li>
+          <a href={link}>{icons}</a>
+        </li>
+      ))
+    }
+  </ol>
+</Section>
+
+<Section className="flex-col space-y-4" title="Hostings">
+  <p>En este proyecto se utilizan las siguientes fuentes:</p>
+  <ol>
+    {
+      HOSTINGS.map(({ hosting, link }) => (
+        <li>
+          <a href={link}>{hosting}</a>
+        </li>
+      ))
+    }
+  </ol>
+</Section>
+
+<Section className="flex-col space-y-4" title="APIs">
+  <p>En este proyecto se utilizan las siguientes fuentes:</p>
+  <ol>
+    {
+      APIS.map(({ api, link }) => (
+        <li>
+          <a href={link}>{api}</a>
+        </li>
+      ))
+    }
+  </ol>
+</Section>

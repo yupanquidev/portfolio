@@ -1,0 +1,92 @@
+---
+import Backdrop from "@/components/Backdrop.astro";
+import LangSelector from "@/components/LangSelector.astro";
+import ListOfMenu from "@/components/ListOfMenu.astro";
+import MenuMobile from "@/components/MenuMobile.astro";
+import Section from "@/components/Section.astro";
+
+import Code from "@/icons/Code.astro";
+import GitHub from "@/icons/GitHub.astro";
+import Menu from "@/icons/Menu.astro";
+
+import { LIST_MENU } from "@/utils/menuData";
+---
+
+<header class="w-full sticky top-0 z-10 text-base">
+  <Section className="justify-between items-center">
+    <Backdrop />
+    <a
+      class="text-zinc-300/90 hover:text-zinc-200 transition-opacity duration-200 ease-out cursor-pointer"
+      href="/"
+      aria-label="Logo"
+    >
+      <Code width="24" heigth="24" />
+    </a>
+    <nav id="backdrop">
+      <ul class="hidden md:flex">
+        {
+          LIST_MENU.map(({ menuName, href }) => (
+            <ListOfMenu href={href} nemuName={menuName} />
+          ))
+        }
+      </ul>
+    </nav>
+    <section class="flex items-center gap-4">
+      <a
+        class="text-zinc-300/90 hover:text-zinc-200 transition-opacity duration-200 ease-out cursor-pointer"
+        href="https://github.com/yupanquidev"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GitHub />
+      </a>
+      <LangSelector />
+      <button
+        class="text-zinc-300/90 hover:text-zinc-200 transition-opacity duration-200 ease-out cursor-pointer md:hidden"
+        id="open-dialog"
+      >
+        <Menu width="24" height="24" />
+      </button>
+    </section>
+  </Section>
+</header>
+<MenuMobile />
+
+<style>
+  header {
+    background-color: rgb(9 9 11 / 0.5);
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
+
+  @keyframes blur {
+    to {
+      box-shadow:
+        0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+        0px 5px 50px -5px rgba(0, 0, 0, 0.3);
+      background-color: rgb(9 9 11 / 0.5);
+      backdrop-filter: blur(10px);
+    }
+  }
+</style>
+
+<script>
+  const d = document;
+  const dialog = d.getElementById("dialog") as HTMLDialogElement;
+  const openDialog = d.getElementById("open-dialog") as HTMLButtonElement;
+  const closeDialog = d.getElementById("close-dialog") as HTMLButtonElement;
+
+  openDialog.addEventListener("click", (e) => {
+    dialog.show();
+  });
+
+  closeDialog.addEventListener("click", (e) => {
+    dialog.close();
+  });
+
+  dialog.addEventListener("click", (e) => {
+    const target = e.target;
+    if (target === dialog) dialog.close();
+  });
+</script>
