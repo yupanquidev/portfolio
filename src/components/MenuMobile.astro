@@ -1,0 +1,39 @@
+---
+import LangSelector from "@/components/LangSelector.astro";
+import ListOfMenu from "@/components/ListOfMenu.astro";
+import Section from "@/components/Section.astro";
+
+import X from "@/icons/X.astro";
+
+import { LIST_MENU } from "@/utils/menuData";
+---
+
+<dialog
+  class="w-full h-full fixed top-0 left-0 backdrop-blur-sm bg-zinc-950/80 inset-0 z-50 border-none"
+  id="dialog"
+>
+  <Section
+    className="relative flex-col top-14 w-80 rounded-lg shadow-lg shadow-sky-950/30 p-6 bg-zinc-950"
+  >
+    <button
+      class="absolute top-6 right-6 text-zinc-300/90 hover:text-zinc-200 transition-opacity duration-200 ease-out cursor-pointer"
+      id="close-dialog"
+    >
+      <X width="24" heght="24" />
+    </button>
+    <nav class="w-full">
+      <ul class="space-y-6">
+        {
+          LIST_MENU.map(({ menuName, href }) => (
+            <ListOfMenu href={href} nemuName={menuName} />
+          ))
+        }
+      </ul>
+    </nav>
+    <span class="mt-6 pt-6 border-t border-zinc-200/10"></span>
+    <div class="flex justify-between items-center">
+      <p class="text-zinc-300/90 text-base font-normal">Selecionar idioma</p>
+      <LangSelector />
+    </div>
+  </Section>
+</dialog>
