@@ -7,10 +7,10 @@ export const LIST_MENU = [
     menuName: "Portafolio",
     href: "/#portfolio",
   },
-  {
-    menuName: "Blog",
-    href: "/blogs",
-  },
+  /*  {
+     menuName: "Blog",
+     href: "/blogs",
+   }, */
   {
     menuName: "Fotos",
     href: "/photos",
