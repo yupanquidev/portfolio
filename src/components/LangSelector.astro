@@ -50,14 +50,17 @@ const currentPath = url.pathname.replace(currentLocaleData.href, "");
   </a>
   <ul>
     {
-      otherLocales.map(({ href, name, flag }) => (
-        <li>
-          <a class="lang-selector-button" href={`${href}${currentPath}`}>
-            <flag />
-            {name}
-          </a>
-        </li>
-      ))
+      otherLocales.map(({ href, name, flag }) => {
+        const Flag = flag;
+        return (
+          <li>
+            <a class="lang-selector-button" href={`${href}${currentPath}`}>
+              <Flag />
+              {name}
+            </a>
+          </li>
+        );
+      })
     }
   </ul>
 </section>
