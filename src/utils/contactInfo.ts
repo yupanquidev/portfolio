@@ -3,7 +3,6 @@ import GitHub from "@/icons/GitHub.astro"
 import Instagram from '@/icons/Instagram.astro'
 import LinkedIn from '@/icons/LinkedIn.astro'
 import Mail from "@/icons/Mail.astro"
-import Threads from '@/icons/Threads.astro'
 import TikTok from '@/icons/TikTok.astro'
 import X from "@/icons/X.astro"
 
@@ -45,9 +44,4 @@ export const CONTACT_INFO: ContactLinks[] = [
     link: "https://tiktok.com/@yupanquidev",
     icon: TikTok,
   },
-  {
-    network: "Threads",
-    link: "https://threads.net/@yupanquidev",
-    icon: Threads,
-  }
 ]
