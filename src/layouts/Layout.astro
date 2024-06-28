@@ -1,6 +1,6 @@
 ---
-import Footer from "@/components/sections/Footer.astro"
-import Header from "@/components/sections/Header.astro"
+import Footer from "@/components/sections/Footer.astro";
+import Header from "@/components/sections/Header.astro";
 
 interface Props {
   title: string;
@@ -22,6 +22,11 @@ const { currentLocale } = Astro;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Humberto Yupanqui Apaza</title>
+    <style>
+      @view-transition {
+        navigation: auto; /* enabled! */
+      }
+    </style>
   </head>
   <body>
     <Header />
