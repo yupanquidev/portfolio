@@ -1,0 +1,23 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+const { title } = Astro.props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Astro description" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="copyright" content="Diseñado por yupanqui.dev" />
+  <meta name="author" content="Humberto Yupanqui Apaza" />
+  <meta name="description" content="Humberto Yupanqui Apaza" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title} - Humberto Yupanqui Apaza</title>
+  <ViewTransitions />
+  <style>
+    @view-transition {
+      navigation: auto; /* desible */
+    }
+  </style>
+</head>
