@@ -14,7 +14,11 @@ const { currentLocale } = Astro;
 <!doctype html>
 <html lang={currentLocale}>
   <Head title={title} />
-  <body>
+  <body class="relative">
+    <section
+      class="w-full fixed top-0 -z-10 h-dvh bg-[radial-gradient(ellipse_90%_90%_at_50%_-20%,rgba(14,165,233,0.08),rgba(255,255,255,0))]"
+    >
+    </section>
     <Header />
     <main class="space-y-10">
       <slot />
