@@ -48,7 +48,7 @@ const currentPath = url.pathname.replace(currentLocaleData.href, "");
     {currentLocaleData.name}
     <ChevronDown width="18" heght="18" />
   </a>
-  <ul>
+  <!-- <ul>
     {
       otherLocales.map(({ href, name, flag }) => {
         const Flag = flag;
@@ -62,7 +62,7 @@ const currentPath = url.pathname.replace(currentLocaleData.href, "");
         );
       })
     }
-  </ul>
+  </ul> -->
 </section>
 
 <style>
@@ -73,6 +73,10 @@ const currentPath = url.pathname.replace(currentLocaleData.href, "");
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+
+    svg:nth-last-child(1) {
+      display: none;
+    }
   }
 
   .lang-selector ul {
