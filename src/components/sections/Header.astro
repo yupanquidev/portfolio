@@ -12,7 +12,9 @@ import Menu from "@/icons/Menu.astro";
 import { LIST_MENU } from "@/utils/menuData";
 ---
 
-<header class="w-full sticky top-0 z-10 text-base">
+<header
+  class="w-full sticky top-0 z-10 text-base bg-zinc-950/20 backdrop-blur-md"
+>
   <Section className="justify-between items-center">
     <Backdrop />
     <a
@@ -51,25 +53,6 @@ import { LIST_MENU } from "@/utils/menuData";
   </Section>
 </header>
 <MenuMobile />
-
-<style>
-  header {
-    background-color: rgb(9 9 11 / 0.5);
-    animation: blur linear both;
-    animation-timeline: scroll();
-    animation-range: 0 500px;
-  }
-
-  @keyframes blur {
-    to {
-      box-shadow:
-        0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-        0px 5px 50px -5px rgba(0, 0, 0, 0.3);
-      background-color: rgb(9 9 11 / 0.5);
-      backdrop-filter: blur(10px);
-    }
-  }
-</style>
 
 <script>
   const d = document;
