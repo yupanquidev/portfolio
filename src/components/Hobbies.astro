@@ -1,4 +1,24 @@
+---
+import Star from "@/icons/Star.astro";
+---
+
 <section class="hobbies">
+  <a
+    class="h-min flex justify-center items-center relative bg-sky-500/20 p-1.5 rounded-full border border-sky-500/30 group hover:bg-yellow-600"
+    href="https://github.com/yupanquidev/portfolio/stargazers"
+  >
+    <Star
+      className="fill-yellow-500 stroke-yellow-500 group-hover:fill-white group-hover:stroke-white group"
+      whidth="15"
+      height="15"
+    />
+    <tooltip
+      class="absolute z-10 pointer-events-none select-none shadow-sm py-2 px-4 rounded-md font-light text-xs top-9 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-100 bg-sky-500/20 border border-sky-500/30 text-nowrap"
+      role="tooltip"
+    >
+      Una estrella en GitHub
+    </tooltip>
+  </a>
   <span class="soccer">Fútbol</span>
   <span class="run">Correr</span>
   <span class="walk">Caminar</span>
@@ -8,7 +28,9 @@
 <style>
   .hobbies {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
   }
 
   .soccer,
@@ -18,13 +40,15 @@
     --text-opacity: 0.3;
     --bg-opacity: 0.2;
     display: inline-flex;
+    align-items: center;
+    height: min-content;
     background-color: var(--bg-color);
     color: var(--text-color);
     border-radius: 6px;
     border: 2px solid var(--border-color);
     padding: 2px 8px;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px;
     cursor: crosshair;
     user-select: none;
