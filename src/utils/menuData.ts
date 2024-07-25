@@ -1,11 +1,11 @@
 export const LIST_MENU = [
   {
-    menuName: "Experiencia",
-    href: "/#experience",
+    menuName: "Home",
+    href: "/",
   },
   {
     menuName: "Portafolio",
-    href: "/#portfolio",
+    href: "/#projects",
   },
   /*  {
      menuName: "Blog",
@@ -22,5 +22,13 @@ export const LIST_MENU = [
   {
     menuName: "Recursos",
     href: "/resources",
+  },
+  {
+    menuName: "Resume",
+    href: "https://cv.yupanqui.dev",
+  },
+  {
+    menuName: "About",
+    href: "/about",
   },
 ]
