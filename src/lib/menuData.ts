@@ -16,10 +16,6 @@ export const LIST_MENU = [
     href: "/photos",
   },
   {
-    menuName: "Libros",
-    href: "/books",
-  },
-  {
     menuName: "Recursos",
     href: "/resources",
   },
