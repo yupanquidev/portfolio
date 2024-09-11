@@ -9,7 +9,7 @@ import Code from "@/icons/Code.astro";
 import GitHub from "@/icons/GitHub.astro";
 import Menu from "@/icons/Menu.astro";
 
-import { LIST_MENU } from "@/utils/menuData";
+import { LIST_MENU } from "@/lib/menuData";
 ---
 
 <header
@@ -33,7 +33,24 @@ import { LIST_MENU } from "@/utils/menuData";
         }
       </ul>
     </nav>
-    <section class="flex items-center gap-4">
+    <section class="flex items-center">
+      <a
+        href="https://github.com/yupanquidev"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GitHub
+          width="24"
+          height="24"
+          className="stroke-zinc-300/90 hover:stroke-white"
+        />
+      </a>
+      <a
+        class="bg-zinc-200 text-sky-950 py-2 px-4 ml-3 rounded-md"
+        href="mailto:yupanquidev@gmail.com">A Trabajar</a
+      >
+    </section>
+    <section class="items-center gap-4 hidden">
       <a
         class="text-zinc-300/90 hover:text-zinc-200 transition-opacity duration-200 ease-out cursor-pointer"
         href="https://github.com/yupanquidev"
