@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from "astro:transitions";
+
 const { title } = Astro.props;
 ---
 
@@ -12,9 +14,5 @@ const { title } = Astro.props;
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
   <title>{title} - Humberto Yupanqui Apaza</title>
-  <style>
-    @view-transition {
-      navigation: auto; /* enabled! */
-    }
-  </style>
+  <ClientRouter />
 </head>
