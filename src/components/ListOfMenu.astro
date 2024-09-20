@@ -4,9 +4,19 @@ const { href, nemuName } = Astro.props;
 
 <li class="list-none">
   <a
-    class="flex font-medium text-zinc-300/90 hover:text-sky-500 transition-colors duration-200 ease-out w-min sm:py-2 sm:px-4"
+    class="flex font-medium text-zinc-300/90 hover:text-sky-500 transition-colors duration-200 ease-out w-min sm:py-2 sm:px-4 border border-transparent"
     href={href}
   >
     {nemuName}
   </a>
 </li>
+
+<style>
+  a:hover {
+    background-color: rgb(14 165 233 / 0.04);
+    border: 1px solid rgb(14 165 233 / 0.2);
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+  }
+</style>
