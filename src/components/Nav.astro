@@ -1,0 +1,14 @@
+---
+import { LIST_MENU } from "@/lib/menuData";
+import ListOfMenu from "./ListOfMenu.astro";
+---
+
+<nav id="backdrop">
+  <ul class="hidden md:flex">
+    {
+      LIST_MENU.map(({ menuName, href }) => (
+        <ListOfMenu href={href} nemuName={menuName} />
+      ))
+    }
+  </ul>
+</nav>
