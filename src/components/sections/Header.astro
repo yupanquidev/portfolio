@@ -1,22 +1,18 @@
 ---
-import Backdrop from "@/components/Backdrop.astro";
 import LangSelector from "@/components/LangSelector.astro";
-import ListOfMenu from "@/components/ListOfMenu.astro";
 import MenuMobile from "@/components/MenuMobile.astro";
 import Section from "@/components/Section.astro";
 
 import Code from "@/icons/Code.astro";
 import GitHub from "@/icons/GitHub.astro";
 import Menu from "@/icons/Menu.astro";
-
-import { LIST_MENU } from "@/lib/menuData";
+import Nav from "@/components/Nav.astro";
 ---
 
 <header
   class="w-full sticky top-0 z-10 text-base bg-zinc-950/20 backdrop-blur-md"
 >
   <Section className="justify-between items-center">
-    <Backdrop />
     <a
       class="text-zinc-300/90 hover:text-zinc-200 transition-opacity duration-200 ease-out cursor-pointer"
       href="/"
@@ -24,15 +20,7 @@ import { LIST_MENU } from "@/lib/menuData";
     >
       <Code width="24" heigth="24" />
     </a>
-    <nav id="backdrop">
-      <ul class="hidden md:flex">
-        {
-          LIST_MENU.map(({ menuName, href }) => (
-            <ListOfMenu href={href} nemuName={menuName} />
-          ))
-        }
-      </ul>
-    </nav>
+    <Nav />
     <section class="flex items-center">
       <a
         href="https://github.com/yupanquidev"
