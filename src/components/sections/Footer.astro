@@ -4,8 +4,7 @@ import Section from "@/components/Section.astro";
 import Tooltip from "@/components/Tooltip.astro";
 
 import { CONTACT_INFO } from "@/lib/contactInfo";
-
-const currentYear = new Date().getFullYear();
+import CurrentYear from "../CurrentYear.astro";
 ---
 
 <footer class="w-full py-4">
@@ -25,8 +24,6 @@ const currentYear = new Date().getFullYear();
         })
       }
     </ul>
-    <p class="font-normal text-zinc-400">
-      &copy; {currentYear} Humberto Yupanqui Apaza.
-    </p>
+    <CurrentYear server:defer />
   </Section>
 </footer>
