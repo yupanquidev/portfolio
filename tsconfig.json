@@ -3,21 +3,24 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
+      "@components/*": [
+        "src/components/*"
       ],
-      "@/layouts/*": [
+      "@layouts/*": [
         "src/layouts/*"
       ],
-      "@/lib/*": [
-        "src/lib/*"
+      "@sections/*": [
+        "src/sections/*"
       ],
-      "@/i18n/*": [
-        "src/i18n/*"
+      "@icons/*": [
+        "src/icons/*"
       ],
-      "@/flags/*": [
-        "src/components/flags/*"
-      ]
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@flags/*": [
+        "src/flags/*"
+      ],
     }
   }
 }
