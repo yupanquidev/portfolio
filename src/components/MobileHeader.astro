@@ -1,0 +1,62 @@
+---
+import LangSelect from "@components/LangSelect.astro";
+
+import GitHub from "@icons/GitHub.astro";
+import Menu from "@icons/Menu.astro";
+import X from "@icons/X.astro";
+
+import { MENUS } from "@data/menus";
+---
+
+<nav
+  class:list={[
+    "w-full flex flex-col items-center gap-8 border border-mauve-300/20 p-6 rounded-xl bg-y/50 text-mauve-50 backdrop-blur-md px-6 py-2 mt-4 left-0 right-0",
+    Astro.props.class,
+  ]}
+>
+  <div class="flex justify-between items-center w-full">
+    <a href="/" class="font-bold text-xl">Y</a>
+    <button
+      class="drawer bg-mauve-100/5 backdrop-blur transition-all duration-300 ease-out rounded-md hover:bg-mauve-100/10 p-1 group"
+    >
+      <Menu class="menu group-hover:scale-95" size="24" />
+      <X class="x hidden group-hover:scale-95" size="24" />
+    </button>
+  </div>
+  <ul class="hidden pb-6 text-center w-full">
+    {
+      MENUS.map(({ name, url }) => (
+        <li class="text-base p-2">
+          <a href={url}>{name}</a>
+        </li>
+      ))
+    }
+    <div
+      class="flex justify-center gap-4 border-t border-mauve-300/30 w-full pt-6 mt-4"
+    >
+      <a
+        href="https://github.com/yupanquidev/"
+        target="_blank"
+        class="inline-flex items-center gap-2 px-2.5 py-1.5 bg-mauve-100 rounded-md text-mauve-950 hover:bg-mauve-300 group transition-all duration-200 ease-in-out"
+      >
+        <span class="text-sm">GitHub</span>
+        <GitHub size="18" class="group-hover:scale-105" />
+      </a>
+      <LangSelect />
+    </div>
+  </ul>
+</nav>
+
+<script>
+  const d = document;
+  const drawer = d.querySelector(".drawer");
+  const nav = d.querySelector("nav ul");
+  const menu = d.querySelector(".menu");
+  const x = d.querySelector(".x");
+
+  drawer?.addEventListener("click", () => {
+    nav?.classList.toggle("hidden");
+    menu?.classList.toggle("hidden");
+    x?.classList.toggle("hidden");
+  });
+</script>
