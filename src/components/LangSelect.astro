@@ -1,0 +1,79 @@
+---
+import SpainFlag from "@flags/Spain.astro";
+import UnitedStatesFlag from "@flags/UnitedStates.astro";
+
+import ChevronDown from "@icons/ChevronDown.astro";
+
+import type { Icon } from "../types";
+
+const { currentLocale = "es", url } = Astro;
+
+const pathname = url.pathname;
+
+let restUrl;
+
+if (pathname.startsWith("/en")) {
+  const segments = pathname.split("/").slice(2);
+  restUrl = "/" + segments.join("/").replace(/\/+$/, "");
+} else {
+  restUrl = pathname.replace(/\/+$/, "");
+}
+
+const LOCALES: Icon = {
+  es: {
+    code: "es",
+    href: restUrl,
+    name: "ES",
+    flag: SpainFlag,
+  },
+  en: {
+    code: "en",
+    href: `/en${restUrl}`,
+    name: "EN",
+    flag: UnitedStatesFlag,
+  },
+};
+
+const currentLocaleData = LOCALES[currentLocale];
+const otherLocales = Object.values(LOCALES).filter(
+  (locale) => locale.code !== currentLocale,
+);
+const currentPath = url.pathname.replace(currentLocaleData.href, "");
+---
+
+<section
+  class:list={[
+    "text-sm relative rounded-md transition-all group",
+    Astro.props.class,
+  ]}
+>
+  <a
+    class="w-full inline-flex items-center gap-x-2 py-1.5 px-2.5 backdrop-blur-md backdrop-filter rounded-md bg-mauve-50/15 hover:bg-mauve-50/20 transition-all duration-300 ease-in-out"
+    aria-expanded="true"
+    aria-haspopup="true"
+  >
+    <currentLocaleData.flag size="18" />
+    {currentLocaleData.name}
+    <ChevronDown size="18" class="" />
+  </a>
+  <ul
+    class="w-full hidden absolute pt-1 group-hover:block group-hover:animate-fadeDown"
+  >
+    {
+      otherLocales.map(({ href, name, flag }) => {
+        const Flag = flag;
+        return (
+          <li>
+            <a
+              class="w-full inline-flex items-center gap-x-2 py-1.5 px-2.5 backdrop-blur-md backdrop-filter rounded-md bg-mauve-50/15 hover:bg-mauve-50/20 transition-all duration-300 ease-in-out"
+              href={`${href}${currentPath}`}
+            >
+              <Flag size="18" />
+              {name}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
