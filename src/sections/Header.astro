@@ -1,0 +1,9 @@
+---
+import DesktopHeader from "@components/DesktopHeader.astro";
+import MobileHeader from "@components/MobileHeader.astro";
+---
+
+<section class="max-w-screen-lg mx-auto px-6 flex justify-between">
+  <MobileHeader class="sm:hidden" />
+  <DesktopHeader class="hidden sm:flex" />
+</section>
