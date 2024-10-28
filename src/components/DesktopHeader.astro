@@ -1,0 +1,35 @@
+---
+import LangSelect from "@components/LangSelect.astro";
+
+import GitHub from "@icons/GitHub.astro";
+
+import { MENUS } from "@data/menus";
+---
+
+<nav
+  class:list={[
+    "w-full flex-row items-center border border-mauve-300/20 p-6 rounded-xl bg-y/50 text-mauve-50 backdrop-blur-md px-6 py-2 mt-4 left-0 right-0 justify-between",
+    Astro.props.class,
+  ]}
+>
+  <a href="/" class="font-bold text-xl">Y</a>
+  <ul class="flex text-center w-auto">
+    {
+      MENUS.map(({ name, url }) => (
+        <li class="text-base p-2">
+          <a href={url}>{name}</a>
+        </li>
+      ))
+    }
+  </ul>
+  <div class="flex justify-center gap-1 w-auto">
+    <a
+      href="https://github.com/yupanquidev/"
+      target="_blank"
+      class="inline-flex items-center gap-2 px-2.5 py-1.5 rounded-md text-mauve-100 group transition-all duration-200 ease-in-out"
+    >
+      <GitHub size="20" class="group-hover:scale-105" />
+    </a>
+    <LangSelect />
+  </div>
+</nav>
