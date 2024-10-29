@@ -1,0 +1,72 @@
+---
+import Card from "@components/Card.astro";
+import SocialButton from "@components/SocialButton.astro";
+
+import GitHub from "@icons/GitHub.astro";
+import Linkedin from "@icons/Linkedin.astro";
+import Mail from "@icons/Mail.astro";
+
+import type { Icon } from "src/types";
+
+interface SocialIcon {
+  name: string;
+  href: string;
+  size?: string;
+  icon: Icon | any;
+}
+
+const SOCIAL_BUTTONS: SocialIcon[] = [
+  {
+    name: "Mail",
+    href: "mailto:yupanquidev@gmail.com",
+    icon: Mail,
+  },
+  {
+    name: "GitHub",
+    href: "https://www.linkedin.com/in/yupanquidev",
+    icon: Linkedin,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://github.com/yupanquidev",
+    icon: GitHub,
+  },
+];
+---
+
+<Card class="space-y-6">
+  <header class="flex gap-2 items-center">
+    <figure
+      class="w-11 h-11 bg-mauve-300/5 aspect-square rounded-full border border-mauve-300/30"
+    >
+      <img
+        class="w-full h-full aspect-square object-cover rounded-full"
+        src="/me.webp"
+        alt="Humberto Yupanqui"
+      />
+    </figure>
+    <section class="text-sm">
+      <h4>
+        <strong class="text-mauve-400 font-medium">Humberto Yupanqui</strong>
+      </h4>
+      <span class="font-light text-mauve-50/60">Ingeniero de Software</span>
+    </section>
+  </header>
+  <main>
+    <h2 class="text-xl font-medium">
+      ¡Bienvenido a mi portafolio!, Aquí encontrarás algunos de mis proyectos.
+    </h2>
+  </main>
+  <footer class="inline-flex gap-2">
+    {
+      SOCIAL_BUTTONS.map(({ href, icon: Icon }) => (
+        <SocialButton href={href}>
+          <Icon
+            class="group-hover/social:scale-105 stroke-mauve-200"
+            size={22}
+          />
+        </SocialButton>
+      ))
+    }
+  </footer>
+</Card>
