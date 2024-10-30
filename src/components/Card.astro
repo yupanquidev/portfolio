@@ -1,0 +1,40 @@
+---
+import ArrowUpRight from "@icons/ArrowUpRight.astro";
+
+interface Props {
+	href?: string;
+	class?: string;
+	title?: string;
+}
+
+const { href, title } = Astro.props;
+---
+
+{
+	href ? (
+		<a
+			class:list={[
+				"flex border border-mauve-300/20 rounded-xl bg-y text-mauve-50 font-light p-6 group",
+				Astro.props.class,
+			]}
+			href={href}
+		>
+			{title ? <h3 class="text-xs text-mauve-400">{title}</h3> : null}
+			<slot />
+			<ArrowUpRight
+				size="24"
+				class="stroke-2 stroke-mauve-50 transition-all duration-200 group-hover:scale-105 group-hover:stroke-mauve-200"
+			/>
+		</a>
+	) : (
+		<article
+			class:list={[
+				"border border-mauve-300/20 rounded-xl bg-y text-mauve-50 font-light p-6 group",
+				Astro.props.class,
+			]}
+		>
+			{title ? <h3 class="text-xs text-mauve-400">{title}</h3> : null}
+			<slot />
+		</article>
+	)
+}
