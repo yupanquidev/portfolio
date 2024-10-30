@@ -1,0 +1,17 @@
+---
+interface Props {
+  tech: string;
+  href: string;
+}
+
+const { tech, href } = Astro.props;
+---
+
+<li class="list-disc list-inside text-xs opacity-85">
+  <a
+    class="hover:underline hover:decoration-emerald-500 transition-all duration-300 ease-in-out"
+    href={href}
+  >
+    {tech}
+  </a>
+</li>
