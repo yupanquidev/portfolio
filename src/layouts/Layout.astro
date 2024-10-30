@@ -1,257 +1,171 @@
 ---
-import Head from "@/components/Head.astro";
-import Footer from "@/components/sections/Footer.astro";
-import Header from "@/components/sections/Header.astro";
+import Header from "@sections/Header.astro";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-  title: string;
+	title: string;
+	class: string;
 }
 
 const { title } = Astro.props;
-const { currentLocale } = Astro;
 ---
 
 <!doctype html>
-<html lang={currentLocale}>
-  <Head title={title} />
-  <body class="relative">
-    <section
-      class="w-full fixed top-0 -z-10 h-dvh bg-[radial-gradient(ellipse_90%_90%_at_50%_-20%,rgba(14,165,233,0.08),rgba(255,255,255,0))]"
-    >
-    </section>
-    <Header />
-    <main class="space-y-10">
-      <slot />
-    </main>
-    <Footer />
-    <style is:global>
-      @font-face {
-        font-family: "N27";
-        src:
-          url("/fonts/n27/n27-light.woff") format("woff"),
-          url("/fonts/n27/n27-light.woff2") format("woff2"),
-          url("/fonts/n27/n27-light.ttf") format("truetype");
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: "N27";
-        src:
-          url("/fonts/n27/n27-regular.woff") format("woff"),
-          url("/fonts/n27/n27-regular.woff2") format("woff2"),
-          url("/fonts/n27/n27-regular.ttf") format("truetype");
-        font-weight: 400;
-        font-display: swap;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: "N27";
-        src:
-          url("/fonts/n27/n27-medium.woff") format("woff"),
-          url("/fonts/n27/n27-medium.woff2") format("woff2"),
-          url("/fonts/n27/n27-medium.ttf") format("truetype");
-        font-weight: 500;
-        font-display: swap;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: "N27";
-        src:
-          url("/fonts/n27/n27-bold.woff") format("woff"),
-          url("/fonts/n27/n27-bold.woff2") format("woff2"),
-          url("/fonts/n27/n27-bold.ttf") format("truetype");
-        font-weight: 700;
-        font-display: swap;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: "N27";
-        src:
-          url("/fonts/n27/n27-lightitalic.woff") format("woff"),
-          url("/fonts/n27/n27-lightitalic.woff2") format("woff2"),
-          url("/fonts/n27/n27-lightitalic.ttf") format("truetype");
-        font-weight: 300;
-        font-display: swap;
-        font-style: italic;
-      }
-
-      @font-face {
-        font-family: "N27";
-        src:
-          url("/fonts/n27/n27-regularitalic.woff") format("woff"),
-          url("/fonts/n27/n27-regularitalic.woff2") format("woff2"),
-          url("/fonts/n27/n27-regularitalic.ttf") format("truetype");
-        font-weight: 400;
-        font-display: swap;
-        font-style: italic;
-      }
-
-      @font-face {
-        font-family: "N27";
-        src:
-          url("/fonts/n27/n27-mediumitalic.woff") format("woff"),
-          url("/fonts/n27/n27-mediumitalic.woff2") format("woff2"),
-          url("/fonts/n27/n27-mediumitalic.ttf") format("truetype");
-        font-weight: 500;
-        font-display: swap;
-        font-style: italic;
-      }
-
-      @font-face {
-        font-family: "N27";
-        src:
-          url("/fonts/n27/n27-bolditalic.woff") format("woff"),
-          url("/fonts/n27/n27-bolditalic.woff2") format("woff2"),
-          url("/fonts/n27/n27-bolditalic.ttf") format("truetype");
-        font-weight: 700;
-        font-display: swap;
-        font-style: italic;
-      }
-
-      @font-face {
-        font-family: "Geist";
-        src:
-          url("/fonts/geist/VF.ttf") format("truetype"),
-          url("/fonts/geist/VF.woff2") format("woff2-variations"),
-          url("/fonts/geist/VF.woff") format("woff supports variations");
-        font-weight: 100 900;
-        font-stretch: 50% 200%;
-        font-display: swap;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: "Monaspace";
-        src:
-          url("/fonts/monaspace/NeonVF.ttf") format("truetype"),
-          url("/fonts/monaspace/NeonVF.woff2") format("woff2-variations"),
-          url("/fonts/monaspace/NeonVF.woff") format("woff supports variations");
-        font-weight: 100 900;
-        font-stretch: 50% 200%;
-        font-display: swap;
-        font-style: normal;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-
-      body {
-        min-height: 100dvh;
-        min-height: 100vh;
-      }
-
-      input,
-      button,
-      textarea,
-      select {
-        font: inherit;
-      }
-
-      p {
-        text-wrap: pretty;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Geist", sans-serif;
-        text-wrap: balance;
-      }
-
-      img,
-      figure,
-      video,
-      svg {
-        height: auto;
-        max-width: 100%;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      li,
-      ul {
-        list-style: none;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-          scroll-behavior: auto !important;
-          transition: none;
-        }
-      }
-
-      html {
-        color-scheme: dark light;
-      }
-
-      body {
-        font-family: "N27", sans-serif;
-      }
-
-      body::-webkit-scrollbar,
-      textarea::-webkit-scrollbar {
-        width: 0.5rem;
-      }
-
-      body::-webkit-scrollbar-thumb,
-      textarea::-webkit-scrollbar-thumb {
-        background-color: #0284c7;
-        border-radius: 1rem;
-        transition: all 0.5s;
-      }
-
-      body::-webkit-scrollbar-thumb:hover,
-      textarea::-webkit-scrollbar-thumb:hover {
-        background-color: #0369a1;
-      }
-    </style>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(9 9 11);
-      }
-
-      div {
-        width: 100%;
-        margin: 0 auto;
-        max-width: 48rem;
-        padding: 0 0.75rem;
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-      }
-
-      footer {
-        width: 100%;
-        padding: 4rem 0;
-        color: rgb(212 212 216);
-        font-size: 1rem;
-        font-weight: 300;
-      }
-    </style>
-  </body>
+<html lang="en" class="">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="w-full h-full bg-primary text-mauve-50/80">
+		<header class="sticky top-0 z-50">
+			<Header />
+		</header>
+		<main
+			class:list={[
+				"max-w-screen-lg mx-auto p-6 overflow-hidden",
+				Astro.props.class,
+			]}
+		>
+			<slot />
+		</main>
+	</body>
 </html>
+
+<style is:global>
+	@font-face {
+		font-family: "N27";
+		src:
+			url("/fonts/n27/n27-light.woff") format("woff"),
+			url("/fonts/n27/n27-light.woff2") format("woff2"),
+			url("/fonts/n27/n27-light.ttf") format("truetype");
+		font-weight: 300;
+		font-display: swap;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "N27";
+		src:
+			url("/fonts/n27/n27-regular.woff") format("woff"),
+			url("/fonts/n27/n27-regular.woff2") format("woff2"),
+			url("/fonts/n27/n27-regular.ttf") format("truetype");
+		font-weight: 400;
+		font-display: swap;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "N27";
+		src:
+			url("/fonts/n27/n27-medium.woff") format("woff"),
+			url("/fonts/n27/n27-medium.woff2") format("woff2"),
+			url("/fonts/n27/n27-medium.ttf") format("truetype");
+		font-weight: 500;
+		font-display: swap;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "N27";
+		src:
+			url("/fonts/n27/n27-bold.woff") format("woff"),
+			url("/fonts/n27/n27-bold.woff2") format("woff2"),
+			url("/fonts/n27/n27-bold.ttf") format("truetype");
+		font-weight: 700;
+		font-display: swap;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "N27";
+		src:
+			url("/fonts/n27/n27-lightitalic.woff") format("woff"),
+			url("/fonts/n27/n27-lightitalic.woff2") format("woff2"),
+			url("/fonts/n27/n27-lightitalic.ttf") format("truetype");
+		font-weight: 300;
+		font-display: swap;
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: "N27";
+		src:
+			url("/fonts/n27/n27-regularitalic.woff") format("woff"),
+			url("/fonts/n27/n27-regularitalic.woff2") format("woff2"),
+			url("/fonts/n27/n27-regularitalic.ttf") format("truetype");
+		font-weight: 400;
+		font-display: swap;
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: "N27";
+		src:
+			url("/fonts/n27/n27-mediumitalic.woff") format("woff"),
+			url("/fonts/n27/n27-mediumitalic.woff2") format("woff2"),
+			url("/fonts/n27/n27-mediumitalic.ttf") format("truetype");
+		font-weight: 500;
+		font-display: swap;
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: "N27";
+		src:
+			url("/fonts/n27/n27-bolditalic.woff") format("woff"),
+			url("/fonts/n27/n27-bolditalic.woff2") format("woff2"),
+			url("/fonts/n27/n27-bolditalic.ttf") format("truetype");
+		font-weight: 700;
+		font-display: swap;
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: "Geist";
+		src:
+			url("/fonts/geist/VF.ttf") format("truetype"),
+			url("/fonts/geist/VF.woff2") format("woff2"),
+			url("/fonts/geist/VF.woff") format("woff");
+		font-weight: 100 900;
+		font-stretch: 50% 200%;
+		font-display: swap;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "Monaspace";
+		src:
+			url("/fonts/monaspace/NeonVF.ttf") format("truetype"),
+			url("/fonts/monaspace/NeonVF.woff2") format("woff2"),
+			url("/fonts/monaspace/NeonVF.woff") format("woff");
+		font-weight: 100 900;
+		font-stretch: 50% 200%;
+		font-display: swap;
+		font-style: normal;
+	}
+
+	html,
+	body {
+		font-family: "N27";
+	}
+
+	p {
+		font-family: "N27";
+		text-wrap: pretty;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-wrap: balance;
+		font-family: "Geist";
+	}
+</style>
