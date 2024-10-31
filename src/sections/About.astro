@@ -1,0 +1,24 @@
+---
+import Card from "@components/Card.astro";
+import TechLink from "@components/TechLink.astro";
+
+const TECH = [
+  {
+    name: "CSS",
+    href: "https://developer.mozilla.org/docs/Web/CSS",
+  },
+];
+---
+
+<Card title="Sobre mí" class="space-y-4">
+  <p class="opacity-90">
+    <strong class="text-lg font-medium text-mauve-400">+1</strong> año de experiencia
+    en desarrollo web, actualmente me encuentro trabajando en proyectos personales
+    y colaborando en proyectos open source.
+  </p>
+  <ul>
+    <h5 class="text-sm pb-1.5">Mis principales herramientas son:</h5>
+    <TechLink tech="CSS" href="https://developer.mozilla.org/docs/Web/CSS" />
+    {TECH.map((tech) => <TechLink tech={tech.name} href={tech.href} />)}
+  </ul>
+</Card>
