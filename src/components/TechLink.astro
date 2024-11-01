@@ -2,14 +2,18 @@
 interface Props {
   tech: string;
   href: string;
+  class: string;
 }
 
 const { tech, href } = Astro.props;
 ---
 
-<li class="list-disc list-inside text-xs opacity-85">
+<li class="list-disc list-inside">
   <a
-    class="hover:underline hover:decoration-emerald-500 transition-all duration-300 ease-in-out"
+    class:list={[
+      "opacity-85 text-xs hover:opacity-100 hover:underline transition-all duration-300 ease-in-out",
+      Astro.props.class,
+    ]}
     href={href}
   >
     {tech}
