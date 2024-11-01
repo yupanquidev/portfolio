@@ -4,8 +4,9 @@ import TechLink from "@components/TechLink.astro";
 
 const TECH = [
   {
-    name: "CSS",
+    tech: "CSS",
     href: "https://developer.mozilla.org/docs/Web/CSS",
+    hover: "hover:text-blue-400",
   },
 ];
 ---
@@ -18,6 +19,10 @@ const TECH = [
   </p>
   <ul>
     <h5 class="text-sm pb-1.5">Mis principales herramientas son:</h5>
-    {TECH.map((tech) => <TechLink tech={tech.name} href={tech.href} />)}
+    {
+      TECH.map(({ tech, href, hover }) => (
+        <TechLink tech={tech} href={href} class={hover} />
+      ))
+    }
   </ul>
 </Card>
