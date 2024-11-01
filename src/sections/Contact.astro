@@ -1,0 +1,47 @@
+---
+import Card from "@components/Card.astro";
+import SocialLink from "@components/SocialLink.astro";
+
+interface Props {
+  social: string;
+  href: string;
+}
+
+const SOCIAL_LINKS = [
+  {
+    social: "GitHub",
+    href: "https://github.com/yupanquidev",
+  },
+  {
+    social: "LinkedIn",
+    href: "https://www.linkedin.com/in/yupanquidev/",
+  },
+  {
+    social: "X",
+    href: "https://X.com/yupanquidev",
+  },
+  {
+    social: "Instagram",
+    href: "https://www.instagram.com/yupanquidev/",
+  },
+];
+---
+
+<Card title="Contacto" class="space-y-4">
+  <h4>¡Comencemos a trabajar juntos!</h4>
+
+  <div>
+    <p>yupanquidev@gmail.com</p>
+    <span class="opacity-80 text-sm">Cusco-Perú</span>
+  </div>
+  <div>
+    <h5>Redes Sociales:</h5>
+    <ul>
+      {
+        SOCIAL_LINKS.map(({ social, href }) => (
+          <SocialLink social={social} href={href} />
+        ))
+      }
+    </ul>
+  </div>
+</Card>
