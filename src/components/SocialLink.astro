@@ -1,0 +1,17 @@
+---
+interface Props {
+  social: string;
+  href: string;
+}
+
+const { social, href } = Astro.props;
+---
+
+<li class="list-disc list-inside">
+  <a
+    class="hover:underline opacity-80 hover:decoration-mauve-500 hover:opacity-100 transition-all duration-300 ease-in-out"
+    href={href}
+  >
+    {social}
+  </a>
+</li>
