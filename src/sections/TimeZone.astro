@@ -1,0 +1,56 @@
+---
+import Card from "@components/Card.astro";
+
+const formatTimeForPeru = (date: Date): string => {
+  const options: Intl.DateTimeFormatOptions = {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    weekday: "long",
+    hour: "numeric",
+    hour12: true,
+    minute: "numeric",
+    second: "numeric",
+    timeZone: "America/Lima",
+  };
+
+  return new Intl.DateTimeFormat("es-PE", options).format(date);
+};
+---
+
+<Card class="space-y-1">
+  <h4 class="font-medium text-lg">Zona Horaria</h4>
+  <p id="timeDisplay">
+    {formatTimeForPeru(new Date())}
+  </p>
+  <span class="text-sm opacity-60">Cusco, Perú 🇵🇪</span>
+</Card>
+
+<script>
+  const d = document;
+
+  setInterval(() => {
+    const timeDisplay = d.getElementById("timeDisplay");
+
+    if (timeDisplay) {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        weekday: "long",
+        hour: "numeric",
+        hour12: true,
+        minute: "numeric",
+        second: "numeric",
+        timeZone: "America/Lima",
+      };
+
+      const formattedTime = new Intl.DateTimeFormat("es-PE", options).format(
+        now,
+      );
+
+      timeDisplay.textContent = formattedTime;
+    }
+  }, 1000);
+</script>
