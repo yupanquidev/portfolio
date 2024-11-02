@@ -25,10 +25,18 @@ export default {
 			fadeDown: {
 				'0%': { opacity: 0, transform: 'translateY(-5px)' },
 				'100%': { opacity: 1, transform: 'translateY(0)' },
-			}
+			},
+			flicker: {
+				'0%': { opacity: 0.5, textShadow: '0 0 5px rgba(16, 185, 129, 1), 0 0 10px rgba(16, 185, 129, 1)' },
+				'20%': { opacity: 1, textShadow: '0 0 10px rgba(16, 185, 129, 1), 0 0 20px rgba(16, 185, 129, 1)' },
+				'50%': { opacity: 0.7, textShadow: '0 0 5px rgba(16, 185, 129, 1), 0 0 10px rgba(16, 185, 129, 1)' },
+				'80%': { opacity: 1, textShadow: '0 0 10px rgba(16, 185, 129, 1), 0 0 20px rgba(16, 185, 129, 1)' },
+				'100%': { opacity: 0.5, textShadow: '0 0 5px rgba(16, 185, 129, 1), 0 0 10px rgba(16, 185, 129, 1)' },
+			},
 		},
 		animation: {
 			fadeDown: 'fadeDown 0.5s ease-out',
+			flicker: 'flicker 2s ease-in infinite',
 		},
 	},
 	plugins: [],
