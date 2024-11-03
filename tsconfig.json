@@ -15,12 +15,12 @@
       "@icons/*": [
         "src/icons/*"
       ],
-      "@data/*": [
-        "src/data/*"
-      ],
       "@flags/*": [
         "src/flags/*"
-      ]
+      ],
+      "@lib/*": [
+        "src/lib/*"
+      ],
     }
   }
 }
