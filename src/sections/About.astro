@@ -8,10 +8,35 @@ const TECH = [
     href: "https://developer.mozilla.org/docs/Web/CSS",
     hover: "hover:text-blue-400",
   },
+  {
+    tech: "HTML",
+    href: "https://developer.mozilla.org/docs/Web/HTML",
+    hover: "hover:text-red-400",
+  },
+  {
+    tech: "JavaScript",
+    href: "https://developer.mozilla.org/docs/Web/JavaScript",
+    hover: "hover:text-yellow-400",
+  },
+  {
+    tech: "TypeScript",
+    href: "https://www.typescriptlang.org/",
+    hover: "hover:text-blue-400",
+  },
+  {
+    tech: "Go",
+    href: "https://golang.org/",
+    hover: "hover:text-blue-400",
+  },
+  {
+    tech: "React",
+    href: "https://reactjs.org/",
+    hover: "hover:text-blue-400",
+  },
 ];
 ---
 
-<Card title="Sobre mí" class="space-y-4">
+<Card title="Sobre mí" class:list={["space-y-4", Astro.props.class]}>
   <p class="opacity-85">
     <strong class="text-lg font-medium text-mauve-400">+1</strong> año de experiencia
     en desarrollo web, actualmente me encuentro trabajando en proyectos personales

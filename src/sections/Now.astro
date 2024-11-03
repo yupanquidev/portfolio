@@ -2,7 +2,7 @@
 import Card from "@components/Card.astro";
 ---
 
-<Card class="relative space-y-1">
+<Card class:list={["relative space-y-1", Astro.props.class]}>
   <h3 class="text-lg font-medium">Ahora</h3>
   <span class="text-sm opacity-60">¿Qué es eso?</span>
   <p>Actualmente trabajando como freelance</p>

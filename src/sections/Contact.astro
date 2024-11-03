@@ -22,9 +22,8 @@ const SOCIAL_LINKS = [
 ];
 ---
 
-<Card title="Contacto" class="space-y-4">
+<Card title="Contacto" class:list={["space-y-4", Astro.props.class]}>
   <h4>¡Comencemos a trabajar juntos!</h4>
-
   <div>
     <p>yupanquidev@gmail.com</p>
     <span class="opacity-80 text-sm">Cusco-Perú</span>
