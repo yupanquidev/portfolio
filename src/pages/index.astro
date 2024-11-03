@@ -1,10 +1,29 @@
 ---
-import App from "@/components/App.astro";
-import Hero from "@/components/sections/Hero.astro";
-import Project from "@/components/sections/Project.astro";
+import Layout from "@layouts/Layout.astro";
+
+import About from "@sections/About.astro";
+import Contact from "@sections/Contact.astro";
+import Hero from "@sections/Hero.astro";
+import LastVisit from "@sections/LastVisit.astro";
+import Now from "@sections/Now.astro";
+import Photo from "@sections/Photo.astro";
+import Project from "@sections/Project.astro";
+import TimeZone from "@sections/TimeZone.astro";
 ---
 
-<App>
-  <Hero />
-  <Project />
-</App>
+<Layout
+	title="Portafolio"
+	class="grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+>
+	<Hero class="md:col-span-2 row-span-1 lg:col-span-3" />
+	<About class="row-span-2" />
+	<Contact class="lg:row-span-3 md:row-span-4" />
+	<TimeZone
+		client:load
+		class="row-span-1 md:col-span-1 lg:col-span-2 md:row-span-2 lg:row-span-1"
+	/>
+	<Now class="row-span-2" />
+	<LastVisit class="row-span-1 md:col-span-1 lg:col-span-2" />
+	<Project class="row-span-1" />
+	<Photo class="row-span-1" />
+</Layout>
