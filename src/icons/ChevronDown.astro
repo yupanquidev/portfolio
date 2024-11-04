@@ -1,11 +1,16 @@
 ---
-const { width, height, className } = Astro.props;
+interface Props {
+  size: string;
+  class?: string;
+}
+
+const { size } = Astro.props;
 ---
 
 <svg
-  width={width}
-  height={height}
-  class={className}
+  class:list={[Astro.props.class]}
+  width={size}
+  height={size}
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
