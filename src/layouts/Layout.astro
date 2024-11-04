@@ -11,7 +11,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -21,7 +21,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="w-full h-full bg-primary text-mauve-50/80">
+	<body class="w-full h-auto bg-primary text-mauve-50/80">
 		<header class="sticky top-0 z-50">
 			<Header />
 		</header>
@@ -138,7 +138,7 @@ const { title } = Astro.props;
 	}
 
 	@font-face {
-		font-family: "Monaspace";
+		font-family: "Monaspace Neon";
 		src:
 			url("/fonts/monaspace/NeonVF.ttf") format("truetype"),
 			url("/fonts/monaspace/NeonVF.woff2") format("woff2"),
@@ -167,5 +167,9 @@ const { title } = Astro.props;
 	h6 {
 		text-wrap: balance;
 		font-family: "Geist";
+	}
+
+	time {
+		font-family: "Monaspace Neon";
 	}
 </style>
