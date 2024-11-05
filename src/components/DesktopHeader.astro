@@ -7,17 +7,19 @@ import { MENUS } from "@lib/menus";
 ---
 
 <nav
-  class:list={[
-    "w-full flex-row items-center border border-mauve-300/20 p-6 rounded-xl bg-y/50 text-mauve-50 backdrop-blur-md px-6 py-2 mt-4 left-0 right-0 justify-between",
-    Astro.props.class,
-  ]}
+  class:list={["w-full flex items-center justify-between", Astro.props.class]}
 >
   <a href="/" class="font-bold text-xl">Y</a>
   <ul class="flex text-center w-auto">
     {
       MENUS.map(({ name, url }) => (
-        <li class="text-base p-2">
-          <a href={url}>{name}</a>
+        <li class="text-base">
+          <a
+            class="py-2 px-3 transition-all duration-500 border border-transparent hover:bg-mauve-400/20 hover:border-mauve-400/30 backdrop-blur-md rounded"
+            href={url}
+          >
+            {name}
+          </a>
         </li>
       ))
     }
