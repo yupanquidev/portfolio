@@ -2,9 +2,9 @@
 import Card from "@components/Card.astro";
 ---
 
-<Card class:list={["space-y-4 text-center", Astro.props.class]}>
+<Card class:list={["space-y-4 text-center relative", Astro.props.class]}>
   <h2 id="last"></h2>
-  <h2 id="next"></h2>
+  <h2 class="absolute right-0 left-0 top-1/2" id="next"></h2>
 </Card>
 
 <script type="module" is:inline>
@@ -68,7 +68,7 @@ import Card from "@components/Card.astro";
 <style>
   h2 {
     display: block;
-    height: 20px;
+    height: auto;
   }
 
   @keyframes fadeOutUp {
