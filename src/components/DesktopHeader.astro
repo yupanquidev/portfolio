@@ -7,7 +7,10 @@ import { MENUS } from "@lib/menus";
 ---
 
 <nav
-  class:list={["w-full flex items-center justify-between", Astro.props.class]}
+  class:list={[
+    "w-full flex items-center justify-between px-6 py-1",
+    Astro.props.class,
+  ]}
 >
   <a href="/" class="font-bold text-xl">Y</a>
   <ul class="flex text-center w-auto">
