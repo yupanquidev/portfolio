@@ -18,7 +18,7 @@ import { MENUS } from "@lib/menus";
       MENUS.map(({ name, url }) => (
         <li class="text-base">
           <a
-            class="py-2 px-3 transition-all duration-500 border border-transparent hover:bg-mauve-400/20 hover:border-mauve-400/30 backdrop-blur-md rounded"
+            class="py-2 px-3 [transition-timing-function:cubic-bezier(0.85,0,0.15,1)] duration-300 border border-transparent hover:bg-mauve-400/20 hover:border-mauve-400/30 backdrop-blur-md rounded"
             href={url}
           >
             {name}
