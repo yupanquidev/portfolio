@@ -1,5 +1,9 @@
 ---
 import Card from "@components/Card.astro";
+
+interface Props {
+  class?: string;
+}
 ---
 
 <Card href="/projects" class:list={[Astro.props.class]}>

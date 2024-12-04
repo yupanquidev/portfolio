@@ -1,5 +1,9 @@
 ---
 import Card from "@components/Card.astro";
+
+interface Props {
+  class?: string;
+}
 ---
 
 <Card class:list={["relative space-y-1", Astro.props.class]}>

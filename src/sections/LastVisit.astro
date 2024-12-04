@@ -1,5 +1,9 @@
 ---
 import Card from "@components/Card.astro";
+
+interface Props {
+  class?: string;
+}
 ---
 
 <Card class:list={["space-y-4 text-center relative", Astro.props.class]}>
@@ -16,7 +20,7 @@ import Card from "@components/Card.astro";
     country: { name: country, flag },
   } = json;
 
-  await fetch("https://last-visit.deno.dev/visit", {
+  await fetch("https://lastvisit.deno.dev/visit", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -28,7 +32,7 @@ import Card from "@components/Card.astro";
     }),
   });
 
-  const source = new EventSource("https://last-visit.deno.dev/visit");
+  const source = new EventSource("https://lastvisit.deno.dev/visit");
   const $last = document.getElementById("last");
   const $next = document.getElementById("next");
   let ready = true;
@@ -65,6 +69,7 @@ import Card from "@components/Card.astro";
     source.close();
   });
 </script>
+
 <style>
   h2 {
     display: block;

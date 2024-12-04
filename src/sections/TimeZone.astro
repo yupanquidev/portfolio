@@ -2,6 +2,10 @@
 import Card from "@components/Card.astro";
 
 import { formatWeekday, formatDate, formatTime } from "@lib/timeZone";
+
+interface Props {
+  class?: string;
+}
 ---
 
 <Card class:list={["space-y-1 flex flex-col", Astro.props.class]}>
