@@ -13,8 +13,7 @@ export default defineConfig({
 
   env: {
     schema: {
-      GEOLOCATION: envField.string({ context: "server", access: "public" }),
-      VISIT: envField.string({ context: "server", access: "public" }),
+      GEOLOCATION: envField.string({ context: "client", access: "public" }),
     }
   }
 })

@@ -1,5 +1,4 @@
 ---
-import Fallback from "@components/Fallback.astro";
 import Layout from "@layouts/Layout.astro";
 
 import About from "@sections/About.astro";
@@ -23,13 +22,7 @@ import TimeZone from "@sections/TimeZone.astro";
 		class="row-span-1 md:col-span-1 lg:col-span-2 md:row-span-2 lg:row-span-1"
 	/>
 	<Now class="row-span-2" />
-	<LastVisit server:defer class="row-span-1 md:col-span-1 lg:col-span-2">
-		<Fallback
-			class="row-span-1 md:col-span-1 lg:col-span-2"
-			slot="fallback"
-			content="Cargando ..."
-		/>
-	</LastVisit>
+	<LastVisit class="row-span-1 md:col-span-1 lg:col-span-2" />
 	<Project class="row-span-1" />
 	<Photo class="row-span-1" />
 </Layout>

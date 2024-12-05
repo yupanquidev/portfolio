@@ -1,33 +1,99 @@
 ---
 import Card from "@components/Card.astro";
-
-import { GEOLOCATION, VISIT } from "astro:env/server";
-
 interface Props {
   class?: string;
 }
-
-const res = await fetch(GEOLOCATION);
-const json = await res.json();
-
-const {
-  city: { name: city },
-  country: { name: country, flag },
-} = json;
-
-await fetch(VISIT, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    city,
-    country,
-    flag,
-  }),
-});
 ---
 
-<Card class:list={["space-y-4 text-center relative", Astro.props.class]}>
-  <h2>Última visita desde {city} - {country} {flag}</h2>
+<Card
+  class:list={[
+    "space-y-4 text-center relative h-20 content-center",
+    Astro.props.class,
+  ]}
+>
+  <h2 id="last"></h2>
+  <h2 class="absolute right-0 left-0 top-1/2" id="next"></h2>
 </Card>
+
+<script>
+  import { GEOLOCATION } from "astro:env/client";
+
+  const res = await fetch(GEOLOCATION);
+  const json = await res.json();
+  const {
+    city: { name: city },
+    country: { name: country, flag },
+  } = json;
+
+  await fetch("https://lastvisit.deno.dev/visit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      city,
+      country,
+      flag,
+    }),
+  });
+
+  const source = new EventSource("https://lastvisit.deno.dev/visit");
+  const last = document.getElementById("last") as HTMLElement;
+  const next = document.getElementById("next") as HTMLElement;
+
+  let ready = true;
+
+  source.addEventListener("update", (event) => {
+    if (ready === false) return;
+    const { city, country, flag } = JSON.parse(event.data);
+    const message = `Last visit from ${city}, ${country} ${flag}`;
+    const isLastEmpty = last.innerHTML === "";
+    if (isLastEmpty) {
+      last.innerHTML = message;
+      return;
+    }
+
+    next.innerHTML = message;
+    next.style.animation = "fadeInUp 1s ease-in-out forwards";
+    last.style.animation = "fadeOutUp 1s ease-in-out forwards";
+    ready = false;
+    next.onanimationend = () => {
+      next.style.animation = "";
+      last.style.animation = "";
+      last.innerHTML = message;
+      next.innerHTML = "";
+      ready = true;
+    };
+  });
+
+  window.addEventListener("unload", () => {
+    source.close();
+  });
+</script>
+
+<style>
+  h2 {
+    display: block;
+    height: auto;
+  }
+  @keyframes fadeOutUp {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(0px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(-20px);
+    }
+  }
+</style>
