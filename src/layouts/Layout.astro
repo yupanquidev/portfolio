@@ -1,6 +1,6 @@
 ---
 import Header from "@sections/Header.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
 	title: string;
@@ -19,7 +19,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body class="w-full h-auto bg-primary text-mauve-50/80">
 		<header
@@ -153,11 +153,11 @@ const { title } = Astro.props;
 
 	html,
 	body {
-		font-family: "N27";
+		font-family: "N27", sans-serif;
 	}
 
 	p {
-		font-family: "N27";
+		font-family: "N27", sans-serif;
 		text-wrap: pretty;
 	}
 
@@ -168,10 +168,10 @@ const { title } = Astro.props;
 	h5,
 	h6 {
 		text-wrap: balance;
-		font-family: "Geist";
+		font-family: "Geist", sans-serif;
 	}
 
 	time {
-		font-family: "Monaspace Neon";
+		font-family: "Monaspace Neon", sans-serif;
 	}
 </style>
