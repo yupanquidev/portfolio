@@ -1,0 +1,33 @@
+<span
+  id="backdrop"
+  class={"absolute bg-mauve-500/20 backdrop-blur-lg rounded translate-x-[var(--left)] translate-y-[var(--top)] left-0 top-0 w-[var(--width)] h-[var(--height)] [transition-timing-function:cubic-bezier(0.42,0,0.58,1)] duration-300 opacity-0 z-0"}
+>
+</span>
+
+<script is:inline data-astro-rerun>
+  const d = document;
+
+  d.addEventListener("astro:page-load", () => {
+    const listItem = d.querySelectorAll("#menu li a");
+    const backDrop = d.querySelector("#backdrop");
+
+    listItem.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        const { left, top, width, height } = item.getBoundingClientRect();
+
+        backDrop.style.setProperty("--left", `${left}px`);
+        backDrop.style.setProperty("--top", `${top}px`);
+        backDrop.style.setProperty("--width", `${width}px`);
+        backDrop.style.setProperty("--height", `${height}px`);
+
+        backDrop.style.opacity = "1";
+        backDrop.style.visibility = "visible";
+      });
+
+      item.addEventListener("mouseleave", () => {
+        backDrop.style.opacity = "0";
+        backDrop.style.visibility = "hidden";
+      });
+    });
+  });
+</script>
