@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config'
+import { defineConfig, envField } from 'astro/config'
 
 import tailwind from '@astrojs/tailwind'
 import vercel from '@astrojs/vercel/serverless'
@@ -10,4 +10,11 @@ export default defineConfig({
   output: 'server',
   adapter: vercel(),
   prefetch: true,
+
+  env: {
+    schema: {
+      GEOLOCATION: envField.string({ context: "server", access: "public" }),
+      POSTLINK: envField.string({ context: "server", access: "public" }),
+    }
+  }
 })

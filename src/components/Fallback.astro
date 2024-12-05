@@ -1,0 +1,12 @@
+---
+import Card from "./Card.astro";
+
+interface Props {
+  content: string;
+  class?: string;
+}
+
+const { content } = Astro.props;
+---
+
+<Card class:list={["text-center relative", Astro.props.class]}>{content}</Card>
