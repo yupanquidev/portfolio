@@ -12,7 +12,7 @@ interface Props {
     Astro.props.class,
   ]}
 >
-  <h2 id="last"></h2>
+  <h2 id="last">Esperando...</h2>
   <h2 class="absolute right-0 left-0 top-1/2" id="next"></h2>
 </Card>
 
@@ -47,7 +47,7 @@ interface Props {
   source.addEventListener("update", (event) => {
     if (ready === false) return;
     const { city, country, flag } = JSON.parse(event.data);
-    const message = `Last visit from ${city}, ${country} ${flag}`;
+    const message = `Última visita desde ${city} - ${country} ${flag}`;
     const isLastEmpty = last.innerHTML === "";
     if (isLastEmpty) {
       last.innerHTML = message;
