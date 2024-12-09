@@ -22,5 +22,6 @@ export const MENUS = [
   {
     name: "Resume",
     url: "https://cv.yupanqui.dev",
+    target: "_blank"
   }
 ]

@@ -17,11 +17,12 @@ import { MENUS } from "@lib/menus";
   <a href="/" class="font-bold text-xl">Y</a>
   <ul id="menu" class="flex text-center w-auto">
     {
-      MENUS.map(({ name, url }) => (
+      MENUS.map(({ name, url, target }) => (
         <li class="text-base z-0">
           <a
             class="py-2 px-3 border border-transparent backdrop-blur-md rounded pointer-events-auto relative z-20 cursor-pointer"
             href={url}
+            target={target}
           >
             {name}
           </a>
